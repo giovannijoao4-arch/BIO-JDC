@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { getUtmUrl } from '../utils/utm';
 import { IconArrowRight, IconLock } from './Icons';
 
@@ -9,6 +10,8 @@ export function ProductCard({ product, isOpen, onToggle }) {
       e.stopPropagation();
     }
   };
+
+  const isInternalRoute = product.link && product.link.startsWith('/');
 
   return (
     <div className={`vtsd-accordion-item ${isOpen ? 'is-open' : ''}`}>
@@ -92,16 +95,26 @@ export function ProductCard({ product, isOpen, onToggle }) {
             {/* CTA BUTTON */}
             {product.cta && (
               <div className="vtsd-accordion-cta-wrapper">
-                <a
-                  href={product.link && product.link !== '#' ? getUtmUrl(product.link) : '#'}
-                  onClick={handleCtaClick}
-                  target={product.link && product.link !== '#' ? '_blank' : '_self'}
-                  rel="noopener noreferrer"
-                  className={`vtsd-accordion-cta-btn ${product.comingSoon ? 'is-coming-soon-btn' : ''}`}
-                >
-                  <span>{product.cta}</span>
-                  {!product.comingSoon && <IconArrowRight size={18} />}
-                </a>
+                {isInternalRoute ? (
+                  <Link
+                    to={product.link}
+                    className="vtsd-accordion-cta-btn"
+                  >
+                    <span>{product.cta}</span>
+                    <IconArrowRight size={18} />
+                  </Link>
+                ) : (
+                  <a
+                    href={product.link && product.link !== '#' ? getUtmUrl(product.link) : '#'}
+                    onClick={handleCtaClick}
+                    target={product.link && product.link !== '#' ? '_blank' : '_self'}
+                    rel="noopener noreferrer"
+                    className={`vtsd-accordion-cta-btn ${product.comingSoon ? 'is-coming-soon-btn' : ''}`}
+                  >
+                    <span>{product.cta}</span>
+                    {!product.comingSoon && <IconArrowRight size={18} />}
+                  </a>
+                )}
               </div>
             )}
           </div>

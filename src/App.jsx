@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { siteConfig } from './data/siteConfig';
 import { HeaderProfile } from './components/HeaderProfile';
 import { FeaturedBanner } from './components/FeaturedBanner';
@@ -8,10 +9,11 @@ import { Ecosystem } from './components/Ecosystem';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { AnalyticsSetup } from './components/AnalyticsSetup';
+import { XequeSocial } from './pages/XequeSocial';
 import './index.css';
 import './styles/components.css';
 
-export default function App() {
+function HomePage() {
   return (
     <>
       {/* Analytics Loader */}
@@ -62,5 +64,16 @@ export default function App() {
         </div>
       </div>
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/xeque-social" element={<XequeSocial />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

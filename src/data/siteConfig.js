@@ -39,10 +39,10 @@ export const siteConfig = {
     description: "Entenda pessoas. Leia situações. Aja com clareza. Seja respeitado.",
     bgImage: "/images/featured_banner.jpg",
     mobileBgImage: "/images/featured_banner_mobile.jpg",
-    link: "#",
+    link: "/xeque-social",
   },
 
-  // 3. PRODUTOS (ACORDEÃO COMPLETO VTSD - TODOS "EM BREVE")
+  // 3. PRODUTOS (ACORDEÃO COMPLETO VTSD)
   productsSection: {
     title: "Conheça o universo que te torna inevitável",
     subtitle: "",
@@ -69,9 +69,9 @@ export const siteConfig = {
         "Quem quer desenvolver leitura social de forma simples e prática.",
         "Quem quer ter mais clareza antes de responder."
       ],
-      cta: "ENTRE NO XEQUE SOCIAL",
-      link: "#",
-      comingSoon: true,
+      cta: "CONHECER O XEQUE SOCIAL",
+      link: "/xeque-social",
+      comingSoon: false,
     },
     {
       id: "jogo-de-cintura",
