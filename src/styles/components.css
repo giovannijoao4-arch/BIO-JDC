@@ -144,7 +144,7 @@
   }
 }
 
-/* 3. VITRINE DE PRODUTOS (ACORDEÃO VTSD - AUMENTADA LARGURA, BADGE EM BREVE, APENAS 1 ABERTO) */
+/* 3. VITRINE DE PRODUTOS (ACORDEÃO VTSD - COR EXATA DOS BOTÕES VTSD SCREENSHOT) */
 .products-showcase-vtsd-section {
   width: 100%;
 }
@@ -157,8 +157,8 @@
 }
 
 .vtsd-accordion-item {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
+  background: #181b22; /* Sleek dark graphite matching VTSD screenshot */
+  border: 1px solid rgba(255, 255, 255, 0.22); /* Crisp visible border */
   border-radius: 18px;
   overflow: hidden;
   transition: var(--transition-normal);
@@ -166,13 +166,14 @@
 }
 
 .vtsd-accordion-item:hover {
-  border-color: rgba(255, 255, 255, 0.25);
+  background: #222630;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .vtsd-accordion-item.is-open {
-  border-color: rgba(212, 175, 55, 0.5);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
-  background: #11141c;
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65);
+  background: #151820;
 }
 
 .vtsd-accordion-header {
@@ -193,10 +194,6 @@
   .vtsd-accordion-header {
     padding: 1.15rem 1.25rem;
   }
-}
-
-.vtsd-accordion-header:hover {
-  background: var(--bg-surface-hover);
 }
 
 .vtsd-accordion-header-left {
@@ -226,7 +223,7 @@
   padding: 0.25rem 0.65rem;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   color: #c0c8d4;
   font-size: 0.725rem;
   font-weight: 700;
@@ -240,14 +237,14 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
   flex-shrink: 0;
   transition: var(--transition-fast);
 }
 
 .vtsd-chevron-svg {
   transition: transform 300ms var(--ease-out);
-  color: var(--text-tertiary);
+  color: #a0a8b4;
 }
 
 .vtsd-accordion-item.is-open .vtsd-chevron-svg {
@@ -257,7 +254,7 @@
 
 .vtsd-accordion-content {
   padding: 0 1.75rem 1.85rem 1.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 640px) {
