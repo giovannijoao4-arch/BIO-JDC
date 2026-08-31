@@ -81,7 +81,7 @@
   line-height: 1.55;
 }
 
-/* 2. PRIMEIRA SEÇÃO / BANNER PRINCIPAL (RESPONSIVO: DESKTOP LARGO 1320x530px | MOBILE VERTICAL 576x1024px) */
+/* 2. PRIMEIRA SEÇÃO / BANNER PRINCIPAL (RESPONSIVO: DESKTOP LARGO 1320x530px | MOBILE NATURAL ASPECT RATIO) */
 .featured-banner-vtsd-wrapper {
   width: 100%;
   display: flex;
@@ -106,26 +106,42 @@
   display: block;
 }
 
-@media (max-width: 900px) {
-  .featured-banner-vtsd-pure-image {
-    height: 420px;
-  }
-}
-
-/* Mobile Portrait Card Aspect Ratio matching VTSD mobile vertical banner */
-@media (max-width: 600px) {
-  .featured-banner-vtsd-pure-image {
-    height: 530px;
-    border-radius: 22px;
-  }
-}
-
 .banner-vtsd-pure-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
   display: block;
+}
+
+@media (max-width: 900px) {
+  .featured-banner-vtsd-pure-image {
+    height: 420px;
+  }
+}
+
+/* Mobile: Natural aspect ratio without any fixed height or cropping */
+@media (max-width: 600px) {
+  .featured-banner-vtsd-pure-image {
+    height: auto !important;
+    max-height: none !important;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+
+  .featured-banner-vtsd-pure-image picture {
+    width: 100%;
+    height: auto !important;
+    display: block;
+  }
+
+  .banner-vtsd-pure-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center top;
+    display: block;
+  }
 }
 
 /* 3. VITRINE DE PRODUTOS (ACORDEÃO VTSD - AUMENTADA LARGURA, BADGE EM BREVE, APENAS 1 ABERTO) */
@@ -452,7 +468,7 @@
 .free-card-vtsd-coming-soon-badge {
   position: absolute;
   top: 12px;
-  left: 12px; /* Positioned on TOP LEFT as requested */
+  left: 12px;
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.18);
