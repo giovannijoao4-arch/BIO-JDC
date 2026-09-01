@@ -17,6 +17,11 @@ export function FreeContent({ sectionConfig, contents }) {
     }
   };
 
+  const getWebpUrl = (jpgUrl) => {
+    if (!jpgUrl) return '';
+    return jpgUrl.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+  };
+
   return (
     <section className="free-content-vtsd-wrapper" aria-label="Conteúdos Gratuitos">
       <h2 className="free-content-vtsd-title">
@@ -26,6 +31,7 @@ export function FreeContent({ sectionConfig, contents }) {
       <div className="free-content-vtsd-grid">
         {contents.map((item) => {
           const isComingSoon = Boolean(item.comingSoon);
+          const webpUrl = getWebpUrl(item.image);
 
           return (
             <a
@@ -35,12 +41,18 @@ export function FreeContent({ sectionConfig, contents }) {
               className={`free-card-vtsd-item ${isComingSoon ? 'is-coming-soon' : ''}`}
             >
               <div className="free-card-vtsd-image-box">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="free-card-vtsd-img"
-                  loading="lazy"
-                />
+                <picture>
+                  {webpUrl && <source srcSet={webpUrl} type="image/webp" />}
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="free-card-vtsd-img"
+                    loading="lazy"
+                    decoding="async"
+                    width="360"
+                    height="240"
+                  />
+                </picture>
 
                 {isComingSoon && (
                   <div className="free-card-vtsd-coming-soon-badge">

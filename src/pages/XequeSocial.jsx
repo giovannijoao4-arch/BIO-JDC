@@ -55,12 +55,19 @@ export function XequeSocial() {
           1. HERO DESKTOP (PREENCHE 100% DA PRIMEIRA TELA - 100SVH)
           ================================================================== */}
       <section className="xeque-hero-desktop">
-        <img
-          className="xeque-hero-desktop-image"
-          src="/images/xeque_hero_desktop.jpg"
-          alt="Xeque Social Guia Prático - Livro, Celular e Peças de Xadrez"
-          loading="eager"
-        />
+        <picture>
+          <source srcSet="/images/xeque_hero_desktop.webp" type="image/webp" />
+          <img
+            className="xeque-hero-desktop-image"
+            src="/images/xeque_hero_desktop.jpg"
+            alt="Xeque Social Guia Prático - Livro, Celular e Peças de Xadrez"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width="1920"
+            height="1080"
+          />
+        </picture>
 
         <div className="xeque-hero-copy">
           <div className="xeque-hero-brand-tag">
@@ -117,11 +124,18 @@ export function XequeSocial() {
           ================================================================== */}
       <section className="xeque-hero-mobile">
         <div className="xeque-mobile-visual">
-          <img
-            src="/images/xeque_hero_mobile.jpg"
-            alt="Xeque Social"
-            loading="eager"
-          />
+          <picture>
+            <source srcSet="/images/xeque_hero_mobile.webp" type="image/webp" />
+            <img
+              src="/images/xeque_hero_mobile.jpg"
+              alt="Xeque Social"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width="768"
+              height="480"
+            />
+          </picture>
           <div className="xeque-mobile-visual-fade" aria-hidden="true" />
         </div>
 
@@ -342,12 +356,18 @@ export function XequeSocial() {
             </div>
 
             <div className="xeque-mechanism-img-wrapper">
-              <img
-                src="/images/xeque_social.jpg"
-                alt="Xeque Social Produto"
-                className="xeque-mechanism-img"
-                loading="lazy"
-              />
+              <picture>
+                <source srcSet="/images/xeque_social.webp" type="image/webp" />
+                <img
+                  src="/images/xeque_social.jpg"
+                  alt="Xeque Social Produto"
+                  className="xeque-mechanism-img"
+                  loading="lazy"
+                  decoding="async"
+                  width="440"
+                  height="440"
+                />
+              </picture>
               {!isLaunched && (
                 <span className="xeque-product-lock-badge">
                   <IconLock size={14} style={{ display: 'inline', marginRight: '6px' }} />
@@ -505,11 +525,18 @@ export function XequeSocial() {
             
             {/* PRODUCT MOCKUP TOP HEADER */}
             <div className="xeque-offer-card-top">
-              <img
-                src="/images/xeque_social.jpg"
-                alt="Xeque Social Produto"
-                className="xeque-offer-card-product-img"
-              />
+              <picture>
+                <source srcSet="/images/xeque_social.webp" type="image/webp" />
+                <img
+                  src="/images/xeque_social.jpg"
+                  alt="Xeque Social Produto"
+                  className="xeque-offer-card-product-img"
+                  loading="lazy"
+                  decoding="async"
+                  width="210"
+                  height="210"
+                />
+              </picture>
               <h2 className="xeque-offer-card-title">XEQUE SOCIAL</h2>
               <p className="xeque-offer-card-subtitle">
                 {!isLaunched ? "ABERTURA: 7 DE SETEMBRO ÀS 20H" : "XEQUE SOCIAL ESTÁ LIBERADO"}
@@ -631,12 +658,18 @@ export function XequeSocial() {
         <div className="xeque-container">
           <div className="xeque-author-editorial">
             <div>
-              <img
-                src="/images/profile.jpg"
-                alt="João Giovanni"
-                className="xeque-author-portrait-img"
-                loading="lazy"
-              />
+              <picture>
+                <source srcSet="/images/profile.webp" type="image/webp" />
+                <img
+                  src="/images/profile.jpg"
+                  alt="João Giovanni"
+                  className="xeque-author-portrait-img"
+                  loading="lazy"
+                  decoding="async"
+                  width="260"
+                  height="320"
+                />
+              </picture>
             </div>
 
             <div className="xeque-author-info">

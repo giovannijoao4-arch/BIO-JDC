@@ -7,6 +7,7 @@ export function Ecosystem({ config }) {
   }
 
   const partner = config.items[0];
+  const partnerWebp = "/images/partner_banner.webp";
 
   return (
     <section className="partnerships-vtsd-section" aria-label="Parcerias">
@@ -23,16 +24,20 @@ export function Ecosystem({ config }) {
             rel="noopener noreferrer"
             className="partnership-banner-box"
           >
-            <img
-              src={partner.image}
-              alt={partner.name || "Banner Parceiro"}
-              className="partnership-banner-img"
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet={partnerWebp} type="image/webp" />
+              <img
+                src={partner.image}
+                alt={partner.name || "Banner Parceiro"}
+                className="partnership-banner-img"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="400"
+              />
+            </picture>
           </a>
         )}
-
-        {/* Button removed per user instructions */}
       </div>
     </section>
   );

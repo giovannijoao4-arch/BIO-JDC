@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { siteConfig } from './data/siteConfig';
 import { HeaderProfile } from './components/HeaderProfile';
@@ -10,9 +10,16 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { AnalyticsSetup } from './components/AnalyticsSetup';
 import { IconChessPawn } from './components/Icons';
-import { XequeSocial } from './pages/XequeSocial';
 import './index.css';
 import './styles/components.css';
+
+/**
+ * Route Level Code-Splitting for /xeque-social
+ * Reduces initial JavaScript payload for Bio visitors
+ */
+const XequeSocial = lazy(() =>
+  import('./pages/XequeSocial').then((module) => ({ default: module.XequeSocial }))
+);
 
 /**
  * Global ScrollToTop Component
@@ -121,10 +128,12 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/xeque-social" element={<XequeSocial />} />
-      </Routes>
+      <Suspense fallback={<div style={{ backgroundColor: '#050506', minHeight: '100vh' }} />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/xeque-social" element={<XequeSocial />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
