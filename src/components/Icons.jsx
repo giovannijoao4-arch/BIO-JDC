@@ -235,3 +235,85 @@ export const IconExternalLink = ({ size = 16, className = '', style = {} }) => (
     <line x1="10" y1="14" x2="21" y2="3" />
   </svg>
 );
+
+export const IconChessPawn = ({ size = 16, className = '', style = {} }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    style={style}
+  >
+    <path d="M12 2a3 3 0 0 0-3 3c0 1.25.77 2.32 1.86 2.75C9.43 9.4 8 11.5 8 14v1h8v-1c0-2.5-1.43-4.6-2.86-6.25A3.001 3.001 0 0 0 15 5a3 3 0 0 0-3-3zm-5 15v2h10v-2H7zm-1 3v2h12v-2H6z" />
+  </svg>
+);
+
+export const IconLightning = ({ size = 16, className = '', style = {} }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    style={style}
+  >
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor" opacity="0.9" />
+  </svg>
+);
+
+export const IconShield = ({ size = 16, className = '', style = {} }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    style={style}
+  >
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+  </svg>
+);
+
+export const IconCheck = ({ size = 16, className = '', style = {} }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    style={style}
+  >
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+);
+
+export const IconCross = ({ size = 16, className = '', style = {} }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    style={style}
+  >
+    <line x1="18" y1="6" x2="6" y2="18" />
+    <line x1="6" y1="6" x2="18" y2="18" />
+  </svg>
+);

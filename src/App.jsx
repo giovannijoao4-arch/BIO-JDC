@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { siteConfig } from './data/siteConfig';
 import { HeaderProfile } from './components/HeaderProfile';
 import { FeaturedBanner } from './components/FeaturedBanner';
@@ -9,9 +9,59 @@ import { Ecosystem } from './components/Ecosystem';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { AnalyticsSetup } from './components/AnalyticsSetup';
+import { IconChessPawn } from './components/Icons';
 import { XequeSocial } from './pages/XequeSocial';
 import './index.css';
 import './styles/components.css';
+
+/**
+ * Global ScrollToTop Component
+ * Disables browser automatic scroll restoration and guarantees scrollY = 0
+ * for ALL route transitions including Links, navigate(), Back & Forward buttons.
+ */
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  // 1. Force manual scroll restoration globally
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
+  // 2. Instant scroll reset to top on pathname change (Link, navigate)
+  useEffect(() => {
+    const resetScroll = () => {
+      window.scrollTo(0, 0);
+      try {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      } catch (e) {
+        // Fallback for older browsers
+      }
+    };
+
+    resetScroll();
+    const rafId = requestAnimationFrame(resetScroll);
+    return () => cancelAnimationFrame(rafId);
+  }, [pathname]);
+
+  // 3. Handle browser Back / Forward popstate events
+  useEffect(() => {
+    const handlePopState = () => {
+      window.scrollTo(0, 0);
+      requestAnimationFrame(() => {
+        window.scrollTo(0, 0);
+      });
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
+  return null;
+}
 
 function HomePage() {
   return (
@@ -29,7 +79,7 @@ function HomePage() {
 
         {/* Divisor Visual Estratégico */}
         <div className="chess-divider" style={{ width: '100%', maxWidth: '1200px', margin: '1.5rem auto' }} aria-hidden="true">
-          <span className="chess-divider-icon">♟</span>
+          <span className="chess-divider-icon"><IconChessPawn size={16} /></span>
         </div>
 
         {/* Seção 2 — Vitrine de Produtos (4 Produtos) */}
@@ -47,7 +97,7 @@ function HomePage() {
 
           {/* Divisor Visual Estratégico */}
           <div className="chess-divider" style={{ width: '100%', maxWidth: '1200px', margin: '2rem 0' }} aria-hidden="true">
-            <span className="chess-divider-icon">♟</span>
+            <span className="chess-divider-icon"><IconChessPawn size={16} /></span>
           </div>
 
           {/* Seção 4 — Conteúdos Gratuitos (YouTube, Spotify, Blog JDC) */}
@@ -70,6 +120,7 @@ function HomePage() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/xeque-social" element={<XequeSocial />} />

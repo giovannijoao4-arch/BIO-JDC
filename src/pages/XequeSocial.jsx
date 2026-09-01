@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
+import { useLaunchStatus } from '../hooks/useLaunchStatus';
+import { IconChessPawn, IconLock, IconLightning, IconShield, IconCheck, IconCross } from '../components/Icons';
 import '../styles/xeque-social.css';
 
 export function XequeSocial() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const { isLaunched } = useLaunchStatus();
 
   const toggleFaq = (index) => {
     setOpenFaqIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  const handleCtaClick = (e) => {
+    const offerSection = document.getElementById('oferta');
+    if (offerSection) {
+      e.preventDefault();
+      offerSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const faqs = [
@@ -53,7 +64,14 @@ export function XequeSocial() {
 
         <div className="xeque-hero-copy">
           <div className="xeque-hero-brand-tag">
-            <span>♟ XEQUE SOCIAL</span>
+            <IconChessPawn size={16} />
+            <span>XEQUE SOCIAL</span>
+            {!isLaunched && (
+              <span className="xeque-hero-lock-badge">
+                <IconLock size={12} style={{ display: 'inline', marginRight: '4px' }} />
+                <span>LIBERA 07/09 ÀS 20H</span>
+              </span>
+            )}
           </div>
 
           <h1 className="xeque-hero-left-headline">
@@ -67,18 +85,30 @@ export function XequeSocial() {
 
           <div className="xeque-hero-micro-cards-row">
             <div className="xeque-hero-mini-card">
-              <span className="xeque-mini-card-icon">✓</span>
+              <IconCheck size={14} className="xeque-mini-card-icon" />
               <span>Leia melhor o que está por trás das palavras</span>
             </div>
             <div className="xeque-hero-mini-card">
-              <span className="xeque-mini-card-icon">✓</span>
+              <IconCheck size={14} className="xeque-mini-card-icon" />
               <span>Saiba quando responder, recuar ou impor um limite</span>
             </div>
           </div>
 
-          <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn">
-            <span>QUERO ENXERGAR O JOGO</span>
-          </a>
+          {/* PRE-LAUNCH LOCKED BUTTON OR ACTIVE CHECKOUT CTA */}
+          {!isLaunched ? (
+            <button
+              type="button"
+              className="xeque-cta-btn xeque-cta-btn-locked"
+              onClick={handleCtaClick}
+            >
+              <IconLock size={16} className="xeque-lock-icon" />
+              <span>LIBERA DIA 7 ÀS 20H</span>
+            </button>
+          ) : (
+            <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn">
+              <span>QUERO ENXERGAR O JOGO</span>
+            </a>
+          )}
         </div>
       </section>
 
@@ -97,7 +127,14 @@ export function XequeSocial() {
 
         <div className="xeque-mobile-copy-overlay">
           <div className="xeque-hero-brand-tag">
-            <span>♟ XEQUE SOCIAL</span>
+            <IconChessPawn size={16} />
+            <span>XEQUE SOCIAL</span>
+            {!isLaunched && (
+              <span className="xeque-hero-lock-badge">
+                <IconLock size={12} style={{ display: 'inline', marginRight: '4px' }} />
+                <span>LIBERA 07/09 ÀS 20H</span>
+              </span>
+            )}
           </div>
 
           <h1 className="xeque-hero-left-headline">
@@ -111,18 +148,30 @@ export function XequeSocial() {
 
           <div className="xeque-hero-micro-cards-row">
             <div className="xeque-hero-mini-card">
-              <span className="xeque-mini-card-icon">✓</span>
+              <IconCheck size={14} className="xeque-mini-card-icon" />
               <span>Leia melhor o que está por trás das palavras</span>
             </div>
             <div className="xeque-hero-mini-card">
-              <span className="xeque-mini-card-icon">✓</span>
+              <IconCheck size={14} className="xeque-mini-card-icon" />
               <span>Saiba quando responder, recuar ou impor um limite</span>
             </div>
           </div>
 
-          <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn">
-            <span>QUERO ENXERGAR O JOGO</span>
-          </a>
+          {/* PRE-LAUNCH LOCKED BUTTON OR ACTIVE CHECKOUT CTA */}
+          {!isLaunched ? (
+            <button
+              type="button"
+              className="xeque-cta-btn xeque-cta-btn-locked"
+              onClick={handleCtaClick}
+            >
+              <IconLock size={16} className="xeque-lock-icon" />
+              <span>LIBERA DIA 7 ÀS 20H</span>
+            </button>
+          ) : (
+            <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn">
+              <span>QUERO ENXERGAR O JOGO</span>
+            </a>
+          )}
         </div>
       </section>
 
@@ -132,7 +181,8 @@ export function XequeSocial() {
       <section className="xeque-section xeque-manifesto-section">
         <div className="xeque-container-editorial">
           <div className="xeque-manifesto-badge">
-            <span>♟ O PRINCÍPIO DO JOGO SOCIAL</span>
+            <IconChessPawn size={14} style={{ display: 'inline', marginRight: '6px' }} />
+            <span>O PRINCÍPIO DO JOGO SOCIAL</span>
           </div>
           <h2 className="xeque-manifesto-quote">
             "O problema não é não saber o que dizer.<br className="xeque-desktop-br" />
@@ -159,42 +209,42 @@ export function XequeSocial() {
 
           <div className="xeque-problem-editorial-list">
             <div className="xeque-problem-editorial-item">
-              <span className="xeque-problem-icon-small">✕</span>
+              <IconCross size={16} className="xeque-problem-icon-small" />
               <p className="xeque-problem-editorial-text">
                 Você percebe a intenção da pessoa só depois que a conversa termina, e passa horas pensando no que deveria ter dito.
               </p>
             </div>
 
             <div className="xeque-problem-editorial-item">
-              <span className="xeque-problem-icon-small">✕</span>
+              <IconCross size={16} className="xeque-problem-icon-small" />
               <p className="xeque-problem-editorial-text">
                 Você entra na defensiva e começa a se explicar, mesmo quando não fez nada que precisava justificar.
               </p>
             </div>
 
             <div className="xeque-problem-editorial-item">
-              <span className="xeque-problem-icon-small">✕</span>
+              <IconCross size={16} className="xeque-problem-icon-small" />
               <p className="xeque-problem-editorial-text">
                 Você aceita um pedido, pressão ou provocação no impulso e se arrepende minutos depois.
               </p>
             </div>
 
             <div className="xeque-problem-editorial-item">
-              <span className="xeque-problem-icon-small">✕</span>
+              <IconCross size={16} className="xeque-problem-icon-small" />
               <p className="xeque-problem-editorial-text">
                 Você sente que precisa impor um limite, mas trava porque não sabe se está exagerando ou sendo manipulado.
               </p>
             </div>
 
             <div className="xeque-problem-editorial-item">
-              <span className="xeque-problem-icon-small">✕</span>
+              <IconCross size={16} className="xeque-problem-icon-small" />
               <p className="xeque-problem-editorial-text">
                 Você percebe que o clima mudou, mas não consegue identificar exatamente o que a outra pessoa fez.
               </p>
             </div>
 
             <div className="xeque-problem-editorial-item">
-              <span className="xeque-problem-icon-small">✕</span>
+              <IconCross size={16} className="xeque-problem-icon-small" />
               <p className="xeque-problem-editorial-text">
                 Você acaba assumindo culpa por conflitos que começaram com pressão, inversão ou provocação do outro lado.
               </p>
@@ -211,7 +261,7 @@ export function XequeSocial() {
       </section>
 
       {/* ==================================================================
-          3B. NOVO CTA ESTRATÉGICO DE TRANSIÇÃO (DIRETO AO CHECKOUT HOTMART)
+          3B. NOVO CTA ESTRATÉGICO DE TRANSIÇÃO
           ================================================================== */}
       <section className="xeque-section xeque-mid-cta-section">
         <div className="xeque-container-editorial">
@@ -222,9 +272,20 @@ export function XequeSocial() {
             Aprenda a identificar o que está acontecendo antes de decidir como responder.
           </p>
 
-          <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn xeque-mid-cta-btn">
-            <span>QUERO ENXERGAR O JOGO</span>
-          </a>
+          {!isLaunched ? (
+            <button
+              type="button"
+              className="xeque-cta-btn xeque-mid-cta-btn xeque-cta-btn-locked"
+              onClick={handleCtaClick}
+            >
+              <IconLock size={16} className="xeque-lock-icon" />
+              <span>LIBERA DIA 7 ÀS 20H</span>
+            </button>
+          ) : (
+            <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn xeque-mid-cta-btn">
+              <span>QUERO ENXERGAR O JOGO</span>
+            </a>
+          )}
         </div>
       </section>
 
@@ -280,13 +341,19 @@ export function XequeSocial() {
               </div>
             </div>
 
-            <div>
+            <div className="xeque-mechanism-img-wrapper">
               <img
                 src="/images/xeque_social.jpg"
                 alt="Xeque Social Produto"
                 className="xeque-mechanism-img"
                 loading="lazy"
               />
+              {!isLaunched && (
+                <span className="xeque-product-lock-badge">
+                  <IconLock size={14} style={{ display: 'inline', marginRight: '6px' }} />
+                  <span>LIBERA DIA 7 ÀS 20H</span>
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -307,23 +374,23 @@ export function XequeSocial() {
               </div>
               <div className="xeque-comp-body">
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon red">✕</span>
+                  <IconCross size={16} className="xeque-comp-icon red" />
                   <span>Responde no calor do momento.</span>
                 </div>
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon red">✕</span>
+                  <IconCross size={16} className="xeque-comp-icon red" />
                   <span>Se explica além do necessário.</span>
                 </div>
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon red">✕</span>
+                  <IconCross size={16} className="xeque-comp-icon red" />
                   <span>Percebe provocações só depois.</span>
                 </div>
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon red">✕</span>
+                  <IconCross size={16} className="xeque-comp-icon red" />
                   <span>Confunde culpa com responsabilidade.</span>
                 </div>
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon red">✕</span>
+                  <IconCross size={16} className="xeque-comp-icon red" />
                   <span>Deixa a outra pessoa decidir o ritmo da conversa.</span>
                 </div>
               </div>
@@ -336,23 +403,23 @@ export function XequeSocial() {
               </div>
               <div className="xeque-comp-body">
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon green">✓</span>
+                  <IconCheck size={16} className="xeque-comp-icon green" />
                   <span>Identifica o que está acontecendo antes de responder.</span>
                 </div>
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon green">✓</span>
+                  <IconCheck size={16} className="xeque-comp-icon green" />
                   <span>Compra tempo para pensar sem parecer inseguro.</span>
                 </div>
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon green">✓</span>
+                  <IconCheck size={16} className="xeque-comp-icon green" />
                   <span>Reconhece pressão, provocação e inversão mais cedo.</span>
                 </div>
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon green">✓</span>
+                  <IconCheck size={16} className="xeque-comp-icon green" />
                   <span>Separa fatos do que a situação fez você sentir.</span>
                 </div>
                 <div className="xeque-comp-row-redesigned">
-                  <span className="xeque-comp-icon green">✓</span>
+                  <IconCheck size={16} className="xeque-comp-icon green" />
                   <span>Escolhe quando responder, impor limite, recuar ou simplesmente não entrar no jogo.</span>
                 </div>
               </div>
@@ -430,7 +497,7 @@ export function XequeSocial() {
       </section>
 
       {/* ==================================================================
-          9. SEÇÃO DE OFERTA (LINK HOTMART MESMA ABA)
+          9. SEÇÃO DE OFERTA (PRÉ-LANÇAMENTO & LANÇADO)
           ================================================================== */}
       <section className="xeque-section xeque-offer-section" id="oferta">
         <div className="xeque-container">
@@ -445,14 +512,23 @@ export function XequeSocial() {
               />
               <h2 className="xeque-offer-card-title">XEQUE SOCIAL</h2>
               <p className="xeque-offer-card-subtitle">
-                Comece a enxergar o jogo antes de fazer o próximo movimento.
+                {!isLaunched ? "ABERTURA: 7 DE SETEMBRO ÀS 20H" : "XEQUE SOCIAL ESTÁ LIBERADO"}
               </p>
             </div>
 
-            {/* "ACESSO IMEDIATO" BADGE */}
+            {/* "ACESSO IMEDIATO" OU "PRÉ-LANÇAMENTO" BADGE */}
             <div className="xeque-offer-badge-pill">
-              <span className="xeque-ticket-icon">⚡</span>
-              <span>ACESSO IMEDIATO</span>
+              {!isLaunched ? (
+                <>
+                  <IconLock size={14} className="xeque-ticket-icon" />
+                  <span>PRÉ-LANÇAMENTO • LIBERA 07/09 ÀS 20H</span>
+                </>
+              ) : (
+                <>
+                  <IconLightning size={14} className="xeque-ticket-icon" />
+                  <span>ACESSO IMEDIATO</span>
+                </>
+              )}
             </div>
 
             {/* HUGE PRICE DISPLAY: R$ 37,00 */}
@@ -465,50 +541,66 @@ export function XequeSocial() {
             {/* CHECKLIST */}
             <ul className="xeque-offer-features-list">
               <li>
-                <span className="xeque-feat-check">✓</span>
+                <IconCheck size={16} className="xeque-feat-check" />
                 <span>Guia prático Xeque Social</span>
               </li>
               <li>
-                <span className="xeque-feat-check">✓</span>
+                <IconCheck size={16} className="xeque-feat-check" />
                 <span>Leitura social aplicada ao dia a dia</span>
               </li>
               <li>
-                <span className="xeque-feat-check">✓</span>
+                <IconCheck size={16} className="xeque-feat-check" />
                 <span>Ferramentas para desacelerar reações impulsivas</span>
               </li>
               <li>
-                <span className="xeque-feat-check">✓</span>
+                <IconCheck size={16} className="xeque-feat-check" />
                 <span>Acesso imediato</span>
               </li>
               <li>
-                <span className="xeque-feat-check">✓</span>
+                <IconCheck size={16} className="xeque-feat-check" />
                 <span>Acesso vitalício</span>
               </li>
               <li>
-                <span className="xeque-feat-check">✓</span>
+                <IconCheck size={16} className="xeque-feat-check" />
                 <span>Garantia de 7 dias</span>
               </li>
             </ul>
 
-            {/* MASSIVE GOLD CTA CHECKOUT BUTTON (SAME WINDOW) */}
-            <a
-              href={HOTMART_CHECKOUT_URL}
-              className="xeque-cta-btn xeque-offer-cta-btn"
-            >
-              <span>QUERO ACESSAR O XEQUE SOCIAL</span>
-            </a>
+            {/* CTA BUTTON */}
+            {!isLaunched ? (
+              <button
+                type="button"
+                className="xeque-cta-btn xeque-offer-cta-btn xeque-cta-btn-locked"
+              >
+                <IconLock size={16} className="xeque-lock-icon" />
+                <span>LIBERA DIA 7 ÀS 20H</span>
+              </button>
+            ) : (
+              <a
+                href={HOTMART_CHECKOUT_URL}
+                className="xeque-cta-btn xeque-offer-cta-btn"
+              >
+                <span>QUERO ACESSAR O XEQUE SOCIAL</span>
+              </a>
+            )}
 
             <p className="xeque-offer-micro-sub">
-              Pagamento único. Sem mensalidade.
+              {!isLaunched ? "Abertura automática em 07/09 às 20h." : "Pagamento único. Sem mensalidade."}
             </p>
 
             {/* SECURITY TRUST BADGES */}
             <div className="xeque-offer-trust-footer">
-              <span>🔒 Compra 100% Segura</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <IconLock size={12} /> Compra 100% Segura
+              </span>
               <span>•</span>
-              <span>⚡ Acesso Imediato</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <IconLightning size={12} /> Acesso Imediato
+              </span>
               <span>•</span>
-              <span>🛡 7 Dias de Garantia</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <IconShield size={12} /> 7 Dias de Garantia
+              </span>
             </div>
 
           </div>
@@ -521,20 +613,7 @@ export function XequeSocial() {
       <section className="xeque-section xeque-guarantee-section">
         <div className="xeque-container-narrow">
           <div className="xeque-guarantee-editorial">
-            <svg
-              className="xeque-guarantee-svg-icon"
-              width="44"
-              height="44"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <path d="m9 12 2 2 4-4" />
-            </svg>
+            <IconShield size={44} className="xeque-guarantee-svg-icon" />
             <div>
               <h3 className="xeque-guarantee-title">Você tem 7 dias para decidir se isso faz sentido para você.</h3>
               <p className="xeque-guarantee-desc">
@@ -609,7 +688,7 @@ export function XequeSocial() {
       </section>
 
       {/* ==================================================================
-          13. CTA FINAL (LINK HOTMART MESMA ABA)
+          13. CTA FINAL
           ================================================================== */}
       <section className="xeque-section xeque-section-surface">
         <div className="xeque-container-editorial">
@@ -627,16 +706,28 @@ export function XequeSocial() {
             <span className="xeque-price-cents">,00</span>
           </div>
 
-          <a
-            href={HOTMART_CHECKOUT_URL}
-            className="xeque-cta-btn"
-            style={{ maxWidth: '440px' }}
-          >
-            <span>QUERO O XEQUE SOCIAL</span>
-          </a>
+          {!isLaunched ? (
+            <button
+              type="button"
+              className="xeque-cta-btn xeque-cta-btn-locked"
+              style={{ maxWidth: '440px' }}
+              onClick={handleCtaClick}
+            >
+              <IconLock size={16} className="xeque-lock-icon" />
+              <span>LIBERA DIA 7 ÀS 20H</span>
+            </button>
+          ) : (
+            <a
+              href={HOTMART_CHECKOUT_URL}
+              className="xeque-cta-btn"
+              style={{ maxWidth: '440px' }}
+            >
+              <span>QUERO O XEQUE SOCIAL</span>
+            </a>
+          )}
 
           <p className="xeque-offer-trust-footer" style={{ marginTop: '1.25rem' }}>
-            Acesso imediato • Pagamento único • Garantia de 7 dias
+            {!isLaunched ? "Abertura oficial em 07/09 às 20h" : "Acesso imediato • Pagamento único • Garantia de 7 dias"}
           </p>
         </div>
       </section>

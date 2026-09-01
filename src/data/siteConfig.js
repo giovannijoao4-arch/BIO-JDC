@@ -72,6 +72,7 @@ export const siteConfig = {
       cta: "CONHECER O XEQUE SOCIAL",
       link: "/xeque-social",
       comingSoon: false,
+      launchBadge: "LIBERA 07/09 ÀS 20H",
     },
     {
       id: "jogo-de-cintura",
@@ -211,7 +212,7 @@ export const siteConfig = {
     title: "Quer falar comigo ou com minha equipe?",
     subtitle: "Atendimento comercial, parcerias e suporte de alunos.",
     ctaText: "FALAR COM A EQUIPE COMERCIAL",
-    link: "https://wa.me/5500000000000",
+    link: "https://wa.me/558498337223?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20Jogo%20de%20Cintura%20e%20quero%20falar%20com%20o%20time%20comercial.",
   },
 
   // 7. RODAPÉ

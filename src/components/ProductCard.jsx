@@ -24,12 +24,17 @@ export function ProductCard({ product, isOpen, onToggle }) {
       >
         <div className="vtsd-accordion-header-left">
           <span className="vtsd-accordion-title">{product.name}</span>
-          {product.comingSoon && (
+          {product.launchBadge ? (
+            <span className="vtsd-accordion-badge-coming-soon" style={{ background: 'rgba(212, 167, 44, 0.12)', color: '#D4A72C', border: '1px solid rgba(212, 167, 44, 0.3)' }}>
+              <IconLock size={12} />
+              <span>{product.launchBadge}</span>
+            </span>
+          ) : product.comingSoon ? (
             <span className="vtsd-accordion-badge-coming-soon">
               <IconLock size={12} />
               <span>EM BREVE</span>
             </span>
-          )}
+          ) : null}
         </div>
 
         <span className="vtsd-accordion-arrow" aria-hidden="true">
