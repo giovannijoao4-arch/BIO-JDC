@@ -1527,3 +1527,9 @@
     border-bottom: 0;
   }
 }
+
+/* XEQUE CTA PRE-LAUNCH */
+
+.xeque-cta-btn-locked:disabled {
+  cursor: not-allowed;
+}

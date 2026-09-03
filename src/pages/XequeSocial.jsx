@@ -12,15 +12,7 @@ export function XequeSocial() {
     setOpenFaqIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  const handleCtaClick = (e) => {
-    const offerSection = document.getElementById('oferta');
-    if (offerSection) {
-      e.preventDefault();
-      offerSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const faqs = [
+const faqs = [
     {
       q: "O Xeque Social é um curso?",
       a: "Não. É um livro digital de 180 páginas, dividido em 30 capítulos e 5 partes, com uma prática orientada de 7 dias."
@@ -163,13 +155,14 @@ export function XequeSocial() {
                 <button
                   type="button"
                   className="xeque-cta-btn xeque-cta-btn-locked"
-                  onClick={handleCtaClick}
-                >
+                
+                  disabled
+                  aria-disabled="true">
                   <IconLock size={16} className="xeque-lock-icon" />
                   <span>LIBERA DIA 7 ÀS 20H</span>
                 </button>
               ) : (
-                <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn">
+                <a href={HOTMART_CHECKOUT_URL} aria-disabled="false" className="xeque-cta-btn">
                   <span>QUERO ACESSAR O XEQUE SOCIAL</span>
                 </a>
               )}
@@ -768,13 +761,15 @@ export function XequeSocial() {
               <button
                 type="button"
                 className="xeque-cta-btn xeque-offer-cta-btn xeque-cta-btn-locked"
-              >
+              
+                  disabled
+                  aria-disabled="true">
                 <IconLock size={16} className="xeque-lock-icon" />
                 <span>LIBERA DIA 7 ÀS 20H</span>
               </button>
             ) : (
               <a
-                href={HOTMART_CHECKOUT_URL}
+                href={HOTMART_CHECKOUT_URL} aria-disabled="false"
                 className="xeque-cta-btn xeque-offer-cta-btn"
               >
                 <span>QUERO ACESSAR O XEQUE SOCIAL</span>
@@ -882,14 +877,15 @@ export function XequeSocial() {
               type="button"
               className="xeque-cta-btn xeque-cta-btn-locked"
               style={{ maxWidth: '440px' }}
-              onClick={handleCtaClick}
-            >
+            
+                  disabled
+                  aria-disabled="true">
               <IconLock size={16} className="xeque-lock-icon" />
               <span>LIBERA DIA 7 ÀS 20H</span>
             </button>
           ) : (
             <a
-              href={HOTMART_CHECKOUT_URL}
+              href={HOTMART_CHECKOUT_URL} aria-disabled="false"
               className="xeque-cta-btn"
               style={{ maxWidth: '440px' }}
             >
