@@ -23,19 +23,25 @@ export function XequeSocial() {
   const faqs = [
     {
       q: "O Xeque Social é um curso?",
-      a: "Não. É um livro digital de 180 páginas, dividido em 30 capítulos e cinco partes. Ele foi desenvolvido como a porta de entrada prática para o Universo Jogo de Cintura."
+      a: "Não. É um livro digital de 180 páginas, dividido em 30 capítulos e 5 partes, com uma prática orientada de 7 dias."
     },
     {
       q: "Preciso ser extrovertido?",
-      a: "Não. O método não depende de falar muito, ser carismático ou ter respostas rápidas. Ele começa pela capacidade de observar e escolher."
+      a: "Não. O método não depende de falar mais. Ele ensina você a observar melhor, separar fato de interpretação e escolher uma resposta consciente."
     },
     {
       q: "Isso ensina manipulação?",
-      a: "Não. O Xeque Social não ensina controle, leitura mental ou formas de explorar vulnerabilidades. Ele ensina a reconhecer o que está acontecendo e proteger a própria capacidade de escolha."
+      a: "Não. O Xeque Social não ensina controle, leitura mental ou frases para conduzir pessoas. Ele ensina leitura contextual, responsabilidade pela própria reação e respeito aos limites."
+    },
+    {
+      q: "O livro inclui o Protocolo LANCE?",
+      a: "Não como método completo. O Xeque Social entrega a leitura inicial e a primeira resposta. O Protocolo LANCE é o sistema central da formação Jogo de Cintura."
     },
     {
       q: "Quando recebo acesso?",
-      a: "Antes da abertura, seu acesso será liberado automaticamente em 07/09/2026 às 20h. Depois da abertura, o acesso será imediato após a confirmação do pagamento."
+      a: isLaunched
+        ? "O acesso é liberado pela Hotmart após a confirmação do pagamento."
+        : "As compras abrem em 07/09/2026 às 20h, no horário de Fortaleza."
     },
     {
       q: "O acesso expira?",
@@ -43,10 +49,13 @@ export function XequeSocial() {
     },
     {
       q: "Existe garantia?",
-      a: "Sim. A compra possui garantia de 7 dias, conforme as condições apresentadas pela plataforma de pagamento."
+      a: "Sim. Você tem 7 dias, contados a partir da compra, para solicitar o cancelamento dentro das condições informadas no checkout."
+    },
+    {
+      q: "Consigo ler pelo celular?",
+      a: "Sim. O livro digital pode ser acessado em celular, tablet ou computador."
     }
   ];
-
   const galleryItems = [
     {
       title: "Sumário",
@@ -691,10 +700,10 @@ export function XequeSocial() {
                   style={{ objectFit: 'contain' }}
                 />
               </picture>
-              <span className="xeque-offer-eyebrow">SUA ENTRADA NO JOGO</span>
+              <span className="xeque-offer-eyebrow">LIVRO DIGITAL</span>
               <h2 className="xeque-offer-card-title">XEQUE SOCIAL</h2>
               <p className="xeque-offer-card-subtitle">
-                O manual dos segundos antes da reação.
+                180 páginas para ler a posição antes de entregar o movimento.
               </p>
             </div>
 
@@ -703,7 +712,7 @@ export function XequeSocial() {
               {!isLaunched ? (
                 <>
                   <IconLock size={14} className="xeque-ticket-icon" />
-                  <span>Liberação automática em 07/09/2026 às 20h</span>
+                  <span>Abertura em 07/09/2026 às 20h.</span>
                 </>
               ) : (
                 <>
@@ -719,40 +728,38 @@ export function XequeSocial() {
               <span className="xeque-price-val">37</span>
               <span className="xeque-price-cents">,00</span>
             </div>
+            <p className="xeque-offer-payment-label">pagamento único</p>
 
             {/* CONTENT CHECKLIST */}
             <ul className="xeque-offer-features-list">
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Livro digital completo com 180 páginas.</span>
+                <span>Livro digital com 180 páginas</span>
               </li>
+
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>30 capítulos organizados em 5 partes.</span>
+                <span>30 capítulos organizados em 5 partes</span>
               </li>
+
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Ferramentas para separar fato, interpretação e reação.</span>
+                <span>Prática orientada de 7 dias</span>
               </li>
+
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Prática orientada de 7 dias.</span>
+                <span>Ferramentas para separar fato, interpretação e reação</span>
               </li>
+
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Mapa pessoal de leitura e reação.</span>
+                <span>Acesso vitalício</span>
               </li>
+
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Notas e referências.</span>
-              </li>
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>Acesso vitalício.</span>
-              </li>
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>Garantia de 7 dias.</span>
+                <span>Garantia de 7 dias</span>
               </li>
             </ul>
 
@@ -775,17 +782,17 @@ export function XequeSocial() {
             )}
 
             <p className="xeque-offer-micro-sub">
-              {!isLaunched ? "Liberação automática em 07/09/2026 às 20h" : "Pagamento único. Sem mensalidade."}
+              {!isLaunched ? "Abertura em 07/09/2026 às 20h." : "Acesso liberado após a confirmação do pagamento."}
             </p>
 
             {/* SECURITY TRUST BADGES */}
             <div className="xeque-offer-trust-footer">
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                <IconLock size={12} /> Compra 100% Segura
+                <IconLock size={12} /> Pagamento processado pela Hotmart
               </span>
               <span>•</span>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                <IconLightning size={12} /> {!isLaunched ? "Acesso Vitalício" : "Acesso Imediato"}
+                <IconLightning size={12} /> {!isLaunched ? "Acesso Vitalício" : "Acesso Vitalício"}
               </span>
               <span>•</span>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
@@ -891,7 +898,7 @@ export function XequeSocial() {
           )}
 
           <p className="xeque-offer-trust-footer" style={{ marginTop: '1.25rem' }}>
-            {!isLaunched ? "Liberação automática em 07/09/2026 às 20h" : "Acesso imediato • Pagamento único • Garantia de 7 dias"}
+            {!isLaunched ? "Abertura em 07/09/2026 às 20h." : "Acesso liberado após a confirmação do pagamento. • Garantia de 7 dias"}
           </p>
         </div>
       </section>
