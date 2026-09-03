@@ -602,6 +602,74 @@ export function XequeSocial() {
       </section>
 
       {/* ==================================================================
+          AUTORIDADE / POR TRÁS DO XEQUE SOCIAL
+          ================================================================== */}
+      <section className="xeque-section xeque-author-section xeque-section-alt">
+        <div className="xeque-container">
+          <div className="xeque-author-editorial">
+            <div>
+              <picture>
+                <source srcSet="/images/profile.webp" type="image/webp" />
+                <img
+                  src="/images/profile.jpg"
+                  alt="João Giovanni"
+                  className="xeque-author-portrait-img"
+                  loading="lazy"
+                  decoding="async"
+                  width="260"
+                  height="320"
+                />
+              </picture>
+            </div>
+
+            <div className="xeque-author-info">
+              <span className="xeque-author-tag">POR TRÁS DO XEQUE SOCIAL</span>
+              <h3 className="xeque-author-name-title">
+                Eu sabia conversar. Mas descobri que isso não bastava.
+              </h3>
+              <div className="xeque-author-bio-paragraphs">
+                <p>
+                  Durante muito tempo, pensei que ter jogo de cintura significava saber conquistar, argumentar e sustentar uma conversa.
+                </p>
+                <p>
+                  Então vivi uma situação na qual perdi exatamente aquilo que acreditava dominar. Quanto mais eu sentia alguém se afastar, mais eu pressionava. Quanto mais tentava recuperar o controle, mais abandonava minha própria posição.
+                </p>
+                <p>
+                  Foi ali que entendi: meu problema não era falta de palavras. Eu não sabia atravessar os segundos anteriores à reação.
+                </p>
+                <p>
+                  O Xeque Social nasceu dessa reconstrução. Não como uma fórmula para controlar pessoas, mas como um sistema para que ninguém precise entregar a própria posição no impulso.
+                </p>
+              </div>
+
+              <div className="xeque-author-signature-block">
+                <span className="xeque-author-sign-name">João Giovanni</span>
+                <span className="xeque-author-sign-role">Criador do Universo Jogo de Cintura</span>
+              </div>
+            </div>
+          </div>
+
+          {/* FAIXA DISCRETA — PONTE PARA O JOGO DE CINTURA (SEM SEGUNDA OFERTA) */}
+          <div className="xeque-universo-hierarchy-banner">
+            <span className="xeque-hierarchy-badge">A PORTA DE ENTRADA DO UNIVERSO JOGO DE CINTURA</span>
+            <h3 className="xeque-hierarchy-title">O Xeque Social é a entrada. O Jogo de Cintura é o tabuleiro completo.</h3>
+            <div className="xeque-hierarchy-paragraphs">
+              <p className="xeque-hierarchy-text">
+                O Xeque Social ensina a reconhecer a posição, separar fato de interpretação e escolher uma primeira resposta mais consciente.
+              </p>
+              <p className="xeque-hierarchy-text">
+                O Protocolo LANCE — sistema central do Jogo de Cintura — aprofunda essa leitura e a transforma em movimento sustentado.
+              </p>
+              <p className="xeque-hierarchy-text">
+                Você não precisa conhecer o JDC para aplicar o Xeque Social. E o Xeque Social não tenta substituir a formação completa.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ==================================================================
           SEÇÃO DE OFERTA (PRÉ-LANÇAMENTO & LANÇADO)
           ================================================================== */}
       <section className="xeque-section xeque-offer-section" id="oferta">
@@ -745,74 +813,6 @@ export function XequeSocial() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ==================================================================
-          AUTORIDADE / POR TRÁS DO XEQUE SOCIAL
-          ================================================================== */}
-      <section className="xeque-section xeque-author-section xeque-section-alt">
-        <div className="xeque-container">
-          <div className="xeque-author-editorial">
-            <div>
-              <picture>
-                <source srcSet="/images/profile.webp" type="image/webp" />
-                <img
-                  src="/images/profile.jpg"
-                  alt="João Giovanni"
-                  className="xeque-author-portrait-img"
-                  loading="lazy"
-                  decoding="async"
-                  width="260"
-                  height="320"
-                />
-              </picture>
-            </div>
-
-            <div className="xeque-author-info">
-              <span className="xeque-author-tag">POR TRÁS DO XEQUE SOCIAL</span>
-              <h3 className="xeque-author-name-title">
-                Eu sabia conversar. Mas descobri que isso não bastava.
-              </h3>
-              <div className="xeque-author-bio-paragraphs">
-                <p>
-                  Durante muito tempo, pensei que ter jogo de cintura significava saber conquistar, argumentar e sustentar uma conversa.
-                </p>
-                <p>
-                  Então vivi uma situação na qual perdi exatamente aquilo que acreditava dominar. Quanto mais eu sentia alguém se afastar, mais eu pressionava. Quanto mais tentava recuperar o controle, mais abandonava minha própria posição.
-                </p>
-                <p>
-                  Foi ali que entendi: meu problema não era falta de palavras. Eu não sabia atravessar os segundos anteriores à reação.
-                </p>
-                <p>
-                  O Xeque Social nasceu dessa reconstrução. Não como uma fórmula para controlar pessoas, mas como um sistema para que ninguém precise entregar a própria posição no impulso.
-                </p>
-              </div>
-
-              <div className="xeque-author-signature-block">
-                <span className="xeque-author-sign-name">João Giovanni</span>
-                <span className="xeque-author-sign-role">Criador do Universo Jogo de Cintura</span>
-              </div>
-            </div>
-          </div>
-
-          {/* FAIXA DISCRETA — PONTE PARA O JOGO DE CINTURA (SEM SEGUNDA OFERTA) */}
-          <div className="xeque-universo-hierarchy-banner">
-            <span className="xeque-hierarchy-badge">A PORTA DE ENTRADA DO UNIVERSO JOGO DE CINTURA</span>
-            <h3 className="xeque-hierarchy-title">O Xeque Social é a entrada. O Jogo de Cintura é o tabuleiro completo.</h3>
-            <div className="xeque-hierarchy-paragraphs">
-              <p className="xeque-hierarchy-text">
-                O Xeque Social ensina a reconhecer a posição, separar fato de interpretação e escolher uma primeira resposta mais consciente.
-              </p>
-              <p className="xeque-hierarchy-text">
-                O Protocolo LANCE — sistema central do Jogo de Cintura — aprofunda essa leitura e a transforma em movimento sustentado.
-              </p>
-              <p className="xeque-hierarchy-text">
-                Você não precisa conhecer o JDC para aplicar o Xeque Social. E o Xeque Social não tenta substituir a formação completa.
-              </p>
-            </div>
-          </div>
-
         </div>
       </section>
 
