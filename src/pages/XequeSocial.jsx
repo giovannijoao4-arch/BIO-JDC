@@ -518,6 +518,46 @@ export function XequeSocial() {
       {/* ==================================================================
           REFORMULATED TRANSFORMATION SECTION (SOBER EDITORIAL - NO RED/GREEN)
           ================================================================== */}
+
+      {/* ==================================================================
+          PROVA DO PRODUTO - CREDIBILIDADE
+          ================================================================== */}
+      <section className="xeque-section xeque-credibilidade-section">
+        <div className="xeque-container">
+          <div className="xeque-credibilidade-box">
+
+            <span className="xeque-tag-badge">CRITÉRIO DE LEITURA</span>
+
+            <h2 className="xeque-headline-medium">
+              Fundamentado sem prometer leitura mental.
+            </h2>
+
+            <p className="xeque-credibilidade-desc">
+              O Xeque Social combina observação prática, exercícios de aplicação e referências
+              de comportamento humano. Nenhum sinal isolado prova intenção: a leitura considera
+              contexto, repetição, hierarquia e efeito produzido na interação.
+            </p>
+
+            <div className="xeque-credibilidade-items">
+              <div className="xeque-credibilidade-item">
+                <span>01</span>
+                <p>Observação antes da conclusão</p>
+              </div>
+
+              <div className="xeque-credibilidade-item">
+                <span>02</span>
+                <p>Exercício antes da resposta automática</p>
+              </div>
+
+              <div className="xeque-credibilidade-item">
+                <span>03</span>
+                <p>Referências apresentadas com transparência</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
       <section className="xeque-section xeque-section-transf-sober">
         <div className="xeque-container">
           <span className="xeque-tag-badge">MUDANÇA DE POSICIONAMENTO</span>
