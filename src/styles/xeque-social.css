@@ -1555,7 +1555,7 @@
       rgba(0,0,0,.08) 42%,
       rgba(0,0,0,0) 66%
     ),
-    url("/images/xeque-hero-desktop.png");
+    url("/images/xeque-hero-desktop.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1595,7 +1595,7 @@
         #080808 61%,
         #080808 100%
       ),
-      url("/images/xeque-hero-mobile.png");
+      url("/images/xeque-hero-mobile.webp");
 
     background-size: 100% auto;
     background-position: top center;

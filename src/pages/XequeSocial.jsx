@@ -53,42 +53,42 @@ const faqs = [
       title: "Sumário",
       tag: "Estrutura Geral",
       desc: "Visão integrada dos 30 capítulos organizados em 5 partes.",
-      src: "/images/xeque-social-sumario.png",
+      src: "/images/xeque-social-sumario.webp",
       alt: "Página de sumário do livro Xeque Social, com 30 capítulos organizados em 5 partes."
     },
     {
       title: "Abertura do Prólogo",
       tag: "Prólogo",
       desc: "A abertura da obra e o intervalo entre o que acontece e a sua resposta.",
-      src: "/images/xeque-social-prologo.png",
+      src: "/images/xeque-social-prologo.webp",
       alt: "Página de abertura do prólogo Os segundos antes da reação, do livro Xeque Social."
     },
     {
       title: "Abertura de Capítulo",
       tag: "Leitura da Posição",
       desc: "Abertura editorial de capítulo dedicada à leitura da posição antes da reação.",
-      src: "/images/xeque-social-capitulo.png",
+      src: "/images/xeque-social-capitulo.webp",
       alt: "Página de abertura de capítulo Leia a posição antes de reagir, do livro Xeque Social."
     },
     {
       title: "Fato x interpretação",
       tag: "Leitura Aplicada",
       desc: "Uma ferramenta visual para separar observação, interpretação e leitura consciente.",
-      src: "/images/xeque-social-fato-interpretacao.png",
+      src: "/images/xeque-social-fato-interpretacao.webp",
       alt: "Página Fato x interpretação do livro Xeque Social, comparando fato, interpretação e leitura consciente."
     },
     {
       title: "Prática Orientada",
       tag: "7 Dias",
       desc: "Uma prática de observação estruturada ao longo de sete dias.",
-      src: "/images/xeque-social-pratica-7-dias.png",
+      src: "/images/xeque-social-pratica-7-dias.webp",
       alt: "Página Prática Orientada, 7 dias de observação, do livro Xeque Social."
     },
     {
       title: "Notas e Referências",
       tag: "Fundamentação",
       desc: "A seção editorial destinada às notas, referências e critérios de leitura.",
-      src: "/images/xeque-social-referencias.png",
+      src: "/images/xeque-social-referencias.webp",
       alt: "Página de notas e referências do livro Xeque Social."
     }
   ];
