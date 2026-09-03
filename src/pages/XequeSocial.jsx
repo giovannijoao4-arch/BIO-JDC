@@ -12,30 +12,28 @@ export function XequeSocial() {
     setOpenFaqIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  const handleCtaClick = (e) => {
-    const offerSection = document.getElementById('oferta');
-    if (offerSection) {
-      e.preventDefault();
-      offerSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const faqs = [
+const faqs = [
     {
       q: "O Xeque Social é um curso?",
-      a: "Não. É um livro digital de 180 páginas, dividido em 30 capítulos e cinco partes. Ele foi desenvolvido como a porta de entrada prática para o Universo Jogo de Cintura."
+      a: "Não. É um livro digital de 180 páginas, dividido em 30 capítulos e 5 partes, com uma prática orientada de 7 dias."
     },
     {
       q: "Preciso ser extrovertido?",
-      a: "Não. O método não depende de falar muito, ser carismático ou ter respostas rápidas. Ele começa pela capacidade de observar e escolher."
+      a: "Não. O método não depende de falar mais. Ele ensina você a observar melhor, separar fato de interpretação e escolher uma resposta consciente."
     },
     {
       q: "Isso ensina manipulação?",
-      a: "Não. O Xeque Social não ensina controle, leitura mental ou formas de explorar vulnerabilidades. Ele ensina a reconhecer o que está acontecendo e proteger a própria capacidade de escolha."
+      a: "Não. O Xeque Social não ensina controle, leitura mental ou frases para conduzir pessoas. Ele ensina leitura contextual, responsabilidade pela própria reação e respeito aos limites."
+    },
+    {
+      q: "O Xeque Social substitui o Jogo de Cintura?",
+      a: "Não. O Xeque Social é a entrada prática para desenvolver leitura social e uma primeira resposta consciente. O Jogo de Cintura é a formação completa."
     },
     {
       q: "Quando recebo acesso?",
-      a: "Antes da abertura, seu acesso será liberado automaticamente em 07/09/2026 às 20h. Depois da abertura, o acesso será imediato após a confirmação do pagamento."
+      a: isLaunched
+        ? "O acesso é liberado pela Hotmart após a confirmação do pagamento."
+        : "As compras abrem em 07/09/2026 às 20h, no horário de Fortaleza."
     },
     {
       q: "O acesso expira?",
@@ -43,40 +41,55 @@ export function XequeSocial() {
     },
     {
       q: "Existe garantia?",
-      a: "Sim. A compra possui garantia de 7 dias, conforme as condições apresentadas pela plataforma de pagamento."
+      a: "Sim. Você tem 7 dias, contados a partir da compra, para solicitar o cancelamento dentro das condições informadas no checkout."
+    },
+    {
+      q: "Consigo ler pelo celular?",
+      a: "Sim. O livro digital pode ser acessado em celular, tablet ou computador."
     }
   ];
-
   const galleryItems = [
     {
       title: "Sumário",
       tag: "Estrutura Geral",
-      desc: "Visão integrada dos 30 capítulos organizados em 5 partes estratégicas."
+      desc: "Visão integrada dos 30 capítulos organizados em 5 partes.",
+      src: "/images/xeque-social-sumario.png",
+      alt: "Página de sumário do livro Xeque Social, com 30 capítulos organizados em 5 partes."
     },
     {
       title: "Abertura do Prólogo",
-      tag: "Introdução",
-      desc: "A fundação sobre a recuperação dos segundos entre o estímulo e a reação."
+      tag: "Prólogo",
+      desc: "A abertura da obra e o intervalo entre o que acontece e a sua resposta.",
+      src: "/images/xeque-social-prologo.png",
+      alt: "Página de abertura do prólogo Os segundos antes da reação, do livro Xeque Social."
     },
     {
       title: "Abertura de Capítulo",
-      tag: "Análise de Padrão",
-      desc: "Estudo detalhado de urgência, culpa, provocação, silêncio e limites."
+      tag: "Leitura da Posição",
+      desc: "Abertura editorial de capítulo dedicada à leitura da posição antes da reação.",
+      src: "/images/xeque-social-capitulo.png",
+      alt: "Página de abertura de capítulo Leia a posição antes de reagir, do livro Xeque Social."
     },
     {
       title: "Fato x interpretação",
       tag: "Leitura Aplicada",
-      desc: "Ferramentas para distinguir o que aconteceu do que você interpretou."
+      desc: "Uma ferramenta visual para separar observação, interpretação e leitura consciente.",
+      src: "/images/xeque-social-fato-interpretacao.png",
+      alt: "Página Fato x interpretação do livro Xeque Social, comparando fato, interpretação e leitura consciente."
     },
     {
       title: "Prática Orientada",
-      tag: "Guia de 7 Dias",
-      desc: "Exercícios diários estruturados para treino prático de percepção social."
+      tag: "7 Dias",
+      desc: "Uma prática de observação estruturada ao longo de sete dias.",
+      src: "/images/xeque-social-pratica-7-dias.png",
+      alt: "Página Prática Orientada, 7 dias de observação, do livro Xeque Social."
     },
     {
       title: "Notas e Referências",
       tag: "Fundamentação",
-      desc: "Base teórica e referências de estudo em comportamento humano aplicado."
+      desc: "A seção editorial destinada às notas, referências e critérios de leitura.",
+      src: "/images/xeque-social-referencias.png",
+      alt: "Página de notas e referências do livro Xeque Social."
     }
   ];
 
@@ -84,20 +97,21 @@ export function XequeSocial() {
 
   return (
     <div className="xeque-social-page">
-      
+
       {/* ==================================================================
           1. REFORMULATED EDITORIAL HERO SECTION
           ================================================================== */}
       <section className="xeque-editorial-hero-section">
+        <div className="xeque-hero-responsive-bg" aria-hidden="true" />
         <div className="xeque-editorial-hero-container">
-          
+
           {/* LEFT COLUMN: EDITORIAL COPY & CALL TO ACTION */}
           <div className="xeque-editorial-hero-copy">
-            
+
             {/* EYEBROW */}
             <div className="xeque-hero-brand-tag">
               <IconChessPawn size={15} />
-              <span>XEQUE SOCIAL • O MANUAL DOS SEGUNDOS ANTES DA REAÇÃO</span>
+              <span>XEQUE SOCIAL • LIVRO DIGITAL</span>
               {!isLaunched && (
                 <span className="xeque-hero-lock-badge">
                   <IconLock size={12} style={{ display: 'inline', marginRight: '4px' }} />
@@ -108,12 +122,15 @@ export function XequeSocial() {
 
             {/* HEADLINE */}
             <h1 className="xeque-hero-left-headline">
-              Perceba o <span className="xeque-gold-highlight">xeque</span> antes que a sua reação escolha por você.
+              Pare de reagir no automático.
+              <span className="xeque-hero-headline-second">
+                <span className="xeque-gold-highlight">Leia a situação</span> antes de escolher seu próximo movimento.
+              </span>
             </h1>
 
             {/* SUBHEADLINE */}
             <p className="xeque-hero-left-subheadline">
-              Um livro de 180 páginas para separar fatos de interpretações, reconhecer pressão e recuperar os segundos necessários para decidir quando responder, limitar, recuar ou encerrar.
+              Um livro prático de 180 páginas para separar fato de interpretação, reconhecer pressão e escolher uma primeira resposta com mais clareza, sem manipulação e sem leitura mental.
             </p>
 
             {/* ATTRIBUTES LINE */}
@@ -122,7 +139,7 @@ export function XequeSocial() {
               <span className="xeque-attr-dot">•</span>
               <span>5 partes</span>
               <span className="xeque-attr-dot">•</span>
-              <span className="xeque-gold-text">Prática orientada de 7 dias</span>
+              <span className="xeque-gold-text">Prática de 7 dias</span>
             </div>
 
             {/* EDITORIAL QUOTE */}
@@ -130,37 +147,20 @@ export function XequeSocial() {
               "Leia a posição antes de entregar o movimento."
             </blockquote>
 
-            {/* MOBILE ONLY BOOK COVER PLACE */}
-            <div className="xeque-hero-mobile-book-wrapper">
-              <picture>
-                <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
-                <img
-                  src="/images/xeque-social-capa-oficial.png"
-                  alt="Capa do livro digital Xeque Social, de João Giovanni"
-                  className="xeque-hero-book-cover-img"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  width="440"
-                  height="440"
-                  style={{ objectFit: 'contain' }}
-                />
-              </picture>
-            </div>
-
             {/* CALL TO ACTION BUTTON (LOCKED OR ACTIVE) */}
             <div className="xeque-hero-cta-wrapper">
               {!isLaunched ? (
                 <button
                   type="button"
                   className="xeque-cta-btn xeque-cta-btn-locked"
-                  onClick={handleCtaClick}
-                >
+                
+                  disabled
+                  aria-disabled="true">
                   <IconLock size={16} className="xeque-lock-icon" />
                   <span>LIBERA DIA 7 ÀS 20H</span>
                 </button>
               ) : (
-                <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn">
+                <a href={HOTMART_CHECKOUT_URL} aria-disabled="false" className="xeque-cta-btn">
                   <span>QUERO ACESSAR O XEQUE SOCIAL</span>
                 </a>
               )}
@@ -173,29 +173,11 @@ export function XequeSocial() {
 
           </div>
 
-          {/* RIGHT COLUMN: DESKTOP OFFICIAL BOOK COVER MOCKUP */}
-          <div className="xeque-editorial-hero-media">
-            <picture>
-              <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
-              <img
-                src="/images/xeque-social-capa-oficial.png"
-                alt="Capa do livro digital Xeque Social, de João Giovanni"
-                className="xeque-hero-book-cover-img"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                width="440"
-                height="440"
-                style={{ objectFit: 'contain' }}
-              />
-            </picture>
-          </div>
-
         </div>
       </section>
 
       {/* ==================================================================
-          SEÇÃO 1 — RECONHECIMENTO
+          SEÇÃO 1, RECONHECIMENTO
           ================================================================== */}
       <section className="xeque-section xeque-section-reconhecimento">
         <div className="xeque-container-editorial">
@@ -247,7 +229,7 @@ export function XequeSocial() {
       </section>
 
       {/* ==================================================================
-          SEÇÃO 2 — O CONCEITO (TEXTURA DE PAPEL CLARO)
+          SEÇÃO 2, O CONCEITO (TEXTURA DE PAPEL CLARO)
           ================================================================== */}
       <section className="xeque-section xeque-section-conceito">
         <div className="xeque-container-editorial">
@@ -275,7 +257,7 @@ export function XequeSocial() {
       </section>
 
       {/* ==================================================================
-          SEÇÃO — UMA POSIÇÃO, TRÊS LEITURAS
+          SEÇÃO, UMA POSIÇÃO, TRÊS LEITURAS
           ================================================================== */}
       <section className="xeque-section xeque-section-tres-leituras">
         <div className="xeque-container">
@@ -324,12 +306,45 @@ export function XequeSocial() {
 
 
       {/* ==================================================================
+          O QUE VOCÊ APRENDE AO LONGO DO LIVRO (5 EIXOS)
+          ================================================================== */}
+      <section className="xeque-section xeque-section-aprendizado">
+        <div className="xeque-container">
+          <span className="xeque-tag-badge">OS 5 EIXOS DA OBRA</span>
+          <h2 className="xeque-headline-medium">O que você aprende ao longo do livro</h2>
+
+          <div className="xeque-eixos-grid">
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">01</span>
+              <p className="xeque-eixo-text">Ler contexto, posição, hierarquia e acordos invisíveis.</p>
+            </div>
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">02</span>
+              <p className="xeque-eixo-text">Separar acontecimentos de interpretações e hipóteses emocionais.</p>
+            </div>
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">03</span>
+              <p className="xeque-eixo-text">Reconhecer pressão, culpa, silêncio, urgência e invasão de limites.</p>
+            </div>
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">04</span>
+              <p className="xeque-eixo-text">Escolher entre perguntar, afirmar, adiar, negar, limitar ou sair.</p>
+            </div>
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">05</span>
+              <p className="xeque-eixo-text">Avaliar o movimento realizado e reconstruir o próprio eixo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================================================================
           POR DENTRO DA OBRA & FICHA TÉCNICA PREMIUM
           ================================================================== */}
       <section className="xeque-section xeque-section-pordentro">
         <div className="xeque-container-editorial">
           <span className="xeque-tag-badge">POR DENTRO DA OBRA</span>
-          
+
           <h2 className="xeque-headline-medium">
             Não é um manual de respostas prontas.
           </h2>
@@ -372,38 +387,7 @@ export function XequeSocial() {
         </div>
       </section>
 
-      {/* ==================================================================
-          O QUE VOCÊ APRENDE AO LONGO DO LIVRO (5 EIXOS)
-          ================================================================== */}
-      <section className="xeque-section xeque-section-aprendizado">
-        <div className="xeque-container">
-          <span className="xeque-tag-badge">OS 5 EIXOS DA OBRA</span>
-          <h2 className="xeque-headline-medium">O que você aprende ao longo do livro</h2>
 
-          <div className="xeque-eixos-grid">
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">01</span>
-              <p className="xeque-eixo-text">Ler contexto, posição, hierarquia e acordos invisíveis.</p>
-            </div>
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">02</span>
-              <p className="xeque-eixo-text">Separar acontecimentos de interpretações e hipóteses emocionais.</p>
-            </div>
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">03</span>
-              <p className="xeque-eixo-text">Reconhecer pressão, culpa, silêncio, urgência e invasão de limites.</p>
-            </div>
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">04</span>
-              <p className="xeque-eixo-text">Escolher entre perguntar, afirmar, adiar, negar, limitar ou sair.</p>
-            </div>
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">05</span>
-              <p className="xeque-eixo-text">Avaliar o movimento realizado e reconstruir o próprio eixo.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ==================================================================
           GALERIA EDITORIAL DA OBRA (TEXTURA DE PAPEL CLARO / REAIS)
@@ -422,16 +406,13 @@ export function XequeSocial() {
               <div key={index} className={`xeque-gallery-card ${index % 2 === 0 ? 'card-enlarged' : 'card-detail'}`}>
                 <div className="xeque-gallery-img-box">
                   <picture>
-                    <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
                     <img
-                      src="/images/xeque-social-capa-oficial.png"
-                      alt="Capa do livro digital Xeque Social, de João Giovanni"
+                      src={item.src}
+                      alt={item.alt}
                       className="xeque-gallery-book-img"
                       loading="lazy"
                       decoding="async"
-                      width="220"
-                      height="220"
-                      style={{ objectFit: 'contain' }}
+
                     />
                   </picture>
                 </div>
@@ -456,16 +437,13 @@ export function XequeSocial() {
                     <div className="xeque-gallery-card">
                       <div className="xeque-gallery-img-box">
                         <picture>
-                          <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
                           <img
-                            src="/images/xeque-social-capa-oficial.png"
-                            alt="Capa do livro digital Xeque Social, de João Giovanni"
+                            src={item.src}
+                            alt={item.alt}
                             className="xeque-gallery-book-img"
                             loading="lazy"
                             decoding="async"
-                            width="180"
-                            height="180"
-                            style={{ objectFit: 'contain' }}
+
                           />
                         </picture>
                       </div>
@@ -518,6 +496,46 @@ export function XequeSocial() {
       {/* ==================================================================
           REFORMULATED TRANSFORMATION SECTION (SOBER EDITORIAL - NO RED/GREEN)
           ================================================================== */}
+
+      {/* ==================================================================
+          PROVA DO PRODUTO - CREDIBILIDADE
+          ================================================================== */}
+      <section className="xeque-section xeque-credibilidade-section">
+        <div className="xeque-container">
+          <div className="xeque-credibilidade-box">
+
+            <span className="xeque-tag-badge">CRITÉRIO DE LEITURA</span>
+
+            <h2 className="xeque-headline-medium">
+              Fundamentado sem prometer leitura mental.
+            </h2>
+
+            <p className="xeque-credibilidade-desc">
+              O Xeque Social combina observação prática, exercícios de aplicação e referências
+              de comportamento humano. Nenhum sinal isolado prova intenção: a leitura considera
+              contexto, repetição, hierarquia e efeito produzido na interação.
+            </p>
+
+            <div className="xeque-credibilidade-items">
+              <div className="xeque-credibilidade-item">
+                <span>01</span>
+                <p>Observação antes da conclusão</p>
+              </div>
+
+              <div className="xeque-credibilidade-item">
+                <span>02</span>
+                <p>Exercício antes da resposta automática</p>
+              </div>
+
+              <div className="xeque-credibilidade-item">
+                <span>03</span>
+                <p>Referências apresentadas com transparência</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
       <section className="xeque-section xeque-section-transf-sober">
         <div className="xeque-container">
           <span className="xeque-tag-badge">MUDANÇA DE POSICIONAMENTO</span>
@@ -532,7 +550,7 @@ export function XequeSocial() {
 
           {/* TWO SOBER EDITORIAL COLUMNS (NO RED/GREEN BOXES) */}
           <div className="xeque-transf-editorial-columns">
-            
+
             {/* COLUMN 1: QUANDO A REAÇÃO DECIDE */}
             <div className="xeque-transf-col xeque-transf-col-reacao">
               <h3 className="xeque-transf-col-title">QUANDO A REAÇÃO DECIDE</h3>
@@ -557,153 +575,6 @@ export function XequeSocial() {
               </ul>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ==================================================================
-          SEÇÃO DE OFERTA (PRÉ-LANÇAMENTO & LANÇADO)
-          ================================================================== */}
-      <section className="xeque-section xeque-offer-section" id="oferta">
-        <div className="xeque-container">
-          <div className="xeque-offer-main-card">
-            
-            {/* OFFICIAL NEW COVER MOCKUP HEADER */}
-            <div className="xeque-offer-card-top">
-              <picture>
-                <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
-                <img
-                  src="/images/xeque-social-capa-oficial.png"
-                  alt="Capa do livro digital Xeque Social, de João Giovanni"
-                  className="xeque-offer-card-product-img"
-                  loading="lazy"
-                  decoding="async"
-                  width="210"
-                  height="210"
-                  style={{ objectFit: 'contain' }}
-                />
-              </picture>
-              <span className="xeque-offer-eyebrow">SUA ENTRADA NO JOGO</span>
-              <h2 className="xeque-offer-card-title">XEQUE SOCIAL</h2>
-              <p className="xeque-offer-card-subtitle">
-                O manual dos segundos antes da reação.
-              </p>
-            </div>
-
-            {/* STATUS BADGE: PRE-LAUNCH OR RELEASED */}
-            <div className="xeque-offer-badge-pill">
-              {!isLaunched ? (
-                <>
-                  <IconLock size={14} className="xeque-ticket-icon" />
-                  <span>Liberação automática em 07/09/2026 às 20h</span>
-                </>
-              ) : (
-                <>
-                  <IconLightning size={14} className="xeque-ticket-icon" />
-                  <span>Acesso imediato</span>
-                </>
-              )}
-            </div>
-
-            {/* HUGE PRICE DISPLAY: R$ 37,00 */}
-            <div className="xeque-offer-big-price">
-              <span className="xeque-price-currency">R$</span>
-              <span className="xeque-price-val">37</span>
-              <span className="xeque-price-cents">,00</span>
-            </div>
-
-            {/* CONTENT CHECKLIST */}
-            <ul className="xeque-offer-features-list">
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>Livro digital completo com 180 páginas.</span>
-              </li>
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>30 capítulos organizados em 5 partes.</span>
-              </li>
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>Ferramentas para separar fato, interpretação e reação.</span>
-              </li>
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>Prática orientada de 7 dias.</span>
-              </li>
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>Mapa pessoal de leitura e reação.</span>
-              </li>
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>Notas e referências.</span>
-              </li>
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>Acesso vitalício.</span>
-              </li>
-              <li>
-                <IconCheck size={16} className="xeque-feat-check" />
-                <span>Garantia de 7 dias.</span>
-              </li>
-            </ul>
-
-            {/* CTA BUTTON (LOCKED OR ACTIVE WITH HOTMART URL) */}
-            {!isLaunched ? (
-              <button
-                type="button"
-                className="xeque-cta-btn xeque-offer-cta-btn xeque-cta-btn-locked"
-              >
-                <IconLock size={16} className="xeque-lock-icon" />
-                <span>LIBERA DIA 7 ÀS 20H</span>
-              </button>
-            ) : (
-              <a
-                href={HOTMART_CHECKOUT_URL}
-                className="xeque-cta-btn xeque-offer-cta-btn"
-              >
-                <span>QUERO ACESSAR O XEQUE SOCIAL</span>
-              </a>
-            )}
-
-            <p className="xeque-offer-micro-sub">
-              {!isLaunched ? "Liberação automática em 07/09/2026 às 20h" : "Pagamento único. Sem mensalidade."}
-            </p>
-
-            {/* SECURITY TRUST BADGES */}
-            <div className="xeque-offer-trust-footer">
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                <IconLock size={12} /> Compra 100% Segura
-              </span>
-              <span>•</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                <IconLightning size={12} /> {!isLaunched ? "Acesso Vitalício" : "Acesso Imediato"}
-              </span>
-              <span>•</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                <IconShield size={12} /> 7 Dias de Garantia
-              </span>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ==================================================================
-          GARANTIA (7 DIAS)
-          ================================================================== */}
-      <section className="xeque-section xeque-guarantee-section">
-        <div className="xeque-container-narrow">
-          <div className="xeque-guarantee-editorial">
-            <IconShield size={44} className="xeque-guarantee-svg-icon" />
-            <div>
-              <h3 className="xeque-guarantee-title">
-                Você tem 7 dias para decidir se esta obra faz sentido para você.
-              </h3>
-              <p className="xeque-guarantee-desc">
-                Acesse o Xeque Social, conheça o conteúdo e comece a aplicação. Se, dentro do prazo legal de 7 dias, entender que o livro não faz sentido para você, poderá solicitar o reembolso pelos canais da plataforma de pagamento.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -756,7 +627,7 @@ export function XequeSocial() {
             </div>
           </div>
 
-          {/* FAIXA DISCRETA — PONTE PARA O JOGO DE CINTURA (SEM SEGUNDA OFERTA) */}
+          {/* FAIXA DISCRETA, PONTE PARA O JOGO DE CINTURA (SEM SEGUNDA OFERTA) */}
           <div className="xeque-universo-hierarchy-banner">
             <span className="xeque-hierarchy-badge">A PORTA DE ENTRADA DO UNIVERSO JOGO DE CINTURA</span>
             <h3 className="xeque-hierarchy-title">O Xeque Social é a entrada. O Jogo de Cintura é o tabuleiro completo.</h3>
@@ -765,7 +636,7 @@ export function XequeSocial() {
                 O Xeque Social ensina a reconhecer a posição, separar fato de interpretação e escolher uma primeira resposta mais consciente.
               </p>
               <p className="xeque-hierarchy-text">
-                O Protocolo LANCE — sistema central do Jogo de Cintura — aprofunda essa leitura e a transforma em movimento sustentado.
+                O Protocolo LANCE, sistema central do Jogo de Cintura, aprofunda essa leitura e a transforma em movimento sustentado.
               </p>
               <p className="xeque-hierarchy-text">
                 Você não precisa conhecer o JDC para aplicar o Xeque Social. E o Xeque Social não tenta substituir a formação completa.
@@ -773,6 +644,153 @@ export function XequeSocial() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* ==================================================================
+          SEÇÃO DE OFERTA (PRÉ-LANÇAMENTO & LANÇADO)
+          ================================================================== */}
+      <section className="xeque-section xeque-offer-section" id="oferta">
+        <div className="xeque-container">
+          <div className="xeque-offer-main-card">
+
+            {/* OFFICIAL NEW COVER MOCKUP HEADER */}
+            <div className="xeque-offer-card-top">
+              <picture>
+                <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
+                <img
+                  src="/images/xeque-social-capa-oficial.png"
+                  alt="Capa do livro digital Xeque Social, de João Giovanni"
+                  className="xeque-offer-card-product-img"
+                  loading="lazy"
+                  decoding="async"
+                  width="210"
+                  height="210"
+                  style={{ objectFit: 'contain' }}
+                />
+              </picture>
+              <span className="xeque-offer-eyebrow">LIVRO DIGITAL</span>
+              <h2 className="xeque-offer-card-title">XEQUE SOCIAL</h2>
+              <p className="xeque-offer-card-subtitle">
+                180 páginas para ler a posição antes de entregar o movimento.
+              </p>
+            </div>
+
+            {/* STATUS BADGE: PRE-LAUNCH OR RELEASED */}
+            <div className="xeque-offer-badge-pill">
+              {!isLaunched ? (
+                <>
+                  <IconLock size={14} className="xeque-ticket-icon" />
+                  <span>Abertura em 07/09/2026 às 20h.</span>
+                </>
+              ) : (
+                <>
+                  <IconLightning size={14} className="xeque-ticket-icon" />
+                  <span>Acesso imediato</span>
+                </>
+              )}
+            </div>
+
+            {/* HUGE PRICE DISPLAY: R$ 37,00 */}
+            <div className="xeque-offer-big-price">
+              <span className="xeque-price-currency">R$</span>
+              <span className="xeque-price-val">37</span>
+              <span className="xeque-price-cents">,00</span>
+            </div>
+            <p className="xeque-offer-payment-label">pagamento único</p>
+
+            {/* CONTENT CHECKLIST */}
+            <ul className="xeque-offer-features-list">
+              <li>
+                <IconCheck size={16} className="xeque-feat-check" />
+                <span>Livro digital com 180 páginas</span>
+              </li>
+
+              <li>
+                <IconCheck size={16} className="xeque-feat-check" />
+                <span>30 capítulos organizados em 5 partes</span>
+              </li>
+
+              <li>
+                <IconCheck size={16} className="xeque-feat-check" />
+                <span>Prática orientada de 7 dias</span>
+              </li>
+
+              <li>
+                <IconCheck size={16} className="xeque-feat-check" />
+                <span>Ferramentas para separar fato, interpretação e reação</span>
+              </li>
+
+              <li>
+                <IconCheck size={16} className="xeque-feat-check" />
+                <span>Acesso vitalício</span>
+              </li>
+
+              <li>
+                <IconCheck size={16} className="xeque-feat-check" />
+                <span>Garantia de 7 dias</span>
+              </li>
+            </ul>
+
+            {/* CTA BUTTON (LOCKED OR ACTIVE WITH HOTMART URL) */}
+            {!isLaunched ? (
+              <button
+                type="button"
+                className="xeque-cta-btn xeque-offer-cta-btn xeque-cta-btn-locked"
+              
+                  disabled
+                  aria-disabled="true">
+                <IconLock size={16} className="xeque-lock-icon" />
+                <span>LIBERA DIA 7 ÀS 20H</span>
+              </button>
+            ) : (
+              <a
+                href={HOTMART_CHECKOUT_URL} aria-disabled="false"
+                className="xeque-cta-btn xeque-offer-cta-btn"
+              >
+                <span>QUERO ACESSAR O XEQUE SOCIAL</span>
+              </a>
+            )}
+
+            <p className="xeque-offer-micro-sub">
+              {!isLaunched ? "Abertura em 07/09/2026 às 20h." : "Acesso liberado após a confirmação do pagamento."}
+            </p>
+
+            {/* SECURITY TRUST BADGES */}
+            <div className="xeque-offer-trust-footer">
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <IconLock size={12} /> Pagamento processado pela Hotmart
+              </span>
+              <span>•</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <IconLightning size={12} /> {!isLaunched ? "Acesso Vitalício" : "Acesso Vitalício"}
+              </span>
+              <span>•</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <IconShield size={12} /> 7 Dias de Garantia
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ==================================================================
+          GARANTIA (7 DIAS)
+          ================================================================== */}
+      <section className="xeque-section xeque-guarantee-section">
+        <div className="xeque-container-narrow">
+          <div className="xeque-guarantee-editorial">
+            <IconShield size={44} className="xeque-guarantee-svg-icon" />
+            <div>
+              <h3 className="xeque-guarantee-title">
+                Você tem 7 dias para decidir se esta obra faz sentido para você.
+              </h3>
+              <p className="xeque-guarantee-desc">
+                Acesse o Xeque Social, conheça o conteúdo e comece a aplicação. Se, dentro do prazo legal de 7 dias, entender que o livro não faz sentido para você, poderá solicitar o reembolso pelos canais da plataforma de pagamento.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -789,10 +807,11 @@ export function XequeSocial() {
               return (
                 <div key={index} className="xeque-faq-editorial-item">
                   <button
-                    type="button"
-                    className="xeque-faq-editorial-question"
-                    onClick={() => toggleFaq(index)}
-                  >
+                type="button"
+                className="xeque-faq-editorial-question"
+                onClick={() => toggleFaq(index)}
+                aria-expanded={openFaqIndex === index}
+              >
                     <span>{faq.q}</span>
                     <span className="xeque-faq-editorial-symbol">
                       {isOpen ? '−' : '+'}
@@ -835,14 +854,15 @@ export function XequeSocial() {
               type="button"
               className="xeque-cta-btn xeque-cta-btn-locked"
               style={{ maxWidth: '440px' }}
-              onClick={handleCtaClick}
-            >
+            
+                  disabled
+                  aria-disabled="true">
               <IconLock size={16} className="xeque-lock-icon" />
               <span>LIBERA DIA 7 ÀS 20H</span>
             </button>
           ) : (
             <a
-              href={HOTMART_CHECKOUT_URL}
+              href={HOTMART_CHECKOUT_URL} aria-disabled="false"
               className="xeque-cta-btn"
               style={{ maxWidth: '440px' }}
             >
@@ -851,7 +871,7 @@ export function XequeSocial() {
           )}
 
           <p className="xeque-offer-trust-footer" style={{ marginTop: '1.25rem' }}>
-            {!isLaunched ? "Liberação automática em 07/09/2026 às 20h" : "Acesso imediato • Pagamento único • Garantia de 7 dias"}
+            {!isLaunched ? "Abertura em 07/09/2026 às 20h." : "Acesso liberado após a confirmação do pagamento. • Garantia de 7 dias"}
           </p>
         </div>
       </section>
