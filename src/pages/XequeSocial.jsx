@@ -98,7 +98,7 @@ const faqs = [
             {/* EYEBROW */}
             <div className="xeque-hero-brand-tag">
               <IconChessPawn size={15} />
-              <span>XEQUE SOCIAL • O MANUAL DOS SEGUNDOS ANTES DA REAÇÃO</span>
+              <span>XEQUE SOCIAL • LIVRO DIGITAL</span>
               {!isLaunched && (
                 <span className="xeque-hero-lock-badge">
                   <IconLock size={12} style={{ display: 'inline', marginRight: '4px' }} />
@@ -109,12 +109,12 @@ const faqs = [
 
             {/* HEADLINE */}
             <h1 className="xeque-hero-left-headline">
-              Perceba o <span className="xeque-gold-highlight">xeque</span> antes que a sua reação escolha por você.
+              Pare de reagir no automático. Aprenda a ler a situação antes de escolher o próximo movimento.
             </h1>
 
             {/* SUBHEADLINE */}
             <p className="xeque-hero-left-subheadline">
-              Um livro de 180 páginas para separar fatos de interpretações, reconhecer pressão e recuperar os segundos necessários para decidir quando responder, limitar, recuar ou encerrar.
+              Um livro prático de 180 páginas para separar fato de interpretação, reconhecer pressão e escolher uma primeira resposta com mais clareza — sem manipulação e sem leitura mental.
             </p>
 
             {/* ATTRIBUTES LINE */}
