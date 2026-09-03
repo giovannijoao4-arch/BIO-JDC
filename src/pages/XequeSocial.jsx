@@ -52,32 +52,44 @@ const faqs = [
     {
       title: "Sumário",
       tag: "Estrutura Geral",
-      desc: "Visão integrada dos 30 capítulos organizados em 5 partes estratégicas."
+      desc: "Visão integrada dos 30 capítulos organizados em 5 partes.",
+      src: "/images/xeque-social-sumario.png",
+      alt: "Página de sumário do livro Xeque Social, com 30 capítulos organizados em 5 partes."
     },
     {
       title: "Abertura do Prólogo",
-      tag: "Introdução",
-      desc: "A fundação sobre a recuperação dos segundos entre o estímulo e a reação."
+      tag: "Prólogo",
+      desc: "A abertura da obra e o intervalo entre o que acontece e a sua resposta.",
+      src: "/images/xeque-social-prologo.png",
+      alt: "Página de abertura do prólogo Os segundos antes da reação, do livro Xeque Social."
     },
     {
       title: "Abertura de Capítulo",
-      tag: "Análise de Padrão",
-      desc: "Estudo detalhado de urgência, culpa, provocação, silêncio e limites."
+      tag: "Leitura da Posição",
+      desc: "Abertura editorial de capítulo dedicada à leitura da posição antes da reação.",
+      src: "/images/xeque-social-capitulo.png",
+      alt: "Página de abertura de capítulo Leia a posição antes de reagir, do livro Xeque Social."
     },
     {
       title: "Fato x interpretação",
       tag: "Leitura Aplicada",
-      desc: "Ferramentas para distinguir o que aconteceu do que você interpretou."
+      desc: "Uma ferramenta visual para separar observação, interpretação e leitura consciente.",
+      src: "/images/xeque-social-fato-interpretacao.png",
+      alt: "Página Fato x interpretação do livro Xeque Social, comparando fato, interpretação e leitura consciente."
     },
     {
       title: "Prática Orientada",
-      tag: "Guia de 7 Dias",
-      desc: "Exercícios diários estruturados para treino prático de percepção social."
+      tag: "7 Dias",
+      desc: "Uma prática de observação estruturada ao longo de sete dias.",
+      src: "/images/xeque-social-pratica-7-dias.png",
+      alt: "Página Prática Orientada, 7 dias de observação, do livro Xeque Social."
     },
     {
       title: "Notas e Referências",
       tag: "Fundamentação",
-      desc: "Base teórica e referências de estudo em comportamento humano aplicado."
+      desc: "A seção editorial destinada às notas, referências e critérios de leitura.",
+      src: "/images/xeque-social-referencias.png",
+      alt: "Página de notas e referências do livro Xeque Social."
     }
   ];
 
@@ -85,16 +97,17 @@ const faqs = [
 
   return (
     <div className="xeque-social-page">
-      
+
       {/* ==================================================================
           1. REFORMULATED EDITORIAL HERO SECTION
           ================================================================== */}
       <section className="xeque-editorial-hero-section">
+        <div className="xeque-hero-responsive-bg" aria-hidden="true" />
         <div className="xeque-editorial-hero-container">
-          
+
           {/* LEFT COLUMN: EDITORIAL COPY & CALL TO ACTION */}
           <div className="xeque-editorial-hero-copy">
-            
+
             {/* EYEBROW */}
             <div className="xeque-hero-brand-tag">
               <IconChessPawn size={15} />
@@ -109,12 +122,15 @@ const faqs = [
 
             {/* HEADLINE */}
             <h1 className="xeque-hero-left-headline">
-              Pare de reagir no automático. Aprenda a ler a situação antes de escolher o próximo movimento.
+              Pare de reagir no automático.
+              <span className="xeque-hero-headline-second">
+                <span className="xeque-gold-highlight">Leia a situação</span> antes de escolher seu próximo movimento.
+              </span>
             </h1>
 
             {/* SUBHEADLINE */}
             <p className="xeque-hero-left-subheadline">
-              Um livro prático de 180 páginas para separar fato de interpretação, reconhecer pressão e escolher uma primeira resposta com mais clareza — sem manipulação e sem leitura mental.
+              Um livro prático de 180 páginas para separar fato de interpretação, reconhecer pressão e escolher uma primeira resposta com mais clareza, sem manipulação e sem leitura mental.
             </p>
 
             {/* ATTRIBUTES LINE */}
@@ -123,31 +139,13 @@ const faqs = [
               <span className="xeque-attr-dot">•</span>
               <span>5 partes</span>
               <span className="xeque-attr-dot">•</span>
-              <span className="xeque-gold-text">Prática orientada de 7 dias</span>
+              <span className="xeque-gold-text">Prática de 7 dias</span>
             </div>
 
             {/* EDITORIAL QUOTE */}
             <blockquote className="xeque-hero-editorial-quote">
               "Leia a posição antes de entregar o movimento."
             </blockquote>
-
-            {/* MOBILE ONLY BOOK COVER PLACE */}
-            <div className="xeque-hero-mobile-book-wrapper">
-              <picture>
-                <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
-                <img
-                  src="/images/xeque-social-capa-oficial.png"
-                  alt="Capa do livro digital Xeque Social, de João Giovanni"
-                  className="xeque-hero-book-cover-img"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  width="440"
-                  height="440"
-                  style={{ objectFit: 'contain' }}
-                />
-              </picture>
-            </div>
 
             {/* CALL TO ACTION BUTTON (LOCKED OR ACTIVE) */}
             <div className="xeque-hero-cta-wrapper">
@@ -175,29 +173,11 @@ const faqs = [
 
           </div>
 
-          {/* RIGHT COLUMN: DESKTOP OFFICIAL BOOK COVER MOCKUP */}
-          <div className="xeque-editorial-hero-media">
-            <picture>
-              <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
-              <img
-                src="/images/xeque-social-capa-oficial.png"
-                alt="Capa do livro digital Xeque Social, de João Giovanni"
-                className="xeque-hero-book-cover-img"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                width="440"
-                height="440"
-                style={{ objectFit: 'contain' }}
-              />
-            </picture>
-          </div>
-
         </div>
       </section>
 
       {/* ==================================================================
-          SEÇÃO 1 — RECONHECIMENTO
+          SEÇÃO 1, RECONHECIMENTO
           ================================================================== */}
       <section className="xeque-section xeque-section-reconhecimento">
         <div className="xeque-container-editorial">
@@ -249,7 +229,7 @@ const faqs = [
       </section>
 
       {/* ==================================================================
-          SEÇÃO 2 — O CONCEITO (TEXTURA DE PAPEL CLARO)
+          SEÇÃO 2, O CONCEITO (TEXTURA DE PAPEL CLARO)
           ================================================================== */}
       <section className="xeque-section xeque-section-conceito">
         <div className="xeque-container-editorial">
@@ -277,7 +257,7 @@ const faqs = [
       </section>
 
       {/* ==================================================================
-          SEÇÃO — UMA POSIÇÃO, TRÊS LEITURAS
+          SEÇÃO, UMA POSIÇÃO, TRÊS LEITURAS
           ================================================================== */}
       <section className="xeque-section xeque-section-tres-leituras">
         <div className="xeque-container">
@@ -364,7 +344,7 @@ const faqs = [
       <section className="xeque-section xeque-section-pordentro">
         <div className="xeque-container-editorial">
           <span className="xeque-tag-badge">POR DENTRO DA OBRA</span>
-          
+
           <h2 className="xeque-headline-medium">
             Não é um manual de respostas prontas.
           </h2>
@@ -426,16 +406,13 @@ const faqs = [
               <div key={index} className={`xeque-gallery-card ${index % 2 === 0 ? 'card-enlarged' : 'card-detail'}`}>
                 <div className="xeque-gallery-img-box">
                   <picture>
-                    <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
                     <img
-                      src="/images/xeque-social-capa-oficial.png"
-                      alt="Capa do livro digital Xeque Social, de João Giovanni"
+                      src={item.src}
+                      alt={item.alt}
                       className="xeque-gallery-book-img"
                       loading="lazy"
                       decoding="async"
-                      width="220"
-                      height="220"
-                      style={{ objectFit: 'contain' }}
+
                     />
                   </picture>
                 </div>
@@ -460,16 +437,13 @@ const faqs = [
                     <div className="xeque-gallery-card">
                       <div className="xeque-gallery-img-box">
                         <picture>
-                          <source srcSet="/images/xeque-social-capa-oficial.webp" type="image/webp" />
                           <img
-                            src="/images/xeque-social-capa-oficial.png"
-                            alt="Capa do livro digital Xeque Social, de João Giovanni"
+                            src={item.src}
+                            alt={item.alt}
                             className="xeque-gallery-book-img"
                             loading="lazy"
                             decoding="async"
-                            width="180"
-                            height="180"
-                            style={{ objectFit: 'contain' }}
+
                           />
                         </picture>
                       </div>
@@ -576,7 +550,7 @@ const faqs = [
 
           {/* TWO SOBER EDITORIAL COLUMNS (NO RED/GREEN BOXES) */}
           <div className="xeque-transf-editorial-columns">
-            
+
             {/* COLUMN 1: QUANDO A REAÇÃO DECIDE */}
             <div className="xeque-transf-col xeque-transf-col-reacao">
               <h3 className="xeque-transf-col-title">QUANDO A REAÇÃO DECIDE</h3>
@@ -653,7 +627,7 @@ const faqs = [
             </div>
           </div>
 
-          {/* FAIXA DISCRETA — PONTE PARA O JOGO DE CINTURA (SEM SEGUNDA OFERTA) */}
+          {/* FAIXA DISCRETA, PONTE PARA O JOGO DE CINTURA (SEM SEGUNDA OFERTA) */}
           <div className="xeque-universo-hierarchy-banner">
             <span className="xeque-hierarchy-badge">A PORTA DE ENTRADA DO UNIVERSO JOGO DE CINTURA</span>
             <h3 className="xeque-hierarchy-title">O Xeque Social é a entrada. O Jogo de Cintura é o tabuleiro completo.</h3>
@@ -662,7 +636,7 @@ const faqs = [
                 O Xeque Social ensina a reconhecer a posição, separar fato de interpretação e escolher uma primeira resposta mais consciente.
               </p>
               <p className="xeque-hierarchy-text">
-                O Protocolo LANCE — sistema central do Jogo de Cintura — aprofunda essa leitura e a transforma em movimento sustentado.
+                O Protocolo LANCE, sistema central do Jogo de Cintura, aprofunda essa leitura e a transforma em movimento sustentado.
               </p>
               <p className="xeque-hierarchy-text">
                 Você não precisa conhecer o JDC para aplicar o Xeque Social. E o Xeque Social não tenta substituir a formação completa.
@@ -679,7 +653,7 @@ const faqs = [
       <section className="xeque-section xeque-offer-section" id="oferta">
         <div className="xeque-container">
           <div className="xeque-offer-main-card">
-            
+
             {/* OFFICIAL NEW COVER MOCKUP HEADER */}
             <div className="xeque-offer-card-top">
               <picture>
