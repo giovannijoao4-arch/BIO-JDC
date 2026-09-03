@@ -26,8 +26,8 @@ const faqs = [
       a: "Não. O Xeque Social não ensina controle, leitura mental ou frases para conduzir pessoas. Ele ensina leitura contextual, responsabilidade pela própria reação e respeito aos limites."
     },
     {
-      q: "O livro inclui o Protocolo LANCE?",
-      a: "Não como método completo. O Xeque Social entrega a leitura inicial e a primeira resposta. O Protocolo LANCE é o sistema central da formação Jogo de Cintura."
+      q: "O Xeque Social substitui o Jogo de Cintura?",
+      a: "Não. O Xeque Social é a entrada prática para desenvolver leitura social e uma primeira resposta consciente. O Jogo de Cintura é a formação completa."
     },
     {
       q: "Quando recebo acesso?",
@@ -326,6 +326,39 @@ const faqs = [
 
 
       {/* ==================================================================
+          O QUE VOCÊ APRENDE AO LONGO DO LIVRO (5 EIXOS)
+          ================================================================== */}
+      <section className="xeque-section xeque-section-aprendizado">
+        <div className="xeque-container">
+          <span className="xeque-tag-badge">OS 5 EIXOS DA OBRA</span>
+          <h2 className="xeque-headline-medium">O que você aprende ao longo do livro</h2>
+
+          <div className="xeque-eixos-grid">
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">01</span>
+              <p className="xeque-eixo-text">Ler contexto, posição, hierarquia e acordos invisíveis.</p>
+            </div>
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">02</span>
+              <p className="xeque-eixo-text">Separar acontecimentos de interpretações e hipóteses emocionais.</p>
+            </div>
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">03</span>
+              <p className="xeque-eixo-text">Reconhecer pressão, culpa, silêncio, urgência e invasão de limites.</p>
+            </div>
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">04</span>
+              <p className="xeque-eixo-text">Escolher entre perguntar, afirmar, adiar, negar, limitar ou sair.</p>
+            </div>
+            <div className="xeque-eixo-card">
+              <span className="xeque-eixo-num">05</span>
+              <p className="xeque-eixo-text">Avaliar o movimento realizado e reconstruir o próprio eixo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================================================================
           POR DENTRO DA OBRA & FICHA TÉCNICA PREMIUM
           ================================================================== */}
       <section className="xeque-section xeque-section-pordentro">
@@ -374,38 +407,7 @@ const faqs = [
         </div>
       </section>
 
-      {/* ==================================================================
-          O QUE VOCÊ APRENDE AO LONGO DO LIVRO (5 EIXOS)
-          ================================================================== */}
-      <section className="xeque-section xeque-section-aprendizado">
-        <div className="xeque-container">
-          <span className="xeque-tag-badge">OS 5 EIXOS DA OBRA</span>
-          <h2 className="xeque-headline-medium">O que você aprende ao longo do livro</h2>
 
-          <div className="xeque-eixos-grid">
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">01</span>
-              <p className="xeque-eixo-text">Ler contexto, posição, hierarquia e acordos invisíveis.</p>
-            </div>
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">02</span>
-              <p className="xeque-eixo-text">Separar acontecimentos de interpretações e hipóteses emocionais.</p>
-            </div>
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">03</span>
-              <p className="xeque-eixo-text">Reconhecer pressão, culpa, silêncio, urgência e invasão de limites.</p>
-            </div>
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">04</span>
-              <p className="xeque-eixo-text">Escolher entre perguntar, afirmar, adiar, negar, limitar ou sair.</p>
-            </div>
-            <div className="xeque-eixo-card">
-              <span className="xeque-eixo-num">05</span>
-              <p className="xeque-eixo-text">Avaliar o movimento realizado e reconstruir o próprio eixo.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ==================================================================
           GALERIA EDITORIAL DA OBRA (TEXTURA DE PAPEL CLARO / REAIS)
@@ -831,10 +833,11 @@ const faqs = [
               return (
                 <div key={index} className="xeque-faq-editorial-item">
                   <button
-                    type="button"
-                    className="xeque-faq-editorial-question"
-                    onClick={() => toggleFaq(index)}
-                  >
+                type="button"
+                className="xeque-faq-editorial-question"
+                onClick={() => toggleFaq(index)}
+                aria-expanded={openFaqIndex === index}
+              >
                     <span>{faq.q}</span>
                     <span className="xeque-faq-editorial-symbol">
                       {isOpen ? '−' : '+'}
