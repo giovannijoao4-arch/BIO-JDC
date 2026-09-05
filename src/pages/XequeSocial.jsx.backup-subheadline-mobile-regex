@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useLaunchStatus } from '../hooks/useLaunchStatus';
 import { IconChessPawn, IconLock, IconLightning, IconShield, IconCheck } from '../components/Icons';
 import '../styles/xeque-social.css';
@@ -129,13 +129,9 @@ const faqs = [
             </h1>
 
             {/* SUBHEADLINE */}
-            <p className="xeque-hero-left-subheadline xeque-subheadline-desktop">
-  O Xeque Social é um livro digital para quem quer separar fatos de interpretações, reconhecer o que uma situação realmente exige e escolher uma primeira resposta mais consciente, antes de falar, ceder, explodir ou se explicar demais.
-</p>
-
-<p className="xeque-hero-left-subheadline xeque-subheadline-mobile">
-  Um livro digital para separar fatos de interpretações, entender o que a situação exige e escolher uma resposta mais consciente antes que o impulso decida por você.
-</p>
+            <p className="xeque-hero-left-subheadline">
+              O Xeque Social é um livro digital para quem quer separar fatos de interpretações, reconhecer o que uma situação realmente exige e escolher uma primeira resposta mais consciente, antes de falar, ceder, explodir ou se explicar demais.
+            </p>
 
             {/* ATTRIBUTES LINE */}
             <div className="xeque-hero-attributes-line">

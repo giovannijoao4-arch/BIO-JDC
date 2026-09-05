@@ -14,8 +14,8 @@ export function XequeSocial() {
 
 const faqs = [
     {
-      q: "O Xeque Social é um livro físico?",
-      a: "Não. O Xeque Social é um livro digital. São 188 páginas, divididas em 30 capítulos e 5 partes, com o Protocolo LANCE e uma prática orientada de 7 dias."
+      q: "O Xeque Social é um curso?",
+      a: "Não. É um livro digital de 180 páginas, dividido em 30 capítulos e 5 partes, com uma prática orientada de 7 dias."
     },
     {
       q: "Preciso ser extrovertido?",
@@ -122,20 +122,16 @@ const faqs = [
 
             {/* HEADLINE */}
             <h1 className="xeque-hero-left-headline">
-              Leia o que está acontecendo
+              Pare de reagir no automático.
               <span className="xeque-hero-headline-second">
-                <span className="xeque-gold-highlight">antes que sua reação</span> decida por você.
+                <span className="xeque-gold-highlight">Leia a situação</span> antes de escolher seu próximo movimento.
               </span>
             </h1>
 
             {/* SUBHEADLINE */}
-            <p className="xeque-hero-left-subheadline xeque-subheadline-desktop">
-  O Xeque Social é um livro digital para quem quer separar fatos de interpretações, reconhecer o que uma situação realmente exige e escolher uma primeira resposta mais consciente, antes de falar, ceder, explodir ou se explicar demais.
-</p>
-
-<p className="xeque-hero-left-subheadline xeque-subheadline-mobile">
-  Um livro digital para separar fatos de interpretações, entender o que a situação exige e escolher uma resposta mais consciente antes que o impulso decida por você.
-</p>
+            <p className="xeque-hero-left-subheadline">
+              Um livro prático de 180 páginas para separar fato de interpretação, reconhecer pressão e escolher uma primeira resposta com mais clareza, sem manipulação e sem leitura mental.
+            </p>
 
             {/* ATTRIBUTES LINE */}
             <div className="xeque-hero-attributes-line">
@@ -165,13 +161,13 @@ const faqs = [
                 </button>
               ) : (
                 <a href={HOTMART_CHECKOUT_URL} aria-disabled="false" className="xeque-cta-btn">
-                  <span>QUERO LER ANTES DE REAGIR</span>
+                  <span>QUERO ACESSAR O XEQUE SOCIAL</span>
                 </a>
               )}
 
               {/* BELOW-BUTTON MICROCOPY */}
               <p className="xeque-hero-micro-footer">
-                Livro digital • Prática orientada de 7 dias + acesso vitalício • Garantia de 7 dias
+                Livro digital • Acesso vitalício • Garantia de 7 dias
               </p>
             </div>
 
@@ -240,21 +236,21 @@ const faqs = [
           <span className="xeque-tag-badge xeque-badge-paper">O QUE É UM XEQUE SOCIAL?</span>
 
           <h2 className="xeque-headline-medium xeque-title-paper">
-            O xeque começa quando a situação pressiona você a reagir antes de entender.
+            O momento em que uma interação começa a restringir suas escolhas.
           </h2>
 
           <div className="xeque-conceito-body-text">
             <p>
-              Uma mensagem curta. Um silêncio diferente. Uma provocação disfarçada de brincadeira. Uma cobrança inesperada. Uma mudança de comportamento que você ainda não sabe explicar.
+              Um xeque social pode aparecer como urgência, provocação, culpa, silêncio, exposição, estruturação de narrativa, insistência ou mudança repentina de comportamento.
             </p>
             <p>
-              Em poucos segundos, sua cabeça tenta preencher o que ainda não sabe. O problema começa quando essa interpretação passa a ser tratada como fato e decide sua reação.
+              Você ainda pode escolher. Mas, se não perceber a posição, provavelmente reagirá como se só existisse uma saída.
             </p>
           </div>
 
           <div className="xeque-conceito-highlight-box">
             <p className="xeque-conceito-quote">
-              "Você não precisa adivinhar o que o outro pensa. Precisa impedir que uma hipótese escolha o seu movimento por você."
+              "O Xeque Social não ensina a adivinhar pensamentos. Ele ensina a observar o tabuleiro antes de movimentar a própria peça."
             </p>
           </div>
         </div>
@@ -268,7 +264,7 @@ const faqs = [
           <span className="xeque-tag-badge">UMA POSIÇÃO, TRÊS LEITURAS</span>
 
           <h2 className="xeque-headline-medium">
-            O que aconteceu é uma coisa. O que sua cabeça concluiu é outra.
+            Veja a diferença entre interpretar e ler a posição.
           </h2>
 
           <p className="xeque-tres-leituras-intro">
@@ -280,21 +276,21 @@ const faqs = [
             <div className="xeque-tres-leituras-card">
               <span className="xeque-tres-leituras-label">FATO OBSERVÁVEL</span>
               <p className="xeque-tres-leituras-text">
-                A mensagem foi visualizada. Ainda não houve resposta.
+                A mensagem foi visualizada e ainda não houve resposta.
               </p>
             </div>
 
             <div className="xeque-tres-leituras-card xeque-tres-leituras-card-interp">
               <span className="xeque-tres-leituras-label">INTERPRETAÇÃO AUTOMÁTICA</span>
               <p className="xeque-tres-leituras-text">
-                Ela está me ignorando. Fiz alguma coisa. Preciso resolver isso agora.
+                Ela está me ignorando. Preciso cobrar agora.
               </p>
             </div>
 
             <div className="xeque-tres-leituras-card xeque-tres-leituras-card-leitura">
               <span className="xeque-tres-leituras-label xeque-gold-text">LEITURA CONSCIENTE</span>
               <p className="xeque-tres-leituras-text">
-                A causa da demora ainda é desconhecida. Sem contexto, qualquer certeza é uma hipótese. Observe antes de transformar ansiedade em movimento.
+                A causa da demora ainda não é conhecida. Não transforme hipótese em fato. Preserve sua rotina, observe o padrão e só aborde se isso afetar um acordo real.
               </p>
             </div>
 
@@ -302,7 +298,7 @@ const faqs = [
 
           <div className="xeque-tres-leituras-fechamento">
             <p>
-              É nesse espaço entre o fato e a interpretação que você recupera o comando do próximo movimento.
+              Ler a posição não é adivinhar intenção. É impedir que uma interpretação incompleta escolha seu movimento.
             </p>
           </div>
         </div>
@@ -315,28 +311,28 @@ const faqs = [
       <section className="xeque-section xeque-section-aprendizado">
         <div className="xeque-container">
           <span className="xeque-tag-badge">OS 5 EIXOS DA OBRA</span>
-          <h2 className="xeque-headline-medium">188 páginas para trabalhar os segundos que podem mudar uma conversa inteira.</h2>
+          <h2 className="xeque-headline-medium">O que você aprende ao longo do livro</h2>
 
           <div className="xeque-eixos-grid">
             <div className="xeque-eixo-card">
               <span className="xeque-eixo-num">01</span>
-              <p className="xeque-eixo-text">Enxergar o que realmente aconteceu antes de acrescentar uma história.</p>
+              <p className="xeque-eixo-text">Ler contexto, posição, hierarquia e acordos invisíveis.</p>
             </div>
             <div className="xeque-eixo-card">
               <span className="xeque-eixo-num">02</span>
-              <p className="xeque-eixo-text">Separar fato, interpretação, emoção e reação.</p>
+              <p className="xeque-eixo-text">Separar acontecimentos de interpretações e hipóteses emocionais.</p>
             </div>
             <div className="xeque-eixo-card">
               <span className="xeque-eixo-num">03</span>
-              <p className="xeque-eixo-text">Reconhecer padrões no comportamento do outro e nas suas próprias reações.</p>
+              <p className="xeque-eixo-text">Reconhecer pressão, culpa, silêncio, urgência e invasão de limites.</p>
             </div>
             <div className="xeque-eixo-card">
               <span className="xeque-eixo-num">04</span>
-              <p className="xeque-eixo-text">Entender quando perguntar, esperar, conversar, recusar, limitar ou se afastar.</p>
+              <p className="xeque-eixo-text">Escolher entre perguntar, afirmar, adiar, negar, limitar ou sair.</p>
             </div>
             <div className="xeque-eixo-card">
               <span className="xeque-eixo-num">05</span>
-              <p className="xeque-eixo-text">Examinar o resultado do movimento e ajustar sem abandonar o próprio eixo.</p>
+              <p className="xeque-eixo-text">Avaliar o movimento realizado e reconstruir o próprio eixo.</p>
             </div>
           </div>
         </div>
@@ -350,17 +346,17 @@ const faqs = [
           <span className="xeque-tag-badge">POR DENTRO DA OBRA</span>
 
           <h2 className="xeque-headline-medium">
-            Uma frase pronta acaba quando a situação muda. Um critério continua com você.
+            Não é um manual de respostas prontas.
           </h2>
 
           <p className="xeque-subheadline" style={{ marginTop: '1rem', maxWidth: '780px' }}>
-            O Xeque Social reúne 188 páginas e 30 capítulos organizados em 5 partes para levar você da reação automática a um processo consciente de leitura, decisão e revisão.
+            Xeque Social é um livro digital de 180 páginas sobre leitura social e posicionamento. Ele foi criado para ajudar você a perceber padrões, separar o que aconteceu da interpretação do momento e escolher uma primeira resposta mais consciente.
           </p>
 
           {/* FICHA TÉCNICA DE CATALOGO PREMIUM */}
           <div className="xeque-ficha-tecnica-grid">
             <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">188</span>
+              <span className="xeque-ficha-val">180</span>
               <span className="xeque-ficha-lbl">páginas</span>
             </div>
             <div className="xeque-ficha-item">
@@ -372,8 +368,8 @@ const faqs = [
               <span className="xeque-ficha-lbl">partes</span>
             </div>
             <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">Protocolo LANCE</span>
-              <span className="xeque-ficha-lbl">5 etapas de decisão</span>
+              <span className="xeque-ficha-val">Leitura</span>
+              <span className="xeque-ficha-lbl">APLICADA</span>
             </div>
             <div className="xeque-ficha-item">
               <span className="xeque-ficha-val">Prática de 7 dias</span>
@@ -398,10 +394,10 @@ const faqs = [
           ================================================================== */}
       <section className="xeque-section xeque-section-galeria-papel">
         <div className="xeque-container">
-          <span className="xeque-tag-badge xeque-badge-paper">PÁGINAS REAIS DO XEQUE SOCIAL</span>
-          <h2 className="xeque-headline-medium xeque-title-paper">Você não precisa imaginar o que está comprando.</h2>
+          <span className="xeque-tag-badge xeque-badge-paper">VISUALIZAÇÃO DA OBRA</span>
+          <h2 className="xeque-headline-medium xeque-title-paper">Galeria Editorial</h2>
           <p className="xeque-subheadline" style={{ color: '#44403C', marginTop: '0.5rem', marginBottom: '2.5rem' }}>
-            Veja páginas reais do material, exercícios e ferramentas que você encontrará durante a leitura.
+            Explore a estrutura interna e os elementos que compõem a obra.
           </p>
 
           {/* DESKTOP GRID WITH ENLARGED AND CLOSE-UP DETAIL CARDS */}
@@ -508,10 +504,10 @@ const faqs = [
         <div className="xeque-container">
           <div className="xeque-credibilidade-box">
 
-            <span className="xeque-tag-badge">SEM ADIVINHAÇÃO. SEM LEITURA MENTAL.</span>
+            <span className="xeque-tag-badge">CRITÉRIO DE LEITURA</span>
 
             <h2 className="xeque-headline-medium">
-              Leia sinais sem transformar suposição em certeza.
+              Fundamentado sem prometer leitura mental.
             </h2>
 
             <p className="xeque-credibilidade-desc">
@@ -523,17 +519,17 @@ const faqs = [
             <div className="xeque-credibilidade-items">
               <div className="xeque-credibilidade-item">
                 <span>01</span>
-                <p>Fato antes da interpretação</p>
+                <p>Observação antes da conclusão</p>
               </div>
 
               <div className="xeque-credibilidade-item">
                 <span>02</span>
-                <p>Contexto antes da certeza</p>
+                <p>Exercício antes da resposta automática</p>
               </div>
 
               <div className="xeque-credibilidade-item">
                 <span>03</span>
-                <p>Referências e limites apresentados com transparência</p>
+                <p>Referências apresentadas com transparência</p>
               </div>
             </div>
 
@@ -545,37 +541,37 @@ const faqs = [
           <span className="xeque-tag-badge">MUDANÇA DE POSICIONAMENTO</span>
 
           <h2 className="xeque-headline-medium">
-            O objetivo não é transformar você em alguém frio.
+            Você não precisa vencer toda conversa.
           </h2>
 
           <p className="xeque-subheadline" style={{ marginTop: '0.5rem', marginBottom: '3rem' }}>
-            É fazer a sua reação chegar depois da sua consciência.
+            Precisa parar de perder posição sem perceber.
           </p>
 
           {/* TWO SOBER EDITORIAL COLUMNS (NO RED/GREEN BOXES) */}
           <div className="xeque-transf-editorial-columns">
 
-            {/* COLUMN 1: QUANDO O IMPULSO DECIDE */}
+            {/* COLUMN 1: QUANDO A REAÇÃO DECIDE */}
             <div className="xeque-transf-col xeque-transf-col-reacao">
-              <h3 className="xeque-transf-col-title">QUANDO O IMPULSO DECIDE</h3>
+              <h3 className="xeque-transf-col-title">QUANDO A REAÇÃO DECIDE</h3>
               <ul className="xeque-transf-list">
-                <li>• Responde para aliviar a ansiedade.</li>
-                <li>• Se explica antes mesmo de ser acusado.</li>
-                <li>• Aceita para evitar conflito e se arrepende depois.</li>
-                <li>• Trata interpretação como se fosse certeza.</li>
-                <li>• Encontra a resposta certa quando a situação já passou.</li>
+                <li>• Pressa para responder.</li>
+                <li>• Explicações além do necessário.</li>
+                <li>• Limites impostos tarde demais.</li>
+                <li>• Conclusões baseadas somente na emoção.</li>
+                <li>• Arrependimento depois que a conversa termina.</li>
               </ul>
             </div>
 
-            {/* COLUMN 2: QUANDO VOCÊ RECUPERA A LEITURA */}
+            {/* COLUMN 2: QUANDO VOCÊ LÊ A POSIÇÃO */}
             <div className="xeque-transf-col xeque-transf-col-leitura">
-              <h3 className="xeque-transf-col-title xeque-gold-text">QUANDO VOCÊ RECUPERA A LEITURA</h3>
+              <h3 className="xeque-transf-col-title xeque-gold-text">QUANDO VOCÊ LÊ A POSIÇÃO</h3>
               <ul className="xeque-transf-list">
-                <li>• Distingue exatamente fato de hipótese.</li>
-                <li>• Percebe a emoção sem transformá-la em ordem.</li>
-                <li>• Procura contexto antes de concluir.</li>
-                <li>• Escolhe uma primeira resposta proporcional.</li>
-                <li>• Termina a situação entendendo por que escolheu aquele movimento.</li>
+                <li>• Distingue fato de hipótese.</li>
+                <li>• Compra tempo sem desaparecer.</li>
+                <li>• Reconhece pressão com antecedência.</li>
+                <li>• Escolhe o menor movimento necessário.</li>
+                <li>• Encerra situações sem punição ou espetáculo.</li>
               </ul>
             </div>
 
@@ -607,20 +603,20 @@ const faqs = [
             <div className="xeque-author-info">
               <span className="xeque-author-tag">POR TRÁS DO XEQUE SOCIAL</span>
               <h3 className="xeque-author-name-title">
-                Eu não criei este livro porque sempre soube o que fazer.
+                Eu sabia conversar. Mas descobri que isso não bastava.
               </h3>
               <div className="xeque-author-bio-paragraphs">
                 <p>
-                  Durante anos estudando comportamento humano, percebi que muitos dos nossos piores movimentos não nascem da falta de inteligência.
+                  Durante muito tempo, pensei que ter jogo de cintura significava saber conquistar, argumentar e sustentar uma conversa.
                 </p>
                 <p>
-                  Eles nascem da pressa. Da ansiedade para resolver. Do medo de perder. Da raiva de se sentir desrespeitado. E da certeza criada antes de todos os fatos aparecerem.
+                  Então vivi uma situação na qual perdi exatamente aquilo que acreditava dominar. Quanto mais eu sentia alguém se afastar, mais eu pressionava. Quanto mais tentava recuperar o controle, mais abandonava minha própria posição.
                 </p>
                 <p>
-                  Eu também já entendi situações importantes tarde demais. E foi justamente nesses momentos que percebi que o problema começava antes da frase.
+                  Foi ali que entendi: meu problema não era falta de palavras. Eu não sabia atravessar os segundos anteriores à reação.
                 </p>
                 <p>
-                  O Xeque Social nasceu para organizar esses segundos decisivos em um processo prático. Não para ensinar você a controlar o outro, mas para ajudar você a recuperar o comando da própria reação.
+                  O Xeque Social nasceu dessa reconstrução. Não como uma fórmula para controlar pessoas, mas como um sistema para que ninguém precise entregar a própria posição no impulso.
                 </p>
               </div>
 
@@ -634,16 +630,16 @@ const faqs = [
           {/* FAIXA DISCRETA, PONTE PARA O JOGO DE CINTURA (SEM SEGUNDA OFERTA) */}
           <div className="xeque-universo-hierarchy-banner">
             <span className="xeque-hierarchy-badge">A PORTA DE ENTRADA DO UNIVERSO JOGO DE CINTURA</span>
-            <h3 className="xeque-hierarchy-title">Antes de ter jogo de cintura, você precisa perceber que está em xeque.</h3>
+            <h3 className="xeque-hierarchy-title">O Xeque Social é a entrada. O Jogo de Cintura é o tabuleiro completo.</h3>
             <div className="xeque-hierarchy-paragraphs">
               <p className="xeque-hierarchy-text">
-                O Xeque Social é a porta de entrada do Universo Jogo de Cintura. Seu papel é específico: ajudar você a reconhecer a posição antes de entregar o movimento.
+                O Xeque Social ensina a reconhecer a posição, separar fato de interpretação e escolher uma primeira resposta mais consciente.
               </p>
               <p className="xeque-hierarchy-text">
-                O Protocolo LANCE é o mecanismo central do Xeque Social: Ler, Avaliar, Nomear, Calibrar e Examinar.
+                O Protocolo LANCE, sistema central do Jogo de Cintura, aprofunda essa leitura e a transforma em movimento sustentado.
               </p>
               <p className="xeque-hierarchy-text">
-                Você começa aprendendo a ler o tabuleiro que já está diante de você. Porque ninguém sustenta uma boa jogada quando ainda confunde hipótese com realidade.
+                Você não precisa conhecer o JDC para aplicar o Xeque Social. E o Xeque Social não tenta substituir a formação completa.
               </p>
             </div>
           </div>
@@ -676,7 +672,7 @@ const faqs = [
               <span className="xeque-offer-eyebrow">LIVRO DIGITAL</span>
               <h2 className="xeque-offer-card-title">XEQUE SOCIAL</h2>
               <p className="xeque-offer-card-subtitle">
-                188 páginas para colocar um processo entre você e o impulso.
+                180 páginas para ler a posição antes de entregar o movimento.
               </p>
             </div>
 
@@ -707,7 +703,7 @@ const faqs = [
             <ul className="xeque-offer-features-list">
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Livro digital Xeque Social • 188 páginas</span>
+                <span>Livro digital com 180 páginas</span>
               </li>
 
               <li>
@@ -717,17 +713,17 @@ const faqs = [
 
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Protocolo LANCE completo</span>
+                <span>Prática orientada de 7 dias</span>
               </li>
 
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Mapa pessoal + ferramenta Fato x Interpretação</span>
+                <span>Ferramentas para separar fato, interpretação e reação</span>
               </li>
 
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Prática orientada de 7 dias + acesso vitalício</span>
+                <span>Acesso vitalício</span>
               </li>
 
               <li>
@@ -752,7 +748,7 @@ const faqs = [
                 href={HOTMART_CHECKOUT_URL} aria-disabled="false"
                 className="xeque-cta-btn xeque-offer-cta-btn"
               >
-                <span>QUERO LER ANTES DE REAGIR</span>
+                <span>QUERO ACESSAR O XEQUE SOCIAL</span>
               </a>
             )}
 
@@ -840,11 +836,11 @@ const faqs = [
       <section className="xeque-section xeque-section-surface">
         <div className="xeque-container-editorial">
           <h2 className="xeque-headline-medium" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.3rem)' }}>
-            A próxima situação difícil vai chegar sem avisar.
+            Pare de descobrir tarde demais o que aconteceu.
           </h2>
 
           <p className="xeque-subheadline" style={{ marginTop: '0.75rem', color: '#F7F4EE', fontWeight: '700' }}>
-            A diferença é se ela encontrará você no impulso ou na posição.
+            Leia a posição. Proteja seu eixo. Só então escolha o movimento.
           </p>
 
           <div className="xeque-final-price-box">
@@ -870,7 +866,7 @@ const faqs = [
               className="xeque-cta-btn"
               style={{ maxWidth: '440px' }}
             >
-              <span>QUERO LER ANTES DE REAGIR</span>
+              <span>QUERO ACESSAR O XEQUE SOCIAL</span>
             </a>
           )}
 
@@ -882,11 +878,9 @@ const faqs = [
 
       {/* FOOTER */}
       <footer className="xeque-footer-editorial">
-        <p>© 2026 Universo Jogo de Cintura. Todos os direitos reservados.</p>
+        <p>© 2026 Closy Company. Todos os direitos reservados.</p>
       </footer>
 
     </div>
   );
 }
-
-

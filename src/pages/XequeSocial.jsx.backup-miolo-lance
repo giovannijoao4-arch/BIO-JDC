@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useLaunchStatus } from '../hooks/useLaunchStatus';
 import { IconChessPawn, IconLock, IconLightning, IconShield, IconCheck } from '../components/Icons';
 import '../styles/xeque-social.css';
@@ -129,13 +129,9 @@ const faqs = [
             </h1>
 
             {/* SUBHEADLINE */}
-            <p className="xeque-hero-left-subheadline xeque-subheadline-desktop">
-  O Xeque Social é um livro digital para quem quer separar fatos de interpretações, reconhecer o que uma situação realmente exige e escolher uma primeira resposta mais consciente, antes de falar, ceder, explodir ou se explicar demais.
-</p>
-
-<p className="xeque-hero-left-subheadline xeque-subheadline-mobile">
-  Um livro digital para separar fatos de interpretações, entender o que a situação exige e escolher uma resposta mais consciente antes que o impulso decida por você.
-</p>
+            <p className="xeque-hero-left-subheadline">
+              O Xeque Social é um livro digital para quem quer separar fatos de interpretações, reconhecer o que uma situação realmente exige e escolher uma primeira resposta mais consciente, antes de falar, ceder, explodir ou se explicar demais.
+            </p>
 
             {/* ATTRIBUTES LINE */}
             <div className="xeque-hero-attributes-line">
@@ -350,17 +346,17 @@ const faqs = [
           <span className="xeque-tag-badge">POR DENTRO DA OBRA</span>
 
           <h2 className="xeque-headline-medium">
-            Uma frase pronta acaba quando a situação muda. Um critério continua com você.
+            Não é um manual de respostas prontas.
           </h2>
 
           <p className="xeque-subheadline" style={{ marginTop: '1rem', maxWidth: '780px' }}>
-            O Xeque Social reúne 188 páginas e 30 capítulos organizados em 5 partes para levar você da reação automática a um processo consciente de leitura, decisão e revisão.
+            Xeque Social é um livro digital de 188 páginas sobre leitura social e posicionamento. Ele foi criado para ajudar você a perceber padrões, separar o que aconteceu da interpretação do momento e escolher uma primeira resposta mais consciente.
           </p>
 
           {/* FICHA TÉCNICA DE CATALOGO PREMIUM */}
           <div className="xeque-ficha-tecnica-grid">
             <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">188</span>
+              <span className="xeque-ficha-val">180</span>
               <span className="xeque-ficha-lbl">páginas</span>
             </div>
             <div className="xeque-ficha-item">
@@ -372,8 +368,8 @@ const faqs = [
               <span className="xeque-ficha-lbl">partes</span>
             </div>
             <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">Protocolo LANCE</span>
-              <span className="xeque-ficha-lbl">5 etapas de decisão</span>
+              <span className="xeque-ficha-val">Leitura</span>
+              <span className="xeque-ficha-lbl">APLICADA</span>
             </div>
             <div className="xeque-ficha-item">
               <span className="xeque-ficha-val">Prática de 7 dias</span>
@@ -398,10 +394,10 @@ const faqs = [
           ================================================================== */}
       <section className="xeque-section xeque-section-galeria-papel">
         <div className="xeque-container">
-          <span className="xeque-tag-badge xeque-badge-paper">PÁGINAS REAIS DO XEQUE SOCIAL</span>
-          <h2 className="xeque-headline-medium xeque-title-paper">Você não precisa imaginar o que está comprando.</h2>
+          <span className="xeque-tag-badge xeque-badge-paper">VISUALIZAÇÃO DA OBRA</span>
+          <h2 className="xeque-headline-medium xeque-title-paper">Galeria Editorial</h2>
           <p className="xeque-subheadline" style={{ color: '#44403C', marginTop: '0.5rem', marginBottom: '2.5rem' }}>
-            Veja páginas reais do material, exercícios e ferramentas que você encontrará durante a leitura.
+            Explore a estrutura interna e os elementos que compõem a obra.
           </p>
 
           {/* DESKTOP GRID WITH ENLARGED AND CLOSE-UP DETAIL CARDS */}
@@ -508,10 +504,10 @@ const faqs = [
         <div className="xeque-container">
           <div className="xeque-credibilidade-box">
 
-            <span className="xeque-tag-badge">SEM ADIVINHAÇÃO. SEM LEITURA MENTAL.</span>
+            <span className="xeque-tag-badge">CRITÉRIO DE LEITURA</span>
 
             <h2 className="xeque-headline-medium">
-              Leia sinais sem transformar suposição em certeza.
+              Fundamentado sem prometer leitura mental.
             </h2>
 
             <p className="xeque-credibilidade-desc">
@@ -523,17 +519,17 @@ const faqs = [
             <div className="xeque-credibilidade-items">
               <div className="xeque-credibilidade-item">
                 <span>01</span>
-                <p>Fato antes da interpretação</p>
+                <p>Observação antes da conclusão</p>
               </div>
 
               <div className="xeque-credibilidade-item">
                 <span>02</span>
-                <p>Contexto antes da certeza</p>
+                <p>Exercício antes da resposta automática</p>
               </div>
 
               <div className="xeque-credibilidade-item">
                 <span>03</span>
-                <p>Referências e limites apresentados com transparência</p>
+                <p>Referências apresentadas com transparência</p>
               </div>
             </div>
 
@@ -888,5 +884,3 @@ const faqs = [
     </div>
   );
 }
-
-
