@@ -23,8 +23,8 @@
   gap: 2.25rem;
   align-items: end;
   padding: 1.5rem 0 2.25rem;
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .profile-avatar-wrapper {
@@ -32,7 +32,7 @@
   height: 205px;
   overflow: hidden;
   background: #111214;
-  border: 1px solid var(--border-medium);
+  border: 0;
 }
 
 .profile-avatar {
@@ -78,12 +78,6 @@
 .profile-username {
   color: var(--text-secondary);
   font-weight: 600;
-}
-
-.profile-meta-separator {
-  width: 28px;
-  height: 1px;
-  background: var(--border-gold);
 }
 
 .profile-meta-label {
