@@ -20,9 +20,16 @@
   --border-medium: rgba(241, 237, 228, 0.18);
   --border-gold: rgba(185, 154, 90, 0.42);
 
+  --container-max-width: 720px;
   --section-max-width: 1240px;
   --radius-sm: 3px;
   --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+
+  /* Compatibilidade com componentes legados ainda ativos */
+  --accent-green-vtsd: #25d366;
+  --accent-blue-vtsd: #4c6ef5;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: 160ms var(--ease-out);
