@@ -70,43 +70,7 @@ const faqs = [
       a: "Sim. O livro digital pode ser acessado em celular, tablet ou computador."
     }
   ];
-  const galleryItems = [
-    {
-      title: "Sumário",
-      tag: "Estrutura Geral",
-      desc: "Visão integrada dos 30 capítulos organizados em 5 partes.",
-      src: "/images/xeque-social-sumario.webp",
-      alt: "Página de sumário do livro Xeque Social, com 30 capítulos organizados em 5 partes."
-    },
-    {
-      title: "Abertura do Prólogo",
-      tag: "Prólogo",
-      desc: "A abertura da obra e o intervalo entre o que acontece e a sua resposta.",
-      src: "/images/xeque-social-prologo.webp",
-      alt: "Página de abertura do prólogo Os segundos antes da reação, do livro Xeque Social."
-    },
-    {
-      title: "Abertura de Capítulo",
-      tag: "Leitura da Posição",
-      desc: "Abertura editorial de capítulo dedicada à leitura da posição antes da reação.",
-      src: "/images/xeque-social-capitulo.webp",
-      alt: "Página de abertura de capítulo Leia a posição antes de reagir, do livro Xeque Social."
-    },
-    {
-      title: "Fato x interpretação",
-      tag: "Leitura Aplicada",
-      desc: "Uma ferramenta visual para separar observação, interpretação e leitura consciente.",
-      src: "/images/xeque-social-fato-interpretacao.webp",
-      alt: "Página Fato x interpretação do livro Xeque Social, comparando fato, interpretação e leitura consciente."
-    },
-    {
-      title: "Prática Orientada",
-      tag: "7 Dias",
-      desc: "Uma prática de observação estruturada ao longo de sete dias.",
-      src: "/images/xeque-social-pratica-7-dias.webp",
-      alt: "Página Prática Orientada, 7 dias de observação, do livro Xeque Social."
-    }
-  ];
+
 
   const testimonialImages = [];
 
@@ -476,54 +440,6 @@ const faqs = [
               ))
             )}
           </div>
-        </div>
-      </section>
-
-      {/* ==================================================================
-          GALERIA EDITORIAL DA OBRA (TEXTURA DE PAPEL CLARO / REAIS)
-          ================================================================== */}
-      <section className="xeque-section xeque-section-galeria-papel">
-        <div className="xeque-container">
-          <span className="xeque-tag-badge xeque-badge-paper">PÁGINAS REAIS DO XEQUE SOCIAL</span>
-          <h2 className="xeque-headline-medium xeque-title-paper">Veja como o método aparece dentro do livro.</h2>
-          <p className="xeque-subheadline" style={{ color: '#44403C', marginTop: '0.5rem', marginBottom: '2.5rem' }}>
-            Páginas reais do Xeque Social: estrutura, exemplos, exercícios e ferramentas usadas para organizar a leitura e o próximo movimento.
-          </p>
-
-          <div className="xeque-gallery-natural-grid">
-            <div className="xeque-gallery-natural-column xeque-gallery-natural-left">
-              {galleryItems.slice(0, 2).map((item, index) => (
-                <figure key={index} className="xeque-gallery-natural-item">
-                  <div className="xeque-gallery-img-box">
-                    <img
-                      src={item.src}
-                      alt={item.alt}
-                      className="xeque-gallery-book-img"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </figure>
-              ))}
-            </div>
-
-            <div className="xeque-gallery-natural-column xeque-gallery-natural-right">
-              {galleryItems.slice(2).map((item, index) => (
-                <figure key={index} className="xeque-gallery-natural-item">
-                  <div className="xeque-gallery-img-box">
-                    <img
-                      src={item.src}
-                      alt={item.alt}
-                      className="xeque-gallery-book-img"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </figure>
-              ))}
-            </div>
-          </div>
-
         </div>
       </section>
 
