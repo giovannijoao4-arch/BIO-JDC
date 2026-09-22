@@ -986,3 +986,115 @@
   outline: 1px solid rgba(185, 154, 90, 0.55);
   outline-offset: 4px;
 }
+
+
+/* ==========================================================================
+   BIO — REMOVE CARD OUTLINES + IMAGE FRAMING
+   Remove contornos estruturais pesados e melhora enquadramento das imagens.
+   ========================================================================== */
+
+/* Produtos: sem caixa ao redor do item aberto */
+.vtsd-accordion-list {
+  border-top: 0 !important;
+}
+
+.vtsd-accordion-item {
+  border: 0 !important;
+  border-bottom: 1px solid rgba(241, 237, 228, 0.10) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.vtsd-accordion-item.is-open {
+  border-color: rgba(241, 237, 228, 0.12) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.vtsd-accordion-header {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.vtsd-accordion-arrow {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.vtsd-accordion-item.is-open .vtsd-accordion-arrow {
+  border: 0 !important;
+  color: var(--accent-gold-bright);
+}
+
+.vtsd-accordion-inner {
+  border-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.vtsd-accordion-content {
+  padding-left: 0 !important;
+}
+
+/* Conteúdos gratuitos: remove moldura dos cards */
+.free-content-vtsd-grid {
+  gap: 1.1rem !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.free-card-vtsd-item {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.free-card-vtsd-image-box {
+  border: 0 !important;
+  background: #0a0c0e !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.free-card-vtsd-meta {
+  border-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.free-card-vtsd-label-symbol {
+  border: 0 !important;
+  width: 34px;
+  height: 34px;
+}
+
+/* Enquadramento individual para preservar rostos, logos e composição */
+.free-card-vtsd-item:nth-child(1) .free-card-vtsd-img {
+  object-position: 50% 32% !important;
+}
+
+.free-card-vtsd-item:nth-child(2) .free-card-vtsd-img {
+  object-position: 50% 28% !important;
+}
+
+.free-card-vtsd-item:nth-child(3) .free-card-vtsd-img {
+  object-position: center center !important;
+}
+
+/* Pequeno refinamento na proporção para as imagens respirarem melhor */
+.free-card-vtsd-image-box {
+  aspect-ratio: 16 / 10 !important;
+}
+
+@media (max-width: 700px) {
+  .free-content-vtsd-grid {
+    gap: 1.4rem !important;
+  }
+
+  .free-card-vtsd-image-box {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .vtsd-accordion-content {
+    padding-left: 0 !important;
+  }
+}
