@@ -8,7 +8,7 @@ export function ContactSection({ contact }) {
   return (
     <section className="contact-vtsd-section" aria-label="Atendimento Comercial e Suporte">
       <div className="contact-vtsd-copy">
-        <span className="home-section-kicker">05 / CONTATO</span>
+        <span className="home-section-kicker">CONTATO</span>
         <h2 className="contact-vtsd-title">
           {contact.title || "Quer falar comigo ou com minha equipe?"}
         </h2>
