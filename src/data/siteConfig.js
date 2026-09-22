@@ -51,10 +51,10 @@ export const siteConfig = {
     {
       id: "xeque-social",
       name: "Xeque Social",
-      summary: "O Xeque Social é o livro de entrada do Jogo de Cintura. Ele ajuda homens a organizar o primeiro movimento em mensagens, encontros e conflitos com mulheres, separando fato de interpretação antes de insistir, ceder, cobrar ou se afastar.",
+      summary: "O Xeque Social é o livro de entrada do Jogo de Cintura. Ele ajuda a organizar o primeiro movimento em mensagens, encontros e conflitos, separando fato de interpretação antes de insistir, ceder, cobrar ou se afastar.",
       learnTitle: "No Xeque Social, você vai aprender:",
       learnItems: [
-        "Como separar o que aconteceu do que você concluiu sobre ela e sobre a relação.",
+        "Como separar o que aconteceu do que você concluiu sobre a outra pessoa e sobre a relação.",
         "Como perceber ansiedade, medo de perder ou vontade de agradar antes de agir.",
         "Como ler mudanças de comportamento sem tratar hipótese como certeza.",
         "Como usar o Protocolo LANCE para organizar o primeiro movimento.",
@@ -63,9 +63,9 @@ export const siteConfig = {
       ],
       recommendedTitle: "Para quem o Xeque Social é recomendado:",
       recommendedItems: [
-        "Homens que se perdem na ansiedade quando uma conversa muda de ritmo.",
+        "Quem se perde na ansiedade quando uma conversa muda de ritmo.",
         "Quem insiste, cobra, se explica ou cede antes de entender o que aconteceu.",
-        "Quem quer se relacionar melhor com mulheres sem usar manipulação ou frases prontas.",
+        "Quem quer se relacionar melhor sem usar manipulação ou frases prontas.",
         "Quem quer ter mais critério em mensagens, encontros e conflitos.",
         "Quem quer começar pelo primeiro movimento antes de entrar na formação completa do JDC."
       ],
