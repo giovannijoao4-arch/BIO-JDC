@@ -44,8 +44,8 @@ export const siteConfig = {
 
   // 3. PRODUTOS (ACORDEÃO COMPLETO VTSD)
   productsSection: {
-    title: "Conheça o universo que te torna inevitável",
-    subtitle: "",
+    title: "Produtos e formações",
+    subtitle: "Cada material trabalha uma parte específica do Jogo de Cintura.",
   },
   products: [
     {
