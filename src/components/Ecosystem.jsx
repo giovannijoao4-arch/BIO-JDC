@@ -11,7 +11,10 @@ export function Ecosystem({ config }) {
 
   return (
     <section className="partnerships-vtsd-section" aria-label="Parcerias">
-      <h2 className="partnerships-vtsd-title">{config.title || "Parcerias"}</h2>
+      <div className="partnerships-vtsd-header">
+        <span className="home-section-kicker">03 / PARCERIAS</span>
+        <h2 className="partnerships-vtsd-title">{config.title || "Parcerias"}</h2>
+      </div>
 
       <div className="partnership-vtsd-container">
         {partner?.image && (
