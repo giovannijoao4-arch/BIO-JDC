@@ -4,7 +4,6 @@ import { ProductCard } from './ProductCard';
 export function ProductShowcase({ sectionConfig, products }) {
   if (!products || products.length === 0) return null;
 
-  // Manage single open accordion item so opening one closes any previously open item
   const [openProductId, setOpenProductId] = useState(null);
 
   const handleToggle = (id) => {
@@ -13,22 +12,27 @@ export function ProductShowcase({ sectionConfig, products }) {
 
   return (
     <section className="products-showcase-vtsd-section" aria-label="Vitrine de Produtos">
-      <div className="section-header" style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h2 className="section-title" style={{ fontSize: '1.75rem', fontWeight: 800, color: '#ffffff' }}>
-          {sectionConfig?.title || "Conheça os produtos que eu criei para te ajudar:"}
-        </h2>
+      <div className="products-showcase-header">
+        <div>
+          <span className="home-section-kicker">02 / CATÁLOGO JDC</span>
+          <h2 className="products-showcase-title">
+            {sectionConfig?.title || "Produtos e formações"}
+          </h2>
+        </div>
+
         {sectionConfig?.subtitle && (
-          <p className="section-subtitle" style={{ fontSize: '1rem', marginTop: '0.4rem', color: 'var(--text-secondary)' }}>
+          <p className="products-showcase-subtitle">
             {sectionConfig.subtitle}
           </p>
         )}
       </div>
 
       <div className="vtsd-accordion-list">
-        {products.map((product) => (
+        {products.map((product, index) => (
           <ProductCard
             key={product.id || product.name}
             product={product}
+            index={index}
             isOpen={openProductId === product.id}
             onToggle={() => handleToggle(product.id)}
           />
