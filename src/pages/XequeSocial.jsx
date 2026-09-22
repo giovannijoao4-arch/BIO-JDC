@@ -108,6 +108,8 @@ const faqs = [
     }
   ];
 
+  const testimonialImages = [];
+
   const HOTMART_CHECKOUT_URL = "https://pay.hotmart.com/D107390083H?checkoutMode=10";
 
   return (
@@ -445,56 +447,30 @@ const faqs = [
         </div>
       </section>
 
-      {/* ==================================================================
-          POR DENTRO DA OBRA & FICHA TÉCNICA PREMIUM
-          ================================================================== */}
-      <section className="xeque-section xeque-section-pordentro">
-        <div className="xeque-container-editorial">
-          <span className="xeque-tag-badge">POR DENTRO DA OBRA</span>
+      {testimonialImages.length > 0 && (
+        <section className="xeque-section xeque-testimonials-section">
+          <div className="xeque-container">
+            <span className="xeque-tag-badge">DEPOIMENTOS</span>
+            <h2 className="xeque-headline-medium">
+              O que leitores do Xeque Social estão dizendo.
+            </h2>
 
-          <h2 className="xeque-headline-medium">
-            Frase pronta falha quando a relação muda. Critério continua útil.
-          </h2>
-
-          <p className="xeque-subheadline" style={{ marginTop: '1rem', maxWidth: '780px' }}>
-            O Xeque Social reúne 187 páginas e 30 capítulos organizados em 5 partes para treinar leitura, primeiro movimento e revisão em situações reais de relacionamento.
-          </p>
-
-          {/* FICHA TÉCNICA DE CATALOGO PREMIUM */}
-          <div className="xeque-ficha-tecnica-grid">
-            <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">187</span>
-              <span className="xeque-ficha-lbl">páginas</span>
-            </div>
-            <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">30</span>
-              <span className="xeque-ficha-lbl">capítulos</span>
-            </div>
-            <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">5</span>
-              <span className="xeque-ficha-lbl">partes</span>
-            </div>
-            <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">Protocolo LANCE</span>
-              <span className="xeque-ficha-lbl">5 etapas de decisão</span>
-            </div>
-            <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">Prática de 7 dias</span>
-              <span className="xeque-ficha-lbl">orientada</span>
-            </div>
-            <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">Mapa Pessoal</span>
-              <span className="xeque-ficha-lbl">de leitura & reação</span>
-            </div>
-            <div className="xeque-ficha-item xeque-ficha-full">
-              <span className="xeque-ficha-val">Notas e Referências</span>
-              <span className="xeque-ficha-lbl">base e limites do método</span>
+            <div className="xeque-testimonials-grid">
+              {testimonialImages.map((item, index) => (
+                <figure key={index} className="xeque-testimonial-card">
+                  <img
+                    src={item.src}
+                    alt={item.alt || `Depoimento de leitor do Xeque Social ${index + 1}`}
+                    className="xeque-testimonial-img"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-
-
+        </section>
+      )}
 
       {/* ==================================================================
           GALERIA EDITORIAL DA OBRA (TEXTURA DE PAPEL CLARO / REAIS)
