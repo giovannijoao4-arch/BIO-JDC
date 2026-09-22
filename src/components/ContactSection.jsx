@@ -7,13 +7,16 @@ export function ContactSection({ contact }) {
 
   return (
     <section className="contact-vtsd-section" aria-label="Atendimento Comercial e Suporte">
-      <h2 className="contact-vtsd-title">
-        {contact.title || "Quer falar comigo ou com minha equipe?"}
-      </h2>
+      <div className="contact-vtsd-copy">
+        <span className="home-section-kicker">05 / CONTATO</span>
+        <h2 className="contact-vtsd-title">
+          {contact.title || "Quer falar comigo ou com minha equipe?"}
+        </h2>
 
-      {contact.subtitle && (
-        <p className="contact-vtsd-subtitle">{contact.subtitle}</p>
-      )}
+        {contact.subtitle && (
+          <p className="contact-vtsd-subtitle">{contact.subtitle}</p>
+        )}
+      </div>
 
       <a
         href={contact.link && contact.link !== '#' ? getUtmUrl(contact.link) : '#'}
@@ -22,7 +25,7 @@ export function ContactSection({ contact }) {
         className="contact-vtsd-green-button"
       >
         <span>{contact.ctaText || "FALAR COM A EQUIPE COMERCIAL"}</span>
-        <IconArrowRight size={18} />
+        <IconArrowRight size={17} />
       </a>
     </section>
   );
