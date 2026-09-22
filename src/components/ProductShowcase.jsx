@@ -14,7 +14,7 @@ export function ProductShowcase({ sectionConfig, products }) {
     <section className="products-showcase-vtsd-section" aria-label="Vitrine de Produtos">
       <div className="products-showcase-header">
         <div>
-          <span className="home-section-kicker">02 / CATÁLOGO JDC</span>
+          <span className="home-section-kicker">CATÁLOGO JDC</span>
           <h2 className="products-showcase-title">
             {sectionConfig?.title || "Produtos e formações"}
           </h2>
@@ -28,11 +28,10 @@ export function ProductShowcase({ sectionConfig, products }) {
       </div>
 
       <div className="vtsd-accordion-list">
-        {products.map((product, index) => (
+        {products.map((product) => (
           <ProductCard
             key={product.id || product.name}
             product={product}
-            index={index}
             isOpen={openProductId === product.id}
             onToggle={() => handleToggle(product.id)}
           />
