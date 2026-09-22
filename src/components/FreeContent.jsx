@@ -25,14 +25,14 @@ export function FreeContent({ sectionConfig, contents }) {
   return (
     <section className="free-content-vtsd-wrapper" aria-label="Conteúdos Gratuitos">
       <div className="free-content-vtsd-header">
-        <span className="home-section-kicker">04 / CONTEÚDO</span>
+        <span className="home-section-kicker">CONTEÚDO</span>
         <h2 className="free-content-vtsd-title">
           {sectionConfig?.title || "Conteúdos Gratuitos"}
         </h2>
       </div>
 
       <div className="free-content-vtsd-grid">
-        {contents.map((item, index) => {
+        {contents.map((item) => {
           const isComingSoon = Boolean(item.comingSoon);
           const webpUrl = getWebpUrl(item.image);
 
@@ -57,7 +57,6 @@ export function FreeContent({ sectionConfig, contents }) {
                   />
                 </picture>
 
-                <span className="free-card-vtsd-number">{String(index + 1).padStart(2, '0')}</span>
 
                 {isComingSoon && (
                   <div className="free-card-vtsd-coming-soon-badge">
