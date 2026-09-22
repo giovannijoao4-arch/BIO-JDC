@@ -5880,3 +5880,115 @@
     gap: 1rem !important;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — PROVA SOCIAL 3x3
+   ========================================================================== */
+
+.xeque-testimonials-section {
+  background:
+    radial-gradient(circle at 50% 0, rgba(185,154,90,.055), transparent 30rem),
+    #08070d;
+}
+
+.xeque-testimonials-section .xeque-container {
+  max-width: 1180px;
+  align-items: flex-start;
+}
+
+.xeque-testimonials-grid {
+  width: 100%;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.xeque-testimonial-card.xeque-testimonial-native {
+  min-height: 260px;
+  margin: 0;
+  padding: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  background: #030405;
+  overflow: hidden;
+}
+
+.xeque-testimonial-avatar {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 50%;
+  filter: blur(1.7px);
+  opacity: .88;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(235,207,177,.95) 0 20%, transparent 21%),
+    radial-gradient(circle at 50% 70%, rgba(68,57,52,.95) 0 31%, transparent 32%),
+    linear-gradient(135deg, #574c47, #17191b);
+}
+
+.xeque-testimonial-avatar-2 {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(210,179,151,.95) 0 20%, transparent 21%),
+    radial-gradient(circle at 50% 70%, rgba(34,41,47,.95) 0 31%, transparent 32%),
+    linear-gradient(135deg, #3e474e, #17191b);
+}
+
+.xeque-testimonial-avatar-3 {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(166,125,99,.95) 0 20%, transparent 21%),
+    radial-gradient(circle at 50% 70%, rgba(33,29,28,.95) 0 31%, transparent 32%),
+    linear-gradient(135deg, #715445, #151617);
+}
+
+.xeque-testimonial-avatar-4 {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(192,162,137,.95) 0 20%, transparent 21%),
+    radial-gradient(circle at 50% 70%, rgba(53,57,59,.95) 0 31%, transparent 32%),
+    linear-gradient(135deg, #4f565b, #151617);
+}
+
+.xeque-testimonial-bubble {
+  max-width: 290px;
+  padding: 1rem 1.1rem;
+  border-radius: 22px;
+  background: #242424;
+  box-shadow: 0 10px 28px rgba(0,0,0,.22);
+}
+
+.xeque-testimonial-bubble p {
+  margin: 0;
+  color: #f1f1f1;
+  font-size: .92rem;
+  line-height: 1.48;
+  letter-spacing: -.01em;
+}
+
+@media (max-width: 980px) {
+  .xeque-testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .xeque-testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: .85rem;
+  }
+
+  .xeque-testimonial-card.xeque-testimonial-native {
+    min-height: 0;
+    padding: 1rem .8rem;
+    justify-content: flex-start;
+  }
+
+  .xeque-testimonial-bubble {
+    max-width: none;
+    flex: 1;
+  }
+}
