@@ -51,28 +51,28 @@ export const siteConfig = {
     {
       id: "xeque-social",
       name: "Xeque Social",
-      summary: "O Xeque Social é um guia prático que te ensina a perceber o que está acontecendo em uma interação antes de reagir no automático. O resultado é simples: você para de cair tão fácil em pressão, culpa, provocação, silêncio e outros comportamentos que mexem com você.",
+      summary: "O Xeque Social é o livro de entrada do Jogo de Cintura. Ele ajuda homens a organizar o primeiro movimento em mensagens, encontros e conflitos com mulheres, separando fato de interpretação antes de insistir, ceder, cobrar ou se afastar.",
       learnTitle: "No Xeque Social, você vai aprender:",
       learnItems: [
-        "Como identificar padrões de pressão, provocação, culpa, rejeição, silêncio e invasão.",
-        "Como perceber os gatilhos que fazem você reagir sem pensar.",
-        "Como entender o que a situação está tentando provocar em você.",
-        "Como separar fato, interpretação e emoção.",
-        "Como escolher uma primeira resposta melhor.",
-        "Como evitar se explicar demais, ceder por impulso ou entrar em discussões inúteis."
+        "Como separar o que aconteceu do que você concluiu sobre ela e sobre a relação.",
+        "Como perceber ansiedade, medo de perder ou vontade de agradar antes de agir.",
+        "Como ler mudanças de comportamento sem tratar hipótese como certeza.",
+        "Como usar o Protocolo LANCE para organizar o primeiro movimento.",
+        "Como escolher quando esperar, perguntar, conversar, limitar, recuar ou sair.",
+        "Como revisar o resultado e ajustar o próximo lance sem abandonar sua posição."
       ],
       recommendedTitle: "Para quem o Xeque Social é recomendado:",
       recommendedItems: [
-        "Quem sente que reage no automático em muitas situações.",
-        "Quem costuma perceber tarde demais que caiu em um jogo emocional.",
-        "Quem quer entender melhor o comportamento das pessoas.",
-        "Quem quer desenvolver leitura social de forma simples e prática.",
-        "Quem quer ter mais clareza antes de responder."
+        "Homens que se perdem na ansiedade quando uma conversa muda de ritmo.",
+        "Quem insiste, cobra, se explica ou cede antes de entender o que aconteceu.",
+        "Quem quer se relacionar melhor com mulheres sem usar manipulação ou frases prontas.",
+        "Quem quer ter mais critério em mensagens, encontros e conflitos.",
+        "Quem quer começar pelo primeiro movimento antes de entrar na formação completa do JDC."
       ],
       cta: "CONHECER O XEQUE SOCIAL",
       link: "/xeque-social",
       comingSoon: false,
-      launchBadge: "LIBERA 07/09 ÀS 20H",
+      launchBadge: null,
     },
     {
       id: "jogo-de-cintura",
