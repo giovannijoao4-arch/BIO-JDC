@@ -936,3 +936,53 @@
     flex-wrap: wrap;
   }
 }
+
+
+/* ==========================================================================
+   BIO — LIMPEZA DE NUMERAÇÕES E FOCUS DE CLIQUE
+   ========================================================================== */
+
+/* O cabeçalho do produto não reserva mais espaço para índice numérico */
+.vtsd-accordion-header-main {
+  display: block;
+  min-width: 0;
+}
+
+/* As listas continuam legíveis sem numeração editorial */
+.vtsd-product-list-item {
+  grid-template-columns: 14px minmax(0, 1fr);
+  gap: 0.65rem;
+}
+
+.vtsd-bullet-icon {
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding-top: 0;
+}
+
+/* Remove realce de toque/clique do navegador */
+.app-container-wide a,
+.app-container-wide button,
+.full-width-section-wrapper a,
+.full-width-section-wrapper button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Clique com mouse não deixa contorno residual */
+.app-container-wide a:focus:not(:focus-visible),
+.app-container-wide button:focus:not(:focus-visible),
+.full-width-section-wrapper a:focus:not(:focus-visible),
+.full-width-section-wrapper button:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Foco continua disponível para quem navega por teclado, de forma discreta */
+.app-container-wide a:focus-visible,
+.app-container-wide button:focus-visible,
+.full-width-section-wrapper a:focus-visible,
+.full-width-section-wrapper button:focus-visible {
+  outline: 1px solid rgba(185, 154, 90, 0.55);
+  outline-offset: 4px;
+}
