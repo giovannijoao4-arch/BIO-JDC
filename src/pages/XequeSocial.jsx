@@ -34,7 +34,7 @@ export function XequeSocial() {
 const faqs = [
     {
       q: "O Xeque Social é um livro físico?",
-      a: "Não. O Xeque Social é um livro digital. São 188 páginas, divididas em 30 capítulos e 5 partes, com o Protocolo LANCE e uma prática orientada de 7 dias."
+      a: "Não. O Xeque Social é um livro digital. São 187 páginas, divididas em 30 capítulos e 5 partes, com o Protocolo LANCE e uma prática orientada de 7 dias."
     },
     {
       q: "O livro é só sobre relacionamento amoroso?",
@@ -424,13 +424,13 @@ const faqs = [
           </h2>
 
           <p className="xeque-subheadline" style={{ marginTop: '1rem', maxWidth: '780px' }}>
-            O Xeque Social reúne 188 páginas e 30 capítulos organizados em 5 partes para treinar leitura, primeiro movimento e revisão em situações reais de relacionamento.
+            O Xeque Social reúne 187 páginas e 30 capítulos organizados em 5 partes para treinar leitura, primeiro movimento e revisão em situações reais de relacionamento.
           </p>
 
           {/* FICHA TÉCNICA DE CATALOGO PREMIUM */}
           <div className="xeque-ficha-tecnica-grid">
             <div className="xeque-ficha-item">
-              <span className="xeque-ficha-val">188</span>
+              <span className="xeque-ficha-val">187</span>
               <span className="xeque-ficha-lbl">páginas</span>
             </div>
             <div className="xeque-ficha-item">
@@ -746,7 +746,7 @@ const faqs = [
               <span className="xeque-offer-eyebrow">LIVRO DIGITAL</span>
               <h2 className="xeque-offer-card-title">XEQUE SOCIAL</h2>
               <p className="xeque-offer-card-subtitle">
-                188 páginas para organizar leitura e primeiro movimento em situações reais de relacionamento.
+                187 páginas para organizar leitura e primeiro movimento em situações reais de relacionamento.
               </p>
             </div>
 
@@ -777,7 +777,7 @@ const faqs = [
             <ul className="xeque-offer-features-list">
               <li>
                 <IconCheck size={16} className="xeque-feat-check" />
-                <span>Livro digital Xeque Social • 188 páginas</span>
+                <span>Livro digital Xeque Social • 187 páginas</span>
               </li>
 
               <li>
