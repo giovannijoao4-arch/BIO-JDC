@@ -520,9 +520,6 @@ const faqs = [
                       decoding="async"
                     />
                   </div>
-                  <figcaption className="xeque-gallery-natural-caption">
-                    {item.desc}
-                  </figcaption>
                 </figure>
               ))}
             </div>
@@ -539,9 +536,6 @@ const faqs = [
                       decoding="async"
                     />
                   </div>
-                  <figcaption className="xeque-gallery-natural-caption">
-                    {item.desc}
-                  </figcaption>
                 </figure>
               ))}
             </div>
