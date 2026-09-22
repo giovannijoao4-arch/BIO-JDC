@@ -17,22 +17,28 @@ export function HeaderProfile({ profile }) {
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            width="120"
-            height="120"
+            width="180"
+            height="220"
           />
         </picture>
       </div>
 
-      <h1 className="profile-name">{profile.name}</h1>
-      <span className="profile-username">{profile.username}</span>
+      <div className="profile-copy">
+        <span className="profile-kicker">JOGO DE CINTURA</span>
+        <h1 className="profile-name">{profile.name}</h1>
 
-      {profile.slogan && (
-        <p className="profile-slogan">
-          "{profile.slogan}"
-        </p>
-      )}
+        <div className="profile-meta">
+          <span className="profile-username">{profile.username}</span>
+          <span className="profile-meta-separator" aria-hidden="true" />
+          <span className="profile-meta-label">conteúdo, produtos e formação</span>
+        </div>
 
-      {/* Social buttons removed per user instructions */}
+        {profile.slogan && (
+          <p className="profile-slogan">
+            {profile.slogan}
+          </p>
+        )}
+      </div>
     </header>
   );
 }
