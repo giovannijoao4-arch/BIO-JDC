@@ -13,6 +13,8 @@ import { IconChessPawn } from './components/Icons';
 import './index.css';
 import './styles/components.css';
 
+// Preview branch: ajustes-xeque-sem-deploy
+
 /**
  * Route Level Code-Splitting for /xeque-social
  * Reduces initial JavaScript payload for Bio visitors
