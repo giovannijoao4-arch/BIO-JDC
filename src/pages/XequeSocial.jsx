@@ -351,7 +351,7 @@ const faqs = [
             </div>
             <div className="xeque-eixo-card">
               <span className="xeque-eixo-num">03</span>
-              <p className="xeque-eixo-text">Ler contexto, repetição, acordos e mudanças de comportamento sem fingir que sabe a intenção dela.</p>
+              <p className="xeque-eixo-text">Ler contexto, repetição, acordos e mudanças de comportamento sem fingir que sabe a intenção da outra pessoa.</p>
             </div>
             <div className="xeque-eixo-card">
               <span className="xeque-eixo-num">04</span>
