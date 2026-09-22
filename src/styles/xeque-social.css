@@ -3799,3 +3799,1074 @@
     padding: 1.25rem 1rem;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — SALES CONVERSION DESIGN V4
+   Página de vendas: clareza da oferta, desejo, prova do produto, confiança
+   e CTA visível nos principais momentos de decisão.
+   ========================================================================== */
+
+/* Remove a lógica visual de "capítulos da bio" */
+.xeque-section-reconhecimento::before,
+.xeque-section-conceito::before,
+.xeque-section-tres-leituras::before,
+.xeque-section-aprendizado::before,
+.xeque-lance-section::before,
+.xeque-section-pordentro::before,
+.xeque-section-galeria-papel::before,
+.xeque-credibilidade-section::before,
+.xeque-section-transf-sober::before,
+.xeque-author-section::before,
+.xeque-offer-section::before,
+.xeque-guarantee-section::before {
+  display: none !important;
+}
+
+.xeque-social-page {
+  background:
+    radial-gradient(circle at 50% 0, rgba(185,154,90,.04), transparent 34rem),
+    #070809;
+}
+
+.xeque-section {
+  padding: 5.5rem 1.5rem;
+}
+
+.xeque-container {
+  align-items: center;
+}
+
+.xeque-container-editorial {
+  align-items: flex-start;
+}
+
+.xeque-headline-medium {
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  line-height: 1.07;
+}
+
+.xeque-tag-badge,
+.xeque-badge-paper {
+  padding: 0.42rem 0.72rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(185,154,90,.28);
+  border-radius: 6px;
+  background: rgba(185,154,90,.07);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: .62rem;
+  letter-spacing: .11em;
+}
+
+/* HERO: forte, claro, com oferta e CTA acima da dobra */
+
+.xeque-editorial-hero-section {
+  min-height: 650px !important;
+  padding: 0 !important;
+  background: #040506;
+  border-bottom: 1px solid rgba(185,154,90,.18);
+}
+
+.xeque-hero-responsive-bg {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(4,5,6,.98) 0%,
+      rgba(4,5,6,.92) 31%,
+      rgba(4,5,6,.60) 48%,
+      rgba(4,5,6,.12) 73%
+    ),
+    url("/images/xeque-hero-desktop.webp");
+  background-position: right center !important;
+  filter: saturate(.94) contrast(1.04);
+}
+
+.xeque-editorial-hero-container {
+  min-height: 650px !important;
+  max-width: 1320px !important;
+  padding: 3.4rem 2rem !important;
+  grid-template-columns: minmax(0, 52%) minmax(0, 48%) !important;
+}
+
+.xeque-editorial-hero-copy {
+  max-width: 660px !important;
+}
+
+.xeque-hero-brand-tag {
+  margin-bottom: 1.15rem;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: .7rem;
+  letter-spacing: .12em;
+  color: #d0b16e;
+}
+
+.xeque-hero-left-headline {
+  max-width: 680px;
+  margin-bottom: 1.15rem;
+  font-size: clamp(3rem, 5.1vw, 4.9rem);
+  line-height: 1;
+  letter-spacing: -.058em;
+}
+
+.xeque-hero-left-subheadline {
+  max-width: 625px;
+  margin-bottom: 1.25rem;
+  color: #c2beb5;
+  font-size: 1.02rem;
+  line-height: 1.68;
+}
+
+.xeque-relationship-context {
+  margin: .4rem 0 1.05rem;
+  border: 0;
+  gap: .45rem;
+}
+
+.xeque-relationship-context span {
+  padding: .38rem .68rem;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 999px;
+  background: rgba(0,0,0,.26);
+  color: #c8c4bc;
+  font-size: .67rem;
+  letter-spacing: .035em;
+}
+
+.xeque-relationship-context span:first-child {
+  padding-left: .68rem;
+}
+
+.xeque-hero-attributes-line {
+  margin-bottom: .95rem;
+  gap: .45rem;
+  font-size: .75rem;
+}
+
+.xeque-hero-editorial-quote {
+  margin-bottom: 1.2rem;
+  padding: .9rem 1rem;
+  border: 1px solid rgba(185,154,90,.22);
+  border-left: 3px solid #b99a5a;
+  border-radius: 8px;
+  background: rgba(185,154,90,.045);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: .86rem;
+  color: #d6d1c8;
+}
+
+.xeque-hero-purchase-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: .35rem 0 1rem;
+}
+
+.xeque-hero-price {
+  display: flex;
+  align-items: baseline;
+  color: #f2eee6;
+  line-height: 1;
+}
+
+.xeque-hero-price-currency {
+  margin-right: .2rem;
+  color: #d0b16e;
+  font-size: .85rem;
+  font-weight: 800;
+}
+
+.xeque-hero-price-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -.06em;
+}
+
+.xeque-hero-price-cents {
+  color: #d0b16e;
+  font-size: .95rem;
+  font-weight: 800;
+}
+
+.xeque-hero-price-copy {
+  display: flex;
+  flex-direction: column;
+  gap: .12rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255,255,255,.13);
+}
+
+.xeque-hero-price-copy strong {
+  color: #efebe3;
+  font-size: .75rem;
+}
+
+.xeque-hero-price-copy span {
+  color: #8f918f;
+  font-size: .68rem;
+}
+
+.xeque-hero-cta-wrapper {
+  max-width: 440px;
+}
+
+.xeque-cta-btn {
+  min-height: 56px;
+  border-radius: 9px;
+  background: linear-gradient(180deg, #d0b16e, #b8944d);
+  border-color: #d0b16e;
+  box-shadow: 0 12px 32px rgba(185,154,90,.15);
+  font-size: .78rem;
+}
+
+.xeque-cta-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(180deg, #dbc181, #c29f58);
+  box-shadow: 0 16px 36px rgba(185,154,90,.22);
+}
+
+.xeque-hero-micro-footer {
+  margin-top: .65rem;
+  color: #848681;
+  font-size: .66rem;
+}
+
+/* DOR / RECONHECIMENTO: cards concretos, escaneáveis */
+
+.xeque-section-reconhecimento {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(185,154,90,.055), transparent 28rem),
+    #080a0c;
+}
+
+.xeque-section-reconhecimento .xeque-container-editorial {
+  max-width: 1080px;
+}
+
+.xeque-situations-editorial-grid {
+  gap: 1rem;
+  border: 0;
+  margin-top: 2.5rem;
+}
+
+.xeque-situation-editorial-card,
+.xeque-situation-editorial-card:nth-child(odd),
+.xeque-situation-editorial-card:nth-child(even) {
+  min-height: 165px;
+  padding: 1.45rem;
+  display: block;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
+}
+
+.xeque-situation-num {
+  display: inline-flex;
+  margin-bottom: .9rem;
+  color: #d0b16e;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: .67rem;
+  font-weight: 800;
+}
+
+.xeque-situation-text {
+  color: #d5d1c9;
+  font-size: .95rem;
+  line-height: 1.65;
+}
+
+.xeque-reconhecimento-closing-statement {
+  margin-top: 1.35rem;
+  padding: 1.3rem 1.45rem;
+  border: 1px solid rgba(185,154,90,.25);
+  border-radius: 10px;
+  background: rgba(185,154,90,.055);
+}
+
+/* CONCEITO: mantém o papel, mas com aparência de página editorial premium */
+
+.xeque-section-conceito {
+  background:
+    linear-gradient(rgba(42,36,25,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,36,25,.025) 1px, transparent 1px),
+    #eee9df;
+  background-size: 28px 28px;
+}
+
+.xeque-section-conceito .xeque-container-editorial {
+  max-width: 1060px;
+  padding: 2.6rem;
+  border: 1px solid rgba(24,25,26,.10);
+  background: rgba(255,255,255,.34);
+  box-shadow: 0 24px 70px rgba(45,39,27,.07);
+}
+
+.xeque-conceito-body-text {
+  gap: 2rem;
+}
+
+.xeque-conceito-highlight-box {
+  margin-top: 2rem;
+  padding: 1.4rem;
+  border: 1px solid rgba(24,25,26,.13);
+  border-left: 4px solid #9a7839;
+  background: rgba(255,255,255,.32);
+}
+
+/* FATO / INTERPRETAÇÃO: comparação que o lead entende num olhar */
+
+.xeque-section-tres-leituras {
+  background: #07090b;
+}
+
+.xeque-section-tres-leituras .xeque-container {
+  align-items: flex-start;
+}
+
+.xeque-tres-leituras-grid {
+  gap: .9rem;
+  border: 0;
+}
+
+.xeque-tres-leituras-card {
+  min-height: 225px;
+  padding: 1.45rem;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 12px;
+  background: #0d1014;
+}
+
+.xeque-tres-leituras-card:last-child {
+  border-right: 1px solid rgba(255,255,255,.09);
+}
+
+.xeque-tres-leituras-card-interp {
+  background: #101114;
+}
+
+.xeque-tres-leituras-card-leitura {
+  border-color: rgba(185,154,90,.42);
+  background:
+    radial-gradient(circle at 100% 0, rgba(185,154,90,.10), transparent 15rem),
+    #11120f;
+  box-shadow: 0 16px 50px rgba(0,0,0,.2);
+}
+
+.xeque-tres-leituras-label {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: .63rem;
+  font-weight: 800;
+}
+
+.xeque-tres-leituras-fechamento {
+  margin-top: 1.25rem;
+  padding: 1rem 0 0;
+  border-top: 1px solid rgba(185,154,90,.25);
+}
+
+/* BENEFÍCIOS / EIXOS */
+
+.xeque-section-aprendizado {
+  background: #0a0c0e;
+}
+
+.xeque-eixos-grid {
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1rem;
+  border: 0;
+}
+
+.xeque-eixo-card,
+.xeque-eixo-card + .xeque-eixo-card {
+  min-height: 205px;
+  padding: 1.4rem;
+  border: 1px solid rgba(255,255,255,.085);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #101318, #0b0d10);
+}
+
+.xeque-eixo-card:nth-child(4),
+.xeque-eixo-card:nth-child(5) {
+  min-height: 180px;
+}
+
+.xeque-eixo-num {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(185,154,90,.35);
+  border-radius: 50%;
+  color: #d0b16e;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: .62rem;
+  font-weight: 800;
+}
+
+.xeque-eixo-text {
+  margin-top: 1rem;
+  color: #c6c2ba;
+  font-size: .9rem;
+}
+
+/* PROTOCOLO LANCE: método como ativo visual do produto */
+
+.xeque-lance-section {
+  background:
+    radial-gradient(circle at 50% 0, rgba(185,154,90,.08), transparent 30rem),
+    #050607;
+}
+
+.xeque-lance-grid {
+  position: relative;
+  gap: .8rem;
+  border: 0;
+  background: transparent;
+}
+
+.xeque-lance-grid::before {
+  content: '';
+  position: absolute;
+  top: 43px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(185,154,90,.34), transparent);
+  z-index: 0;
+}
+
+.xeque-lance-card {
+  position: relative;
+  z-index: 1;
+  min-height: 235px;
+  padding: 1.35rem;
+  border: 1px solid rgba(255,255,255,.085);
+  border-radius: 12px;
+  background: rgba(9,11,13,.96);
+}
+
+.xeque-lance-card:hover {
+  background: #0e1114;
+  border-color: rgba(185,154,90,.26);
+}
+
+.xeque-lance-letter {
+  width: 58px;
+  height: 58px;
+  margin: 0 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(185,154,90,.42);
+  border-radius: 50%;
+  background: #080a0c;
+  color: #d0b16e;
+  font-size: 1.5rem;
+}
+
+.xeque-lance-card h3 {
+  font-size: .95rem;
+}
+
+.xeque-lance-card p {
+  color: #aaa79f;
+}
+
+.xeque-lance-closing {
+  margin-top: 1.4rem;
+}
+
+/* CTA intermediário: captura o lead que já entendeu o método */
+
+.xeque-mid-cta {
+  width: 100%;
+  margin-top: 2.25rem;
+  padding: 1.6rem 1.7rem;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid rgba(185,154,90,.28);
+  border-radius: 14px;
+  background:
+    linear-gradient(115deg, rgba(185,154,90,.095), rgba(255,255,255,.018)),
+    #0b0d0f;
+  box-shadow: 0 18px 50px rgba(0,0,0,.24);
+}
+
+.xeque-mid-cta-copy {
+  max-width: 650px;
+}
+
+.xeque-mid-cta-kicker {
+  display: block;
+  margin-bottom: .45rem;
+  color: #d0b16e;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+}
+
+.xeque-mid-cta-copy strong {
+  color: #f0ece4;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+.xeque-mid-cta-action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.xeque-mid-cta-price {
+  color: #f0ece4;
+  font-size: 1.3rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.xeque-mid-cta .xeque-cta-btn {
+  min-width: 290px;
+}
+
+/* O QUE RECEBE: estatísticas com mais valor percebido */
+
+.xeque-section-pordentro {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(185,154,90,.05), transparent 22rem),
+    #0a0c0e;
+}
+
+.xeque-ficha-tecnica-grid {
+  gap: .8rem;
+  border: 0;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+}
+
+.xeque-ficha-item {
+  min-height: 130px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255,255,255,.085);
+  border-radius: 10px;
+  background: #0f1216;
+}
+
+.xeque-ficha-item:hover {
+  background: #11151a;
+}
+
+.xeque-ficha-val {
+  color: #f0ece4;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.xeque-ficha-lbl {
+  color: #7f817e;
+}
+
+/* GALERIA: prova visual do que está sendo comprado */
+
+.xeque-section-galeria-papel {
+  background: #e9e3d7;
+}
+
+.xeque-section-galeria-papel .xeque-container {
+  align-items: flex-start;
+}
+
+.xeque-gallery-desktop-grid {
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1.4rem;
+}
+
+.xeque-gallery-card,
+.xeque-gallery-card.card-enlarged,
+.xeque-gallery-card.card-detail,
+.xeque-gallery-card:nth-child(3n) {
+  display: block;
+  grid-column: auto;
+  overflow: hidden;
+  border: 1px solid rgba(24,25,26,.12);
+  border-radius: 12px;
+  background: rgba(255,255,255,.42);
+  box-shadow: 0 18px 45px rgba(52,45,30,.07);
+}
+
+.xeque-gallery-img-box,
+.xeque-gallery-card:nth-child(3n) .xeque-gallery-img-box {
+  aspect-ratio: 4 / 5;
+  background: #d9d3c7;
+}
+
+.xeque-gallery-card-info,
+.xeque-gallery-card:nth-child(3n) .xeque-gallery-card-info {
+  padding: 1.15rem 1.2rem 1.3rem;
+  border: 0;
+}
+
+.xeque-gallery-item-title {
+  font-size: 1.08rem;
+}
+
+.xeque-gallery-item-desc {
+  font-size: .86rem;
+}
+
+/* CONFIANÇA: deixar o critério parecer parte do produto, não nota de rodapé */
+
+.xeque-credibilidade-section {
+  background: #07090b;
+}
+
+.xeque-credibilidade-box {
+  padding: 2.2rem;
+  border: 1px solid rgba(185,154,90,.24);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(185,154,90,.07), transparent 22rem),
+    #0d1013;
+  box-shadow: 0 24px 70px rgba(0,0,0,.18);
+}
+
+.xeque-credibilidade-items {
+  gap: .8rem;
+  border: 0;
+}
+
+.xeque-credibilidade-item,
+.xeque-credibilidade-item:first-child {
+  min-height: 120px;
+  padding: 1.2rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 9px;
+  background: rgba(255,255,255,.018);
+}
+
+/* TRANSFORMAÇÃO: contraste visual claro antes/depois */
+
+.xeque-section-transf-sober {
+  background: #0a0c0e;
+}
+
+.xeque-transf-editorial-columns {
+  gap: 1rem;
+  border: 0;
+}
+
+.xeque-transf-col,
+.xeque-transf-col + .xeque-transf-col {
+  padding: 1.65rem;
+  border: 1px solid rgba(255,255,255,.085);
+  border-radius: 12px;
+  background: #0e1114;
+}
+
+.xeque-transf-col-reacao {
+  opacity: .82;
+}
+
+.xeque-transf-col-leitura {
+  border-color: rgba(185,154,90,.36);
+  background:
+    radial-gradient(circle at 100% 0, rgba(185,154,90,.08), transparent 18rem),
+    #11120f;
+}
+
+.xeque-transf-col-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: .72rem;
+}
+
+/* AUTORIDADE: humana, não "bio hub" */
+
+.xeque-author-section {
+  background: #07090b;
+}
+
+.xeque-author-editorial {
+  max-width: 1050px;
+  padding: 2rem;
+  gap: 3rem;
+  border: 1px solid rgba(255,255,255,.085);
+  border-radius: 14px;
+  background: #0d1013;
+  box-shadow: 0 22px 60px rgba(0,0,0,.18);
+}
+
+.xeque-author-portrait-img {
+  border-radius: 10px;
+}
+
+.xeque-author-name-title {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+}
+
+.xeque-universo-hierarchy-banner {
+  max-width: 1050px;
+  margin-top: 1.2rem;
+  padding: 1.5rem 1.7rem;
+  border: 1px solid rgba(185,154,90,.22);
+  border-radius: 12px;
+  background: rgba(185,154,90,.04);
+}
+
+.xeque-hierarchy-paragraphs {
+  gap: 1rem;
+}
+
+/* OFERTA: ponto de decisão com peso visual */
+
+.xeque-offer-section {
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(185,154,90,.13), transparent 28rem),
+    #08090a;
+  color: #f1ede4;
+}
+
+.xeque-offer-main-card {
+  max-width: 1040px;
+  padding: 2rem;
+  column-gap: 3.2rem;
+  border: 1px solid rgba(185,154,90,.32);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(185,154,90,.065), transparent 45%),
+    #0e1114;
+  box-shadow: 0 34px 90px rgba(0,0,0,.4);
+}
+
+.xeque-offer-card-top {
+  padding: 0 2.5rem 0 0;
+  border-right: 1px solid rgba(255,255,255,.09);
+}
+
+.xeque-offer-card-product-img {
+  width: min(100%, 300px);
+  margin: 0 auto 1.7rem;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 18px 45px rgba(0,0,0,.32);
+}
+
+.xeque-offer-eyebrow {
+  color: #d0b16e;
+}
+
+.xeque-offer-card-title {
+  color: #f1ede4;
+}
+
+.xeque-offer-card-subtitle {
+  color: #a9a69f;
+}
+
+.xeque-offer-badge-pill {
+  color: #d0b16e;
+  border-color: rgba(185,154,90,.25);
+}
+
+.xeque-offer-big-price {
+  color: #f1ede4;
+}
+
+.xeque-price-currency,
+.xeque-price-cents {
+  color: #d0b16e;
+}
+
+.xeque-price-val {
+  color: #f1ede4;
+}
+
+.xeque-offer-payment-label {
+  color: #858782;
+}
+
+.xeque-offer-features-list {
+  border-top-color: rgba(255,255,255,.09);
+}
+
+.xeque-offer-features-list li {
+  border-bottom-color: rgba(255,255,255,.07);
+  color: #d4d0c8;
+}
+
+.xeque-offer-cta-btn {
+  background: linear-gradient(180deg, #d0b16e, #b8944d);
+  border-color: #d0b16e;
+  color: #090a0b;
+}
+
+.xeque-offer-micro-sub,
+.xeque-offer-trust-footer {
+  color: #888a85;
+}
+
+/* GARANTIA / FAQ / CTA FINAL */
+
+.xeque-guarantee-section {
+  background: #0a0c0e;
+}
+
+.xeque-guarantee-editorial {
+  padding: 1.7rem;
+  border: 1px solid rgba(185,154,90,.25);
+  border-radius: 12px;
+  background: rgba(185,154,90,.045);
+}
+
+.xeque-social-page > .xeque-section:not([class*="xeque-section-"]):not(.xeque-guarantee-section) {
+  background: #07090b;
+}
+
+.xeque-faq-editorial-list {
+  gap: .65rem;
+  border: 0;
+}
+
+.xeque-faq-editorial-item {
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 9px;
+  background: #0d1013;
+}
+
+.xeque-faq-editorial-question {
+  padding: 1.15rem 1.25rem;
+}
+
+.xeque-faq-editorial-answer {
+  padding: 0 1.25rem 1.25rem;
+}
+
+.xeque-section-surface {
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(185,154,90,.10), transparent 26rem),
+    #050607;
+}
+
+.xeque-section-surface .xeque-container-editorial {
+  max-width: 920px;
+}
+
+.xeque-section-surface .xeque-headline-medium {
+  font-size: clamp(2.7rem, 5.5vw, 4.8rem) !important;
+}
+
+.xeque-final-price-box {
+  margin: 1.6rem 0 1.2rem;
+}
+
+.xeque-footer-editorial {
+  background: #040506;
+  text-align: center;
+}
+
+/* RESPONSIVO DE CONVERSÃO */
+
+@media (max-width: 980px) {
+  .xeque-editorial-hero-container {
+    min-height: 620px !important;
+    grid-template-columns: minmax(0, 58%) minmax(0, 42%) !important;
+  }
+
+  .xeque-eixos-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  .xeque-eixo-card:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+
+  .xeque-lance-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  .xeque-lance-grid::before {
+    display: none;
+  }
+
+  .xeque-lance-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .xeque-mid-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .xeque-mid-cta-action {
+    justify-content: space-between;
+  }
+
+  .xeque-offer-main-card {
+    column-gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .xeque-section {
+    padding: 4.2rem 1rem;
+  }
+
+  .xeque-editorial-hero-section {
+    min-height: 0 !important;
+  }
+
+  .xeque-editorial-hero-container {
+    min-height: 0 !important;
+    padding: clamp(245px, 68vw, 325px) 1rem 2.7rem !important;
+  }
+
+  .xeque-hero-left-headline {
+    font-size: clamp(2.35rem, 10.5vw, 3.35rem);
+  }
+
+  .xeque-relationship-context {
+    gap: .38rem;
+    border: 0;
+    overflow: visible;
+    flex-wrap: wrap;
+  }
+
+  .xeque-relationship-context span {
+    padding: .34rem .56rem;
+    font-size: .6rem;
+  }
+
+  .xeque-hero-purchase-meta {
+    gap: .75rem;
+  }
+
+  .xeque-hero-price-value {
+    font-size: 2rem;
+  }
+
+  .xeque-hero-price-copy {
+    padding-left: .75rem;
+  }
+
+  .xeque-hero-cta-wrapper {
+    max-width: 100%;
+  }
+
+  .xeque-section-conceito .xeque-container-editorial {
+    padding: 1.4rem;
+  }
+
+  .xeque-conceito-body-text {
+    gap: 1rem;
+  }
+
+  .xeque-situations-editorial-grid,
+  .xeque-eixos-grid,
+  .xeque-lance-grid,
+  .xeque-gallery-desktop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .xeque-eixo-card:nth-child(5),
+  .xeque-lance-card:last-child {
+    grid-column: auto;
+  }
+
+  .xeque-lance-card {
+    min-height: 0;
+    padding: 1.2rem;
+    border: 1px solid rgba(255,255,255,.085);
+    border-radius: 10px;
+  }
+
+  .xeque-lance-letter {
+    width: 46px;
+    height: 46px;
+  }
+
+  .xeque-mid-cta {
+    padding: 1.35rem;
+    gap: 1.25rem;
+  }
+
+  .xeque-mid-cta-action {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .xeque-mid-cta .xeque-cta-btn {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .xeque-ficha-tecnica-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: .65rem;
+  }
+
+  .xeque-ficha-full {
+    grid-column: 1 / -1;
+  }
+
+  .xeque-gallery-card,
+  .xeque-gallery-card.card-enlarged,
+  .xeque-gallery-card.card-detail {
+    border-radius: 10px;
+  }
+
+  .xeque-credibilidade-box,
+  .xeque-author-editorial {
+    padding: 1.35rem;
+  }
+
+  .xeque-transf-editorial-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .xeque-author-editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .xeque-author-portrait-img {
+    max-width: 210px;
+  }
+
+  .xeque-hierarchy-paragraphs {
+    grid-template-columns: 1fr;
+  }
+
+  .xeque-offer-section {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .xeque-offer-main-card {
+    display: block;
+    padding: 1.25rem;
+  }
+
+  .xeque-offer-card-top {
+    padding: 0 0 1.4rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.09);
+  }
+
+  .xeque-offer-card-product-img {
+    width: min(72vw, 260px);
+  }
+
+  .xeque-offer-badge-pill {
+    margin-top: 1.4rem;
+  }
+
+  .xeque-guarantee-editorial {
+    grid-template-columns: 42px minmax(0,1fr);
+  }
+
+  .xeque-section-surface {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
