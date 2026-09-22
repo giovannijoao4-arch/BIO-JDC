@@ -114,6 +114,16 @@ const faqs = [
   return (
     <div className="xeque-social-page">
 
+      <header className="xeque-page-topbar">
+        <a href="/" className="xeque-page-brand" aria-label="Voltar para a página principal do Jogo de Cintura">
+          JOGO DE CINTURA
+        </a>
+        <div className="xeque-page-meta">
+          <span>01 / XEQUE SOCIAL</span>
+          <span>LIVRO DIGITAL</span>
+        </div>
+      </header>
+
       {/* ==================================================================
           1. REFORMULATED EDITORIAL HERO SECTION
           ================================================================== */}
@@ -162,6 +172,8 @@ const faqs = [
 
             {/* ATTRIBUTES LINE */}
             <div className="xeque-hero-attributes-line">
+              <span>187 páginas</span>
+              <span className="xeque-attr-dot">•</span>
               <span>30 capítulos</span>
               <span className="xeque-attr-dot">•</span>
               <span>5 partes</span>
