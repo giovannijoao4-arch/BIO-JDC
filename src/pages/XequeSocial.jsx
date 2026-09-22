@@ -114,16 +114,6 @@ const faqs = [
   return (
     <div className="xeque-social-page">
 
-      <header className="xeque-page-topbar">
-        <a href="/" className="xeque-page-brand" aria-label="Voltar para a página principal do Jogo de Cintura">
-          JOGO DE CINTURA
-        </a>
-        <div className="xeque-page-meta">
-          <span>01 / XEQUE SOCIAL</span>
-          <span>LIVRO DIGITAL</span>
-        </div>
-      </header>
-
       {/* ==================================================================
           1. REFORMULATED EDITORIAL HERO SECTION
           ================================================================== */}
@@ -137,7 +127,7 @@ const faqs = [
             {/* EYEBROW */}
             <div className="xeque-hero-brand-tag">
               <IconChessPawn size={15} />
-              <span>XEQUE SOCIAL • PRIMEIRO MOVIMENTO DO JDC</span>
+              <span>XEQUE SOCIAL • LIVRO DIGITAL</span>
               {!isLaunched && (
                 <span className="xeque-hero-lock-badge">
                   <IconLock size={12} style={{ display: 'inline', marginRight: '4px' }} />
@@ -185,6 +175,18 @@ const faqs = [
             <blockquote className="xeque-hero-editorial-quote">
               "Antes de tentar decifrar o outro, organize a sua própria leitura."
             </blockquote>
+
+            <div className="xeque-hero-purchase-meta">
+              <div className="xeque-hero-price">
+                <span className="xeque-hero-price-currency">R$</span>
+                <span className="xeque-hero-price-value">37</span>
+                <span className="xeque-hero-price-cents">,00</span>
+              </div>
+              <div className="xeque-hero-price-copy">
+                <strong>pagamento único</strong>
+                <span>Acesso vitalício • 7 dias de garantia</span>
+              </div>
+            </div>
 
             {/* CALL TO ACTION BUTTON (LOCKED OR ACTIVE) */}
             <div className="xeque-hero-cta-wrapper">
@@ -421,6 +423,26 @@ const faqs = [
           <p className="xeque-lance-closing">
             O objetivo não é transformar relacionamento em cálculo. É evitar que o impulso escolha por você.
           </p>
+
+          <div className="xeque-mid-cta">
+            <div className="xeque-mid-cta-copy">
+              <span className="xeque-mid-cta-kicker">XEQUE SOCIAL • 187 PÁGINAS</span>
+              <strong>Se esse é o tipo de situação que costuma tirar você do eixo, comece pelo primeiro movimento.</strong>
+            </div>
+            <div className="xeque-mid-cta-action">
+              <span className="xeque-mid-cta-price">R$ 37,00</span>
+              {isLaunched ? (
+                <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn">
+                  <span>QUERO ACESSAR O XEQUE SOCIAL</span>
+                </a>
+              ) : (
+                <button type="button" className="xeque-cta-btn xeque-cta-btn-locked" disabled aria-disabled="true">
+                  <IconLock size={16} className="xeque-lock-icon" />
+                  <span>LIBERA DIA 7 ÀS 20H</span>
+                </button>
+              )}
+            </div>
+          </div>
         </div>
       </section>
 
