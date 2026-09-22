@@ -7,13 +7,13 @@ export function FreeContent({ sectionConfig, contents }) {
   const renderIcon = (iconName) => {
     switch (iconName?.toLowerCase()) {
       case 'youtube':
-        return <IconYoutube size={26} />;
+        return <IconYoutube size={21} />;
       case 'spotify':
-        return <IconSpotify size={26} />;
+        return <IconSpotify size={21} />;
       case 'blog':
-        return <IconBlog size={26} />;
+        return <IconBlog size={21} />;
       default:
-        return <IconCompass size={26} />;
+        return <IconCompass size={21} />;
     }
   };
 
@@ -24,12 +24,15 @@ export function FreeContent({ sectionConfig, contents }) {
 
   return (
     <section className="free-content-vtsd-wrapper" aria-label="Conteúdos Gratuitos">
-      <h2 className="free-content-vtsd-title">
-        {sectionConfig?.title || "Conteúdos Gratuitos"}
-      </h2>
+      <div className="free-content-vtsd-header">
+        <span className="home-section-kicker">04 / CONTEÚDO</span>
+        <h2 className="free-content-vtsd-title">
+          {sectionConfig?.title || "Conteúdos Gratuitos"}
+        </h2>
+      </div>
 
       <div className="free-content-vtsd-grid">
-        {contents.map((item) => {
+        {contents.map((item, index) => {
           const isComingSoon = Boolean(item.comingSoon);
           const webpUrl = getWebpUrl(item.image);
 
@@ -49,22 +52,29 @@ export function FreeContent({ sectionConfig, contents }) {
                     className="free-card-vtsd-img"
                     loading="lazy"
                     decoding="async"
-                    width="360"
-                    height="240"
+                    width="480"
+                    height="320"
                   />
                 </picture>
 
+                <span className="free-card-vtsd-number">{String(index + 1).padStart(2, '0')}</span>
+
                 {isComingSoon && (
                   <div className="free-card-vtsd-coming-soon-badge">
-                    <IconLock size={12} />
+                    <IconLock size={11} />
                     <span>EM BREVE</span>
                   </div>
                 )}
               </div>
 
-              {/* Display ONLY the symbol/icon below each card (no text name) */}
-              <div className="free-card-vtsd-label-symbol">
-                {renderIcon(item.icon)}
+              <div className="free-card-vtsd-meta">
+                <div className="free-card-vtsd-label-symbol">
+                  {renderIcon(item.icon)}
+                </div>
+                <div>
+                  <span className="free-card-vtsd-platform">{item.platform}</span>
+                  <h3 className="free-card-vtsd-title">{item.title}</h3>
+                </div>
               </div>
             </a>
           );
