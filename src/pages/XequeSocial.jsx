@@ -5,6 +5,7 @@ import '../styles/xeque-social.css';
 
 export function XequeSocial() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [testimonialImages, setTestimonialImages] = useState([]);
   const { isLaunched } = useLaunchStatus();
 
   useEffect(() => {
@@ -23,6 +24,84 @@ export function XequeSocial() {
       if (metaDescription && previousDescription) {
         metaDescription.setAttribute('content', previousDescription);
       }
+    };
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    const objectUrls = [];
+
+    const mimeFor = (name) => {
+      const lower = name.toLowerCase();
+      if (lower.endsWith('.webp')) return 'image/webp';
+      if (lower.endsWith('.jpg') || lower.endsWith('.jpeg')) return 'image/jpeg';
+      return 'image/png';
+    };
+
+    const loadTestimonialsFromZip = async () => {
+      try {
+        const response = await fetch('/images/depoimentos_xeque_social_imgs.zip');
+        if (!response.ok) throw new Error('Não foi possível carregar o arquivo de depoimentos.');
+
+        const buffer = await response.arrayBuffer();
+        const bytes = new Uint8Array(buffer);
+        const view = new DataView(buffer);
+        const decoder = new TextDecoder();
+        const images = [];
+        let offset = 0;
+
+        while (offset + 30 <= bytes.length) {
+          const signature = view.getUint32(offset, true);
+          if (signature !== 0x04034b50) break;
+
+          const compressionMethod = view.getUint16(offset + 8, true);
+          const compressedSize = view.getUint32(offset + 18, true);
+          const fileNameLength = view.getUint16(offset + 26, true);
+          const extraFieldLength = view.getUint16(offset + 28, true);
+
+          const fileNameStart = offset + 30;
+          const dataStart = fileNameStart + fileNameLength + extraFieldLength;
+          const fileName = decoder.decode(bytes.slice(fileNameStart, fileNameStart + fileNameLength));
+          const compressedData = bytes.slice(dataStart, dataStart + compressedSize);
+
+          if (/\.(png|jpe?g|webp)$/i.test(fileName)) {
+            let imageBuffer;
+
+            if (compressionMethod === 0) {
+              imageBuffer = compressedData;
+            } else if (compressionMethod === 8 && 'DecompressionStream' in window) {
+              const stream = new Blob([compressedData])
+                .stream()
+                .pipeThrough(new DecompressionStream('deflate-raw'));
+              imageBuffer = new Uint8Array(await new Response(stream).arrayBuffer());
+            }
+
+            if (imageBuffer) {
+              const blob = new Blob([imageBuffer], { type: mimeFor(fileName) });
+              const url = URL.createObjectURL(blob);
+              objectUrls.push(url);
+              images.push({ src: url, name: fileName });
+            }
+          }
+
+          offset = dataStart + compressedSize;
+        }
+
+        images.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', { numeric: true }));
+
+        if (!cancelled) {
+          setTestimonialImages(images);
+        }
+      } catch (error) {
+        console.error('Erro ao carregar depoimentos do Xeque Social:', error);
+      }
+    };
+
+    loadTestimonialsFromZip();
+
+    return () => {
+      cancelled = true;
+      objectUrls.forEach((url) => URL.revokeObjectURL(url));
     };
   }, []);
 
@@ -72,17 +151,7 @@ const faqs = [
   ];
 
 
-  const testimonials = [
-    "Tô na metade ainda, mas já valeu pela parte de leitura social. Eu era muito desligado com reação e clima da conversa. Depois desse trecho comecei a perceber bem mais o ambiente e o jeito da pessoa.",
-    "Cara, a parte dos sinais de interesse clareou muito pra mim. Tinha coisa que eu via e não entendia direito. Depois do Xeque Social comecei a reparar melhor nas brechas e no jeito que a pessoa responde.",
-    "Curti demais a parte dos Três Níveis. Antes eu ficava preso no assunto mais raso e a conversa morria rápido. O livro me ajudou a entender como puxar o papo de um jeito mais natural e sem parecer decorado.",
-    "O que eu mais gostei foi que o Xeque Social organizou umas coisas que eu fazia no improviso. A parte de manter o controle da conversa sem ficar duro foi a que mais clareou minha cabeça.",
-    "O que mais me pegou foi a parte de conduzir o assunto. Eu percebi que eu fazia pergunta demais e a conversa ficava estranha. No Xeque Social deu pra entender melhor como deixar o papo mais leve.",
-    "Eu achei massa que o Xeque Social vai além de papo pronto. A parte de postura e presença me fez reparar em detalhe que eu deixava passar. Depois que li isso, comecei a me ligar mais no jeito que eu chego.",
-    "O jeito que ele explica timing foi o que mais fez sentido pra mim. Às vezes eu errava não pelo que falava, mas pela hora. Parece detalhe, só que depois que você entende, tudo encaixa melhor.",
-    "Mano, a parte de abordagem foi o que mais me ajudou. Eu sempre ficava travado pra chegar e iniciar conversa. No Xeque Social eu peguei uns jeitos mais simples de entrar no papo sem parecer forçado.",
-    "Na moral, a parte das âncoras foi uma das que mais abriu minha cabeça. Eu nem percebia como faltava firmeza em várias conversas minhas. Coisa simples, mas quando você entende, muda bastante."
-  ];
+
 
   const HOTMART_CHECKOUT_URL = "https://pay.hotmart.com/D107390083H?checkoutMode=10";
 
@@ -429,13 +498,16 @@ const faqs = [
           </h2>
 
           <div className="xeque-testimonials-grid">
-            {testimonials.map((text, index) => (
-              <article key={index} className="xeque-testimonial-card xeque-testimonial-native">
-                <div className={`xeque-testimonial-avatar xeque-testimonial-avatar-${(index % 4) + 1}`} aria-hidden="true" />
-                <div className="xeque-testimonial-bubble">
-                  <p>{text}</p>
-                </div>
-              </article>
+            {testimonialImages.map((item, index) => (
+              <figure key={item.name} className="xeque-testimonial-card">
+                <img
+                  src={item.src}
+                  alt={`Depoimento de leitor do Xeque Social ${index + 1}`}
+                  className="xeque-testimonial-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
             ))}
           </div>
         </div>
