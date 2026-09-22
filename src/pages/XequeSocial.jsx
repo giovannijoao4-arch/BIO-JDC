@@ -72,7 +72,17 @@ const faqs = [
   ];
 
 
-  const testimonialImages = [];
+  const testimonials = [
+    "Tô na metade ainda, mas já valeu pela parte de leitura social. Eu era muito desligado com reação e clima da conversa. Depois desse trecho comecei a perceber bem mais o ambiente e o jeito da pessoa.",
+    "Cara, a parte dos sinais de interesse clareou muito pra mim. Tinha coisa que eu via e não entendia direito. Depois do Xeque Social comecei a reparar melhor nas brechas e no jeito que a pessoa responde.",
+    "Curti demais a parte dos Três Níveis. Antes eu ficava preso no assunto mais raso e a conversa morria rápido. O livro me ajudou a entender como puxar o papo de um jeito mais natural e sem parecer decorado.",
+    "O que eu mais gostei foi que o Xeque Social organizou umas coisas que eu fazia no improviso. A parte de manter o controle da conversa sem ficar duro foi a que mais clareou minha cabeça.",
+    "O que mais me pegou foi a parte de conduzir o assunto. Eu percebi que eu fazia pergunta demais e a conversa ficava estranha. No Xeque Social deu pra entender melhor como deixar o papo mais leve.",
+    "Eu achei massa que o Xeque Social vai além de papo pronto. A parte de postura e presença me fez reparar em detalhe que eu deixava passar. Depois que li isso, comecei a me ligar mais no jeito que eu chego.",
+    "O jeito que ele explica timing foi o que mais fez sentido pra mim. Às vezes eu errava não pelo que falava, mas pela hora. Parece detalhe, só que depois que você entende, tudo encaixa melhor.",
+    "Mano, a parte de abordagem foi o que mais me ajudou. Eu sempre ficava travado pra chegar e iniciar conversa. No Xeque Social eu peguei uns jeitos mais simples de entrar no papo sem parecer forçado.",
+    "Na moral, a parte das âncoras foi uma das que mais abriu minha cabeça. Eu nem percebia como faltava firmeza em várias conversas minhas. Coisa simples, mas quando você entende, muda bastante."
+  ];
 
   const HOTMART_CHECKOUT_URL = "https://pay.hotmart.com/D107390083H?checkoutMode=10";
 
@@ -419,26 +429,14 @@ const faqs = [
           </h2>
 
           <div className="xeque-testimonials-grid">
-            {testimonialImages.length > 0 ? (
-              testimonialImages.map((item, index) => (
-                <figure key={index} className="xeque-testimonial-card">
-                  <img
-                    src={item.src}
-                    alt={item.alt || `Depoimento de leitor do Xeque Social ${index + 1}`}
-                    className="xeque-testimonial-img"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </figure>
-              ))
-            ) : (
-              Array.from({ length: 6 }).map((_, index) => (
-                <div key={index} className="xeque-testimonial-placeholder" aria-label={`Espaço para depoimento real ${index + 1}`}>
-                  <span className="xeque-testimonial-placeholder-label">DEPOIMENTO REAL</span>
-                  <p>Espaço preparado para inserir um print de leitor do Xeque Social.</p>
+            {testimonials.map((text, index) => (
+              <article key={index} className="xeque-testimonial-card xeque-testimonial-native">
+                <div className={`xeque-testimonial-avatar xeque-testimonial-avatar-${(index % 4) + 1}`} aria-hidden="true" />
+                <div className="xeque-testimonial-bubble">
+                  <p>{text}</p>
                 </div>
-              ))
-            )}
+              </article>
+            ))}
           </div>
         </div>
       </section>
