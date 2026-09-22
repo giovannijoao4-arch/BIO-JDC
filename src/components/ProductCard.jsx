@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getUtmUrl } from '../utils/utm';
 import { IconArrowRight, IconLock } from './Icons';
 
-export function ProductCard({ product, index = 0, isOpen, onToggle }) {
+export function ProductCard({ product, isOpen, onToggle }) {
   const handleCtaClick = (e) => {
     if (!product.link || product.link === '#') {
       e.preventDefault();
@@ -12,8 +12,6 @@ export function ProductCard({ product, index = 0, isOpen, onToggle }) {
   };
 
   const isInternalRoute = product.link && product.link.startsWith('/');
-  const productNumber = String(index + 1).padStart(2, '0');
-
   return (
     <article className={`vtsd-accordion-item ${isOpen ? 'is-open' : ''}`}>
       <button
@@ -23,8 +21,6 @@ export function ProductCard({ product, index = 0, isOpen, onToggle }) {
         aria-expanded={isOpen}
       >
         <div className="vtsd-accordion-header-main">
-          <span className="vtsd-product-index">{productNumber}</span>
-
           <div className="vtsd-accordion-header-left">
             <span className="vtsd-accordion-title">{product.name}</span>
 
@@ -79,7 +75,7 @@ export function ProductCard({ product, index = 0, isOpen, onToggle }) {
                   <ul className="vtsd-product-list">
                     {product.learnItems.map((item, idx) => (
                       <li key={idx} className="vtsd-product-list-item">
-                        <span className="vtsd-bullet-icon">{String(idx + 1).padStart(2, '0')}</span>
+                        <span className="vtsd-bullet-icon">•</span>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -95,7 +91,7 @@ export function ProductCard({ product, index = 0, isOpen, onToggle }) {
                   <ul className="vtsd-product-list">
                     {product.recommendedItems.map((item, idx) => (
                       <li key={idx} className="vtsd-product-list-item">
-                        <span className="vtsd-bullet-icon">{String(idx + 1).padStart(2, '0')}</span>
+                        <span className="vtsd-bullet-icon">•</span>
                         <span>{item}</span>
                       </li>
                     ))}
