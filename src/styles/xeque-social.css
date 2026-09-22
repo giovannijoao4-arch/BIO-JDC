@@ -5567,3 +5567,104 @@
     font-size: .76rem;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — GALLERY COMPACT V6
+   Corrige excesso de altura e espaços vazios da galeria.
+   ========================================================================== */
+
+.xeque-section-galeria-papel {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
+.xeque-section-galeria-papel .xeque-container {
+  max-width: 1040px !important;
+}
+
+.xeque-gallery-natural-grid {
+  width: 100%;
+  height: clamp(620px, 58vw, 760px) !important;
+  margin-top: 2.1rem !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr) !important;
+  gap: 1.25rem !important;
+  align-items: stretch !important;
+}
+
+.xeque-gallery-natural-column {
+  height: 100% !important;
+  gap: 1rem !important;
+}
+
+.xeque-gallery-natural-left {
+  grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.xeque-gallery-natural-right {
+  grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.xeque-gallery-natural-item {
+  min-height: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+.xeque-gallery-natural-item .xeque-gallery-img-box {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.xeque-gallery-natural-item .xeque-gallery-book-img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+.xeque-gallery-natural-caption {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .xeque-section-galeria-papel {
+    padding-top: 3.75rem !important;
+    padding-bottom: 3.75rem !important;
+  }
+
+  .xeque-gallery-natural-grid {
+    height: auto !important;
+    display: block !important;
+    margin-top: 1.6rem !important;
+  }
+
+  .xeque-gallery-natural-column {
+    display: block !important;
+    height: auto !important;
+  }
+
+  .xeque-gallery-natural-column + .xeque-gallery-natural-column {
+    margin-top: .9rem !important;
+  }
+
+  .xeque-gallery-natural-item {
+    margin-bottom: .9rem !important;
+  }
+
+  .xeque-gallery-natural-item .xeque-gallery-img-box {
+    height: auto !important;
+  }
+
+  .xeque-gallery-natural-item .xeque-gallery-book-img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
