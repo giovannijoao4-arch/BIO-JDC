@@ -5240,3 +5240,206 @@
     justify-content: flex-start;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — FINAL OFFER CONTRAST + GALLERY 2X3
+   Ajuste solicitado: oferta com contraste legível e galeria com
+   2 páginas grandes à esquerda + 3 menores à direita.
+   ========================================================================== */
+
+/* OFERTA — corrigir elementos escuros demais */
+.xeque-offer-section {
+  background: #060708 !important;
+  color: #f2eee6 !important;
+}
+
+.xeque-offer-main-card {
+  border-color: rgba(185, 154, 90, 0.22) !important;
+  background:
+    linear-gradient(135deg, rgba(185, 154, 90, 0.04), transparent 45%),
+    #0a0c0e !important;
+}
+
+.xeque-offer-card-top {
+  border-right-color: rgba(255,255,255,0.08) !important;
+}
+
+.xeque-offer-eyebrow {
+  color: #c8a85f !important;
+}
+
+.xeque-offer-card-title {
+  color: #f2eee6 !important;
+}
+
+.xeque-offer-card-subtitle {
+  color: #c3beb5 !important;
+}
+
+.xeque-offer-badge-pill {
+  color: #d2b06a !important;
+  border-bottom-color: rgba(185, 154, 90, 0.30) !important;
+}
+
+.xeque-offer-big-price {
+  color: #f2eee6 !important;
+}
+
+.xeque-offer-section .xeque-price-val {
+  color: #f2eee6 !important;
+  opacity: 1 !important;
+}
+
+.xeque-offer-section .xeque-price-currency,
+.xeque-offer-section .xeque-price-cents {
+  color: #c8a85f !important;
+}
+
+.xeque-offer-payment-label {
+  color: #9f998d !important;
+}
+
+.xeque-offer-features-list {
+  border-top-color: rgba(255,255,255,0.08) !important;
+}
+
+.xeque-offer-features-list li {
+  color: #d5d0c8 !important;
+  border-bottom-color: rgba(255,255,255,0.06) !important;
+}
+
+.xeque-feat-check {
+  color: #c8a85f !important;
+}
+
+.xeque-offer-micro-sub {
+  color: #aaa49a !important;
+}
+
+.xeque-offer-trust-footer {
+  color: #a8a298 !important;
+}
+
+.xeque-offer-trust-footer svg,
+.xeque-offer-micro-sub svg {
+  color: #c8a85f !important;
+}
+
+/* PÁGINAS REAIS — 2 grandes à esquerda + 3 menores à direita */
+.xeque-gallery-desktop-grid {
+  width: 100% !important;
+  margin-top: 2.8rem !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) !important;
+  grid-template-rows: auto auto auto !important;
+  gap: 1.35rem !important;
+  align-items: start !important;
+}
+
+.xeque-gallery-card,
+.xeque-gallery-card.card-enlarged,
+.xeque-gallery-card.card-detail,
+.xeque-gallery-card:nth-child(3n) {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  display: block !important;
+  grid-column: auto !important;
+  border: 1px solid rgba(24,25,26,.12) !important;
+  border-radius: 10px !important;
+  background: rgba(255,255,255,.38) !important;
+  box-shadow: 0 14px 36px rgba(52,45,30,.06) !important;
+}
+
+/* 2 grandes à esquerda */
+.xeque-gallery-card:nth-child(1) {
+  grid-column: 1 !important;
+  grid-row: 1 / span 1 !important;
+}
+
+.xeque-gallery-card:nth-child(2) {
+  grid-column: 1 !important;
+  grid-row: 2 / span 2 !important;
+}
+
+/* 3 menores à direita */
+.xeque-gallery-card:nth-child(3) {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+.xeque-gallery-card:nth-child(4) {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+}
+
+.xeque-gallery-card:nth-child(5) {
+  grid-column: 2 !important;
+  grid-row: 3 !important;
+}
+
+.xeque-gallery-card:nth-child(1) .xeque-gallery-img-box,
+.xeque-gallery-card:nth-child(2) .xeque-gallery-img-box {
+  aspect-ratio: 4 / 5 !important;
+}
+
+.xeque-gallery-card:nth-child(3) .xeque-gallery-img-box,
+.xeque-gallery-card:nth-child(4) .xeque-gallery-img-box,
+.xeque-gallery-card:nth-child(5) .xeque-gallery-img-box {
+  aspect-ratio: 4 / 3 !important;
+}
+
+.xeque-gallery-card:nth-child(3) .xeque-gallery-img-box,
+.xeque-gallery-card:nth-child(4) .xeque-gallery-img-box,
+.xeque-gallery-card:nth-child(5) .xeque-gallery-img-box,
+.xeque-gallery-card:nth-child(3n) .xeque-gallery-img-box {
+  background: #d9d3c7 !important;
+}
+
+.xeque-gallery-card-info,
+.xeque-gallery-card:nth-child(3n) .xeque-gallery-card-info {
+  display: block !important;
+  padding: 1rem 1rem 1.2rem !important;
+  border: 0 !important;
+}
+
+.xeque-gallery-item-title {
+  font-size: 1.02rem !important;
+}
+
+.xeque-gallery-item-desc {
+  font-size: 0.84rem !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 767px) {
+  .xeque-gallery-desktop-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: none !important;
+    gap: 1.2rem !important;
+  }
+
+  .xeque-gallery-card:nth-child(1),
+  .xeque-gallery-card:nth-child(2),
+  .xeque-gallery-card:nth-child(3),
+  .xeque-gallery-card:nth-child(4),
+  .xeque-gallery-card:nth-child(5) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .xeque-gallery-card:nth-child(1) .xeque-gallery-img-box,
+  .xeque-gallery-card:nth-child(2) .xeque-gallery-img-box,
+  .xeque-gallery-card:nth-child(3) .xeque-gallery-img-box,
+  .xeque-gallery-card:nth-child(4) .xeque-gallery-img-box,
+  .xeque-gallery-card:nth-child(5) .xeque-gallery-img-box {
+    aspect-ratio: 4 / 5 !important;
+  }
+
+  .xeque-offer-card-top {
+    border-right: 0 !important;
+    border-bottom-color: rgba(255,255,255,0.08) !important;
+  }
+}
