@@ -29,7 +29,6 @@ export function HeaderProfile({ profile }) {
 
         <div className="profile-meta">
           <span className="profile-username">{profile.username}</span>
-          <span className="profile-meta-separator" aria-hidden="true" />
           <span className="profile-meta-label">conteúdo, produtos e formação</span>
         </div>
 
