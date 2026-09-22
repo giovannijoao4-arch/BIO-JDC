@@ -5668,3 +5668,88 @@
     height: auto !important;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — GALLERY FLOW FIX V7
+   Remove altura fixa e deixa a seção crescer com o conteúdo.
+   2 páginas grandes à esquerda + 3 menores à direita em proporção 3:2.
+   ========================================================================== */
+
+.xeque-section-galeria-papel {
+  overflow: visible !important;
+}
+
+.xeque-section-galeria-papel .xeque-container {
+  max-width: 960px !important;
+}
+
+.xeque-gallery-natural-grid {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr) !important;
+  gap: 1.25rem !important;
+  align-items: start !important;
+}
+
+.xeque-gallery-natural-column {
+  height: auto !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+
+.xeque-gallery-natural-left {
+  gap: 1rem !important;
+}
+
+.xeque-gallery-natural-right {
+  gap: .5rem !important;
+}
+
+.xeque-gallery-natural-item {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+}
+
+.xeque-gallery-natural-item .xeque-gallery-img-box {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  display: block !important;
+  overflow: visible !important;
+}
+
+.xeque-gallery-natural-item .xeque-gallery-book-img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 767px) {
+  .xeque-section-galeria-papel .xeque-container {
+    max-width: 100% !important;
+  }
+
+  .xeque-gallery-natural-grid {
+    display: block !important;
+  }
+
+  .xeque-gallery-natural-left,
+  .xeque-gallery-natural-right {
+    gap: .85rem !important;
+  }
+
+  .xeque-gallery-natural-right {
+    margin-top: .85rem !important;
+  }
+}
