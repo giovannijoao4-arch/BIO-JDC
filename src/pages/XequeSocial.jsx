@@ -16,7 +16,7 @@ export function XequeSocial() {
     document.title = 'Xeque Social | Jogo de Cintura';
     metaDescription?.setAttribute(
       'content',
-      'Livro digital do Jogo de Cintura para homens que querem entender melhor situações de relacionamento, separar fato de interpretação e organizar o primeiro movimento antes de reagir.'
+      'Livro digital do Jogo de Cintura para entender melhor situações de relacionamento, separar fato de interpretação e organizar o primeiro movimento antes de reagir.'
     );
 
     return () => {
@@ -38,14 +38,14 @@ const faqs = [
     },
     {
       q: "O livro é só sobre relacionamento amoroso?",
-      a: "O foco principal está nas relações entre homens e mulheres, por isso muitos exemplos passam por mensagens, encontros, aproximação, afastamento e conflito. O mesmo processo também pode ser aplicado a amizades, família e outras relações."
+      a: "Não. O foco é aprender a ler situações de relacionamento com mais clareza. Os exemplos passam por mensagens, aproximação, afastamento, conflito, amizade, família e outras relações do dia a dia."
     },
     {
       q: "Preciso ser extrovertido?",
       a: "Não. O método não depende de falar mais. Ele ajuda você a perceber melhor o que está acontecendo, separar fato de interpretação e escolher uma resposta compatível com a situação."
     },
     {
-      q: "Isso ensina técnicas para controlar mulheres?",
+      q: "Isso ensina técnicas para controlar pessoas?",
       a: "Não. O Xeque Social não ensina manipulação, leitura mental, ciúme provocado nem frases para conduzir alguém. O foco é entender a situação, assumir responsabilidade pelo próprio movimento e respeitar limites."
     },
     {
@@ -146,11 +146,11 @@ const faqs = [
 
             {/* SUBHEADLINE */}
             <p className="xeque-hero-left-subheadline xeque-subheadline-desktop">
-  O Xeque Social é o livro de entrada do Jogo de Cintura para homens que querem se relacionar melhor com mulheres. Ele ensina a separar fato de interpretação e organizar o primeiro movimento em mensagens, encontros, conflitos e mudanças de comportamento.
+  O Xeque Social é o livro de entrada do Jogo de Cintura para quem quer lidar melhor com situações de relacionamento. Ele ensina a separar fato de interpretação e organizar o primeiro movimento em mensagens, encontros, conflitos e mudanças de comportamento.
 </p>
 
 <p className="xeque-hero-left-subheadline xeque-subheadline-mobile">
-  Um livro para homens que querem entender melhor mensagens, encontros e conflitos antes de transformar ansiedade em reação.
+  Um livro para entender melhor mensagens, encontros e conflitos antes de transformar ansiedade em reação.
 </p>
 
             <div className="xeque-relationship-context" aria-label="Situações trabalhadas no livro">
@@ -220,7 +220,7 @@ const faqs = [
             <div className="xeque-situation-editorial-card">
               <span className="xeque-situation-num">01</span>
               <p className="xeque-situation-text">
-                Ela demora a responder e sua cabeça transforma a demora em rejeição antes de existir contexto suficiente.
+                A outra pessoa demora a responder e sua cabeça transforma a demora em rejeição antes de existir contexto suficiente.
               </p>
             </div>
 
@@ -248,7 +248,7 @@ const faqs = [
 
           <div className="xeque-reconhecimento-closing-statement">
             <p>
-              Você não precisa decifrar mulheres para se relacionar melhor. <br className="xeque-desktop-br" />
+              Você não precisa decifrar ninguém para se relacionar melhor. <br className="xeque-desktop-br" />
               <strong className="xeque-gold-text">Precisa perceber o que aconteceu e escolher como vai se posicionar.</strong>
             </p>
           </div>
@@ -295,7 +295,7 @@ const faqs = [
           </h2>
 
           <p className="xeque-tres-leituras-intro">
-            Situação: ela visualiza sua mensagem, continua ativa e não responde.
+            Situação: a pessoa visualiza sua mensagem, continua ativa e não responde.
           </p>
 
           <div className="xeque-tres-leituras-grid">
@@ -310,7 +310,7 @@ const faqs = [
             <div className="xeque-tres-leituras-card xeque-tres-leituras-card-interp">
               <span className="xeque-tres-leituras-label">INTERPRETAÇÃO AUTOMÁTICA</span>
               <p className="xeque-tres-leituras-text">
-                Ela está me ignorando. Fiz alguma coisa. Preciso resolver isso agora.
+                Essa pessoa está me ignorando. Fiz alguma coisa. Preciso resolver isso agora.
               </p>
             </div>
 
@@ -343,7 +343,7 @@ const faqs = [
           <div className="xeque-eixos-grid">
             <div className="xeque-eixo-card">
               <span className="xeque-eixo-num">01</span>
-              <p className="xeque-eixo-text">Separar o que aconteceu do que você concluiu sobre ela e sobre a relação.</p>
+              <p className="xeque-eixo-text">Separar o que aconteceu do que você concluiu sobre a outra pessoa e sobre a relação.</p>
             </div>
             <div className="xeque-eixo-card">
               <span className="xeque-eixo-num">02</span>
@@ -578,7 +578,7 @@ const faqs = [
         <div className="xeque-container">
           <div className="xeque-credibilidade-box">
 
-            <span className="xeque-tag-badge">SEM ADIVINHAR O QUE ELA PENSA</span>
+            <span className="xeque-tag-badge">SEM ADIVINHAR O QUE O OUTRO PENSA</span>
 
             <h2 className="xeque-headline-medium">
               Entender melhor a relação começa por não inventar certeza onde ainda não existe.
@@ -690,7 +690,7 @@ const faqs = [
                   Foi aí que percebi que o problema começava antes da frase: na leitura que eu fazia e na pressa para resolver.
                 </p>
                 <p>
-                  O Xeque Social nasceu para organizar esses segundos com um critério prático. Sem ensinar manipulação, jogo de poder ou controle sobre mulheres.
+                  O Xeque Social nasceu para organizar esses segundos com um critério prático. Sem ensinar manipulação, jogo de poder ou controle sobre outras pessoas.
                 </p>
               </div>
 
