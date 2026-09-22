@@ -447,16 +447,16 @@ const faqs = [
         </div>
       </section>
 
-      {testimonialImages.length > 0 && (
-        <section className="xeque-section xeque-testimonials-section">
-          <div className="xeque-container">
-            <span className="xeque-tag-badge">DEPOIMENTOS</span>
-            <h2 className="xeque-headline-medium">
-              O que leitores do Xeque Social estão dizendo.
-            </h2>
+      <section className="xeque-section xeque-testimonials-section">
+        <div className="xeque-container">
+          <span className="xeque-tag-badge">DEPOIMENTOS</span>
+          <h2 className="xeque-headline-medium">
+            O que leitores do Xeque Social estão dizendo.
+          </h2>
 
-            <div className="xeque-testimonials-grid">
-              {testimonialImages.map((item, index) => (
+          <div className="xeque-testimonials-grid">
+            {testimonialImages.length > 0 ? (
+              testimonialImages.map((item, index) => (
                 <figure key={index} className="xeque-testimonial-card">
                   <img
                     src={item.src}
@@ -466,11 +466,18 @@ const faqs = [
                     decoding="async"
                   />
                 </figure>
-              ))}
-            </div>
+              ))
+            ) : (
+              Array.from({ length: 6 }).map((_, index) => (
+                <div key={index} className="xeque-testimonial-placeholder" aria-label={`Espaço para depoimento real ${index + 1}`}>
+                  <span className="xeque-testimonial-placeholder-label">DEPOIMENTO REAL</span>
+                  <p>Espaço preparado para inserir um print de leitor do Xeque Social.</p>
+                </div>
+              ))
+            )}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* ==================================================================
           GALERIA EDITORIAL DA OBRA (TEXTURA DE PAPEL CLARO / REAIS)
