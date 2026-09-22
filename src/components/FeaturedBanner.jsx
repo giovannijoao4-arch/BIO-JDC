@@ -9,7 +9,6 @@ export function FeaturedBanner({ banner }) {
   return (
     <section className="featured-banner-vtsd-wrapper" aria-label="Banner em Destaque">
       <div className="featured-banner-heading">
-        <span className="featured-banner-index">01</span>
         <span className="featured-banner-label">{banner.tag || "EM DESTAQUE"}</span>
       </div>
 
