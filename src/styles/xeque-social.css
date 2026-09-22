@@ -4870,3 +4870,373 @@
     padding-bottom: 5rem;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — RESTORE GALLERY & OFFER V3
+   Mantém o redesign de conversão V4 no restante da página, mas recupera
+   a aparência editorial anterior nas seções Páginas Reais e Oferta.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PÁGINAS REAIS — aparência editorial anterior
+   -------------------------------------------------------------------------- */
+
+.xeque-section-galeria-papel {
+  background: var(--xs-paper);
+  color: var(--xs-paper-ink);
+  overflow: hidden;
+}
+
+.xeque-section-galeria-papel .xeque-container {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.xeque-section-galeria-papel .xeque-headline-medium,
+.xeque-section-galeria-papel .xeque-title-paper {
+  color: var(--xs-paper-ink) !important;
+}
+
+.xeque-section-galeria-papel .xeque-tag-badge {
+  color: #8b6f36;
+  border-color: rgba(80,60,25,.32);
+  background: transparent;
+  border-radius: 0;
+  border-width: 0 0 1px 0;
+  padding: 0 0 .65rem;
+}
+
+.xeque-section-galeria-papel .xeque-subheadline {
+  color: #55534e !important;
+}
+
+.xeque-gallery-desktop-grid {
+  width: 100%;
+  margin-top: 2.8rem;
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 2rem;
+}
+
+.xeque-gallery-card,
+.xeque-gallery-card.card-enlarged,
+.xeque-gallery-card.card-detail {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.xeque-gallery-card:nth-child(3n) {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+.xeque-gallery-img-box,
+.xeque-gallery-card:nth-child(3n) .xeque-gallery-img-box {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #d9d3c7;
+  border: 1px solid rgba(24,25,26,.16);
+}
+
+.xeque-gallery-img-box {
+  aspect-ratio: 4 / 5;
+}
+
+.xeque-gallery-card:nth-child(3n) .xeque-gallery-img-box {
+  aspect-ratio: 16 / 9;
+}
+
+.xeque-gallery-img-box picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.xeque-gallery-book-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(.94) contrast(1.02);
+}
+
+.xeque-gallery-card-info {
+  padding: 1rem 0 2rem;
+  text-align: left;
+}
+
+.xeque-gallery-card:nth-child(3n) .xeque-gallery-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  border-top: 1px solid rgba(24,25,26,.16);
+  border-right: 1px solid rgba(24,25,26,.16);
+  border-bottom: 1px solid rgba(24,25,26,.16);
+}
+
+.xeque-gallery-item-tag {
+  color: #8b6f36;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: .6rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.xeque-gallery-item-title {
+  margin-top: .55rem;
+  color: #1b1c1c;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+
+.xeque-gallery-item-desc {
+  margin-top: .45rem;
+  color: #56544f;
+  font-size: inherit;
+  line-height: 1.6;
+}
+
+.xeque-gallery-mobile-carousel {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   OFERTA — aparência editorial anterior
+   -------------------------------------------------------------------------- */
+
+.xeque-offer-section {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  background: var(--xs-paper);
+  color: var(--xs-paper-ink);
+}
+
+.xeque-offer-main-card {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(280px, .82fr) minmax(0, 1.18fr);
+  grid-template-rows: auto auto auto auto 1fr auto auto;
+  column-gap: 4rem;
+  align-items: start;
+  border: 0;
+  border-top: 1px solid rgba(24,25,26,.22);
+  border-bottom: 1px solid rgba(24,25,26,.22);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
+}
+
+.xeque-offer-card-top {
+  grid-column: 1;
+  grid-row: 1 / span 7;
+  min-height: 100%;
+  margin: 0;
+  padding: 2rem 2rem 2rem 0;
+  align-items: flex-start;
+  border-right: 1px solid rgba(24,25,26,.18);
+  border-bottom: 0;
+}
+
+.xeque-offer-card-product-img {
+  width: min(100%, 290px);
+  margin: 0 0 2rem;
+  border: 1px solid rgba(24,25,26,.16);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.xeque-offer-eyebrow {
+  color: #8b6f36;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: .62rem;
+  letter-spacing: .15em;
+}
+
+.xeque-offer-card-title {
+  margin-top: .5rem;
+  color: #18191a;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -.05em;
+}
+
+.xeque-offer-card-subtitle {
+  max-width: 300px;
+  margin-top: .75rem;
+  color: #5c5953;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.xeque-offer-badge-pill {
+  grid-column: 2;
+  margin: 2rem 0 0;
+  padding: 0 0 .9rem;
+  width: fit-content;
+  border: 0;
+  border-bottom: 1px solid rgba(80,60,25,.30);
+  border-radius: 0;
+  background: transparent;
+  color: #8b6f36;
+  font-size: .65rem;
+  letter-spacing: .1em;
+}
+
+.xeque-offer-big-price {
+  grid-column: 2;
+  margin: 1.7rem 0 .2rem;
+  color: #18191a;
+  justify-content: flex-start;
+}
+
+.xeque-offer-section .xeque-price-currency,
+.xeque-offer-section .xeque-price-cents {
+  color: #8b6f36;
+}
+
+.xeque-offer-section .xeque-price-val {
+  color: #18191a;
+  font-size: clamp(4.2rem, 7vw, 6.2rem);
+  letter-spacing: -.07em;
+}
+
+.xeque-offer-payment-label {
+  grid-column: 2;
+  color: #6b675f;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.xeque-offer-features-list {
+  grid-column: 2;
+  width: 100%;
+  max-width: none;
+  margin: 2rem 0;
+  gap: 0;
+  border-top: 1px solid rgba(24,25,26,.16);
+}
+
+.xeque-offer-features-list li {
+  padding: .75rem 0;
+  border-bottom: 1px solid rgba(24,25,26,.12);
+  color: #3f3e3a;
+  font-size: .9rem;
+}
+
+.xeque-feat-check {
+  color: #8b6f36;
+}
+
+.xeque-offer-cta-btn {
+  grid-column: 2;
+  max-width: 100%;
+  background: #18191a;
+  border-color: #18191a;
+  color: #f1ede4;
+  box-shadow: none;
+}
+
+.xeque-offer-cta-btn:hover {
+  background: #2b2c2b;
+  color: #f1ede4;
+  box-shadow: none;
+}
+
+.xeque-offer-micro-sub {
+  grid-column: 2;
+  color: #6b675f;
+}
+
+.xeque-offer-trust-footer {
+  grid-column: 2;
+  justify-content: flex-start;
+  margin: 1.2rem 0 2rem;
+  color: #6b675f;
+  font-size: .68rem;
+}
+
+/* Responsivo dessas duas seções */
+
+@media (max-width: 767px) {
+  .xeque-section-galeria-papel .xeque-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .xeque-gallery-desktop-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .xeque-gallery-card:nth-child(3n) {
+    grid-column: auto;
+    display: block;
+  }
+
+  .xeque-gallery-card:nth-child(3n) .xeque-gallery-img-box {
+    aspect-ratio: 4 / 5;
+  }
+
+  .xeque-gallery-card:nth-child(3n) .xeque-gallery-card-info {
+    padding: 1rem 0 2rem;
+    border: 0;
+  }
+
+  .xeque-offer-section {
+    padding-top: 4.75rem;
+    padding-bottom: 4.75rem;
+  }
+
+  .xeque-offer-main-card {
+    display: block;
+    padding: 0;
+    border-top: 1px solid rgba(24,25,26,.22);
+    border-bottom: 1px solid rgba(24,25,26,.22);
+  }
+
+  .xeque-offer-card-top {
+    min-height: 0;
+    padding: 1.5rem 0 2rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(24,25,26,.18);
+  }
+
+  .xeque-offer-card-product-img {
+    width: min(70vw, 260px);
+  }
+
+  .xeque-offer-badge-pill {
+    margin-top: 1.5rem;
+  }
+
+  .xeque-offer-features-list {
+    margin: 1.5rem 0;
+  }
+
+  .xeque-offer-trust-footer {
+    justify-content: flex-start;
+  }
+}
