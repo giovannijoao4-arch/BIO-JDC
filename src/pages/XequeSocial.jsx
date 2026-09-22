@@ -5,7 +5,6 @@ import '../styles/xeque-social.css';
 
 export function XequeSocial() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
-  const [activeSlide, setActiveSlide] = useState(0);
   const { isLaunched } = useLaunchStatus();
 
   useEffect(() => {
@@ -508,93 +507,43 @@ const faqs = [
             Páginas reais do Xeque Social: estrutura, exemplos, exercícios e ferramentas usadas para organizar a leitura e o próximo movimento.
           </p>
 
-          {/* DESKTOP GRID WITH ENLARGED AND CLOSE-UP DETAIL CARDS */}
-          <div className="xeque-gallery-desktop-grid">
-            {galleryItems.map((item, index) => (
-              <div key={index} className={`xeque-gallery-card ${index % 2 === 0 ? 'card-enlarged' : 'card-detail'}`}>
-                <div className="xeque-gallery-img-box">
-                  <picture>
+          <div className="xeque-gallery-natural-grid">
+            <div className="xeque-gallery-natural-column xeque-gallery-natural-left">
+              {galleryItems.slice(0, 2).map((item, index) => (
+                <figure key={index} className="xeque-gallery-natural-item">
+                  <div className="xeque-gallery-img-box">
                     <img
                       src={item.src}
                       alt={item.alt}
                       className="xeque-gallery-book-img"
                       loading="lazy"
                       decoding="async"
-
                     />
-                  </picture>
-                </div>
-                <div className="xeque-gallery-card-info">
-                  <span className="xeque-gallery-item-tag">{item.tag}</span>
-                  <h3 className="xeque-gallery-item-title">{item.title}</h3>
-                  <p className="xeque-gallery-item-desc">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* MOBILE CAROUSEL WITH SWIPE & ACCESSIBLE CONTROLS */}
-          <div className="xeque-gallery-mobile-carousel">
-            <div className="xeque-carousel-track-wrapper">
-              <div
-                className="xeque-carousel-track"
-                style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-              >
-                {galleryItems.map((item, index) => (
-                  <div key={index} className="xeque-carousel-slide">
-                    <div className="xeque-gallery-card">
-                      <div className="xeque-gallery-img-box">
-                        <picture>
-                          <img
-                            src={item.src}
-                            alt={item.alt}
-                            className="xeque-gallery-book-img"
-                            loading="lazy"
-                            decoding="async"
-
-                          />
-                        </picture>
-                      </div>
-                      <div className="xeque-gallery-card-info">
-                        <span className="xeque-gallery-item-tag">{item.tag}</span>
-                        <h3 className="xeque-gallery-item-title">{item.title}</h3>
-                        <p className="xeque-gallery-item-desc">{item.desc}</p>
-                      </div>
-                    </div>
                   </div>
-                ))}
-              </div>
+                  <figcaption className="xeque-gallery-natural-caption">
+                    {item.desc}
+                  </figcaption>
+                </figure>
+              ))}
             </div>
 
-            {/* CONTROLS */}
-            <div className="xeque-carousel-controls">
-              <button
-                type="button"
-                className="xeque-carousel-btn"
-                onClick={() => setActiveSlide((prev) => (prev > 0 ? prev - 1 : galleryItems.length - 1))}
-                aria-label="Página anterior"
-              >
-                ‹
-              </button>
-
-              <div className="xeque-carousel-indicators">
-                {galleryItems.map((_, index) => (
-                  <span
-                    key={index}
-                    className={`xeque-indicator-dot ${activeSlide === index ? 'active' : ''}`}
-                    onClick={() => setActiveSlide(index)}
-                  />
-                ))}
-              </div>
-
-              <button
-                type="button"
-                className="xeque-carousel-btn"
-                onClick={() => setActiveSlide((prev) => (prev < galleryItems.length - 1 ? prev + 1 : 0))}
-                aria-label="Próxima página"
-              >
-                ›
-              </button>
+            <div className="xeque-gallery-natural-column xeque-gallery-natural-right">
+              {galleryItems.slice(2).map((item, index) => (
+                <figure key={index} className="xeque-gallery-natural-item">
+                  <div className="xeque-gallery-img-box">
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="xeque-gallery-book-img"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <figcaption className="xeque-gallery-natural-caption">
+                    {item.desc}
+                  </figcaption>
+                </figure>
+              ))}
             </div>
           </div>
 
