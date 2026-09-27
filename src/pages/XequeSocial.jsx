@@ -56,7 +56,7 @@ export function XequeSocial() {
     { src: '/images/xeque/depoimentos/depoimento-02.webp', alt: 'Depoimento de leitor do Xeque Social 2' },
     { src: '/images/xeque/depoimentos/depoimento-03.webp', alt: 'Depoimento de leitor do Xeque Social 3' },
     { src: '/images/xeque/depoimentos/depoimento-04.webp', alt: 'Depoimento de leitor do Xeque Social 4' },
-    { src: '/images/xeque/depoimentos/depoimento-05.webp', alt: 'Depoimento de leitor do Xeque Social 5' },
+    { src: '/images/xeque/depoimentos/depoimento-01.webp', alt: 'Depoimento de leitor do Xeque Social 5' },
     { src: '/images/xeque/depoimentos/depoimento-06.webp', alt: 'Depoimento de leitor do Xeque Social 6' },
     { src: '/images/xeque/depoimentos/depoimento-07.webp', alt: 'Depoimento de leitor do Xeque Social 7' },
     { src: '/images/xeque/depoimentos/depoimento-08.webp', alt: 'Depoimento de leitor do Xeque Social 8' },
