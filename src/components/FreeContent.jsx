@@ -10,6 +10,11 @@ const APP_LOGOS = {
 export function FreeContent({ sectionConfig, contents }) {
   if (!contents || contents.length === 0) return null;
 
+  const getWebpUrl = (jpgUrl) => {
+    if (!jpgUrl) return '';
+    return jpgUrl.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+  };
+
   return (
     <section className="free-content-vtsd-wrapper" aria-label="Conteúdos Gratuitos">
       <div className="free-content-vtsd-header">
@@ -22,7 +27,8 @@ export function FreeContent({ sectionConfig, contents }) {
       <div className="free-content-vtsd-grid">
         {contents.map((item) => {
           const isComingSoon = Boolean(item.comingSoon);
-          const logoSrc = APP_LOGOS[item.id] || item.image;
+          const webpUrl = getWebpUrl(item.image);
+          const logoSrc = APP_LOGOS[item.id];
 
           return (
             <a
@@ -32,13 +38,18 @@ export function FreeContent({ sectionConfig, contents }) {
               className={`free-card-vtsd-item ${isComingSoon ? 'is-coming-soon' : ''}`}
             >
               <div className="free-card-vtsd-image-box">
-                <img
-                  src={logoSrc}
-                  alt={`${item.platform} logo`}
-                  className={`free-card-vtsd-app-logo free-card-vtsd-app-logo--${item.id}`}
-                  loading="lazy"
-                  decoding="async"
-                />
+                <picture>
+                  {webpUrl && <source srcSet={webpUrl} type="image/webp" />}
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="free-card-vtsd-img"
+                    loading="lazy"
+                    decoding="async"
+                    width="480"
+                    height="320"
+                  />
+                </picture>
 
                 {isComingSoon && (
                   <div className="free-card-vtsd-coming-soon-badge">
@@ -50,12 +61,14 @@ export function FreeContent({ sectionConfig, contents }) {
 
               <div className="free-card-vtsd-meta">
                 <div className="free-card-vtsd-label-symbol">
-                  <img
-                    src={logoSrc}
-                    alt=""
-                    aria-hidden="true"
-                    className="free-card-vtsd-meta-logo"
-                  />
+                  {logoSrc && (
+                    <img
+                      src={logoSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="free-card-vtsd-meta-logo"
+                    />
+                  )}
                 </div>
                 <div>
                   <span className="free-card-vtsd-platform">{item.platform}</span>
