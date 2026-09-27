@@ -6295,3 +6295,39 @@
     gap: 2.25rem;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — PREÇO EM DESTAQUE
+   ========================================================================== */
+.xeque-offer-price {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: .08rem !important;
+  line-height: 1 !important;
+}
+
+.xeque-price-currency {
+  margin-top: .5rem !important;
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+}
+
+.xeque-price-value {
+  font-size: clamp(4.8rem, 7.5vw, 7rem) !important;
+  line-height: .82 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 800 !important;
+}
+
+.xeque-price-cents {
+  margin-top: .5rem !important;
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+}
+
+@media (max-width: 767px) {
+  .xeque-price-value {
+    font-size: clamp(4.2rem, 20vw, 5.6rem) !important;
+  }
+}
