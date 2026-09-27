@@ -6016,3 +6016,91 @@
     filter: saturate(.9);
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — DEPOIMENTOS REAIS / POSIÇÃO ALTA
+   ========================================================================== */
+.xeque-testimonials-section {
+  background:
+    radial-gradient(circle at 50% 0, rgba(185,154,90,.055), transparent 30rem),
+    #08070d !important;
+  border-top: 1px solid rgba(185,154,90,.10);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.xeque-testimonials-section .xeque-container {
+  max-width: 1180px;
+  align-items: flex-start;
+}
+
+.xeque-testimonials-section .xeque-headline-medium {
+  max-width: 760px;
+  text-align: left;
+}
+
+.xeque-testimonials-grid {
+  width: 100%;
+  margin-top: 2.35rem;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+.xeque-testimonial-card,
+.xeque-testimonial-card.xeque-testimonial-native {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 14px !important;
+  background: #050607 !important;
+  overflow: hidden !important;
+}
+
+.xeque-testimonial-img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 900px) {
+  .xeque-testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .xeque-testimonials-section {
+    padding-top: 3.8rem !important;
+    padding-bottom: 3.8rem !important;
+  }
+
+  .xeque-testimonials-section .xeque-headline-medium {
+    text-align: left;
+  }
+
+  .xeque-testimonials-grid {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(82vw, 82vw);
+    grid-template-columns: none !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: .85rem !important;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: .35rem;
+  }
+
+  .xeque-testimonials-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .xeque-testimonial-card {
+    scroll-snap-align: start;
+  }
+}
