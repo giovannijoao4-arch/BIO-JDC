@@ -129,16 +129,9 @@ export function XequeSocial() {
             </div>
 
             <div className="xeque-hero-cta-wrapper">
-              {!isLaunched ? (
-                <button type="button" className="xeque-cta-btn xeque-cta-btn-locked" disabled aria-disabled="true">
-                  <IconLock size={16} className="xeque-lock-icon" />
-                  <span>EM BREVE</span>
-                </button>
-              ) : (
-                <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn">
-                  <span>QUERO O XEQUE SOCIAL</span>
-                </a>
-              )}
+              <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn">
+                <span>QUERO O XEQUE SOCIAL</span>
+              </a>
               <p className="xeque-hero-micro-footer">
                 Livro digital • acesso vitalício • leitura no celular, tablet ou computador
               </p>
@@ -262,16 +255,9 @@ export function XequeSocial() {
               <li><IconCheck size={16} className="xeque-feat-check" /><span>Garantia de 7 dias</span></li>
             </ul>
 
-            {!isLaunched ? (
-              <button type="button" className="xeque-cta-btn xeque-offer-cta-btn xeque-cta-btn-locked" disabled aria-disabled="true">
-                <IconLock size={16} className="xeque-lock-icon" />
-                <span>EM BREVE</span>
-              </button>
-            ) : (
-              <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn xeque-offer-cta-btn">
-                <span>QUERO O XEQUE SOCIAL</span>
-              </a>
-            )}
+            <a href={HOTMART_CHECKOUT_URL} className="xeque-cta-btn xeque-offer-cta-btn">
+              <span>QUERO O XEQUE SOCIAL</span>
+            </a>
 
             <div className="xeque-offer-trust-footer">
               <span><IconLock size={12} /> Pagamento pela Hotmart</span>
