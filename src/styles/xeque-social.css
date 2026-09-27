@@ -6367,3 +6367,27 @@
     max-width: 100%;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — DEPOIMENTOS MOBILE EM COLUNA
+   ========================================================================== */
+@media (max-width: 620px) {
+  .xeque-testimonials-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-auto-flow: initial !important;
+    grid-auto-columns: auto !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    gap: .85rem !important;
+    padding-bottom: 0 !important;
+    scroll-snap-type: none !important;
+  }
+
+  .xeque-testimonial-card {
+    width: 100% !important;
+    scroll-snap-align: none !important;
+  }
+}
