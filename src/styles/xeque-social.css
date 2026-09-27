@@ -6104,3 +6104,194 @@
     scroll-snap-align: start;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — LOW TICKET COMPACT
+   ========================================================================== */
+.xeque-low-ticket-page .xeque-section {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+
+.xeque-compact-problem-section {
+  background: #07090c;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.xeque-compact-problem-section .xeque-container-editorial {
+  max-width: 1020px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.xeque-compact-lead {
+  max-width: 780px;
+  margin-top: 1rem;
+  color: #b9b5ad;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.xeque-compact-example {
+  width: 100%;
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  border-top: 1px solid rgba(255,255,255,.09);
+  border-bottom: 1px solid rgba(255,255,255,.09);
+}
+
+.xeque-compact-example > div {
+  min-width: 0;
+  padding: 1.3rem 1.25rem;
+  border-right: 1px solid rgba(255,255,255,.09);
+}
+
+.xeque-compact-example > div:first-child {
+  padding-left: 0;
+}
+
+.xeque-compact-example > div:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.xeque-compact-example span {
+  display: block;
+  margin-bottom: .65rem;
+  color: #c8a85f;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.xeque-compact-example p {
+  margin: 0;
+  color: #ece8e0;
+  font-size: .94rem;
+  line-height: 1.6;
+}
+
+.xeque-compact-included-section {
+  background: #070809;
+  border-top: 1px solid rgba(255,255,255,.05);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.xeque-compact-included-section .xeque-container {
+  max-width: 1080px;
+  align-items: flex-start;
+}
+
+.xeque-compact-included-section .xeque-headline-medium {
+  max-width: 760px;
+  text-align: left;
+}
+
+.xeque-compact-included-grid {
+  width: 100%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.xeque-compact-included-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255,255,255,.09);
+}
+
+.xeque-compact-included-list > div {
+  display: grid;
+  grid-template-columns: 20px minmax(0,1fr);
+  gap: .7rem;
+  align-items: start;
+  padding: .9rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  color: #d8d3ca;
+  line-height: 1.5;
+}
+
+.xeque-compact-included-list svg {
+  color: #c8a85f;
+  margin-top: .14rem;
+}
+
+.xeque-compact-pages {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .75rem;
+  align-items: start;
+}
+
+.xeque-compact-pages figure {
+  margin: 0;
+  overflow: hidden;
+  background: #efe9df;
+}
+
+.xeque-compact-pages img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.xeque-compact-after-offer {
+  background: #08090b;
+}
+
+.xeque-compact-after-offer .xeque-container-narrow {
+  max-width: 840px;
+  gap: 2.75rem;
+}
+
+.xeque-compact-faq-wrap {
+  width: 100%;
+}
+
+.xeque-compact-faq-wrap .xeque-headline-medium {
+  margin-bottom: 1.4rem;
+  text-align: left;
+  font-size: clamp(1.7rem,3vw,2.4rem);
+}
+
+@media (max-width: 767px) {
+  .xeque-low-ticket-page .xeque-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .xeque-compact-example {
+    grid-template-columns: 1fr;
+  }
+
+  .xeque-compact-example > div,
+  .xeque-compact-example > div:first-child,
+  .xeque-compact-example > div:last-child {
+    padding: 1rem 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .xeque-compact-example > div:last-child {
+    border-bottom: 0;
+  }
+
+  .xeque-compact-included-grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .xeque-compact-pages {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: .45rem;
+  }
+
+  .xeque-compact-after-offer .xeque-container-narrow {
+    gap: 2.25rem;
+  }
+}
