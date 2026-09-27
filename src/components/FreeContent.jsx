@@ -1,26 +1,14 @@
 import React from 'react';
-import { IconYoutube, IconSpotify, IconBlog, IconLock, IconCompass } from './Icons';
+import { IconLock } from './Icons';
+
+const APP_LOGOS = {
+  youtube: '/images/youtube-white.png',
+  spotify: '/images/spotify-white.png',
+  blog: '/images/blog-white.png',
+};
 
 export function FreeContent({ sectionConfig, contents }) {
   if (!contents || contents.length === 0) return null;
-
-  const renderIcon = (iconName) => {
-    switch (iconName?.toLowerCase()) {
-      case 'youtube':
-        return <IconYoutube size={21} />;
-      case 'spotify':
-        return <IconSpotify size={21} />;
-      case 'blog':
-        return <IconBlog size={21} />;
-      default:
-        return <IconCompass size={21} />;
-    }
-  };
-
-  const getWebpUrl = (jpgUrl) => {
-    if (!jpgUrl) return '';
-    return jpgUrl.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-  };
 
   return (
     <section className="free-content-vtsd-wrapper" aria-label="Conteúdos Gratuitos">
@@ -34,7 +22,7 @@ export function FreeContent({ sectionConfig, contents }) {
       <div className="free-content-vtsd-grid">
         {contents.map((item) => {
           const isComingSoon = Boolean(item.comingSoon);
-          const webpUrl = getWebpUrl(item.image);
+          const logoSrc = APP_LOGOS[item.id] || item.image;
 
           return (
             <a
@@ -44,19 +32,13 @@ export function FreeContent({ sectionConfig, contents }) {
               className={`free-card-vtsd-item ${isComingSoon ? 'is-coming-soon' : ''}`}
             >
               <div className="free-card-vtsd-image-box">
-                <picture>
-                  {webpUrl && <source srcSet={webpUrl} type="image/webp" />}
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="free-card-vtsd-img"
-                    loading="lazy"
-                    decoding="async"
-                    width="480"
-                    height="320"
-                  />
-                </picture>
-
+                <img
+                  src={logoSrc}
+                  alt={`${item.platform} logo`}
+                  className={`free-card-vtsd-app-logo free-card-vtsd-app-logo--${item.id}`}
+                  loading="lazy"
+                  decoding="async"
+                />
 
                 {isComingSoon && (
                   <div className="free-card-vtsd-coming-soon-badge">
@@ -68,7 +50,12 @@ export function FreeContent({ sectionConfig, contents }) {
 
               <div className="free-card-vtsd-meta">
                 <div className="free-card-vtsd-label-symbol">
-                  {renderIcon(item.icon)}
+                  <img
+                    src={logoSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="free-card-vtsd-meta-logo"
+                  />
                 </div>
                 <div>
                   <span className="free-card-vtsd-platform">{item.platform}</span>
