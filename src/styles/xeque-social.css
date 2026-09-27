@@ -6331,3 +6331,39 @@
     font-size: clamp(4.2rem, 20vw, 5.6rem) !important;
   }
 }
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — CONDIÇÃO ESPECIAL
+   ========================================================================== */
+.xeque-special-condition {
+  width: fit-content;
+  margin: 1.15rem 0 .7rem;
+  padding: .42rem .72rem;
+  border: 1px solid rgba(200,168,95,.42);
+  border-radius: 999px;
+  background: rgba(200,168,95,.07);
+  color: #c8a85f;
+  font-size: .64rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .12em;
+}
+
+.xeque-special-condition-offer {
+  margin: 0 0 .65rem;
+}
+
+.xeque-offer-card-title {
+  max-width: 360px;
+}
+
+@media (max-width: 767px) {
+  .xeque-special-condition {
+    margin-top: 1rem;
+  }
+
+  .xeque-offer-card-title {
+    max-width: 100%;
+  }
+}
