@@ -12,7 +12,7 @@ export function XequeSocial() {
     const metaDescription = document.querySelector('meta[name="description"]');
     const previousDescription = metaDescription?.getAttribute('content');
 
-    document.title = 'Xeque Social | Jogo de Cintura';
+    document.title = 'Xeque Social - O Lance Perfeito | Jogo de Cintura';
     metaDescription?.setAttribute(
       'content',
       'Livro digital para entender melhor mensagens, encontros e conflitos antes de transformar ansiedade em reação.'
@@ -89,7 +89,7 @@ export function XequeSocial() {
           <div className="xeque-editorial-hero-copy">
             <div className="xeque-hero-brand-tag">
               <IconChessPawn size={15} />
-              <span>XEQUE SOCIAL • LIVRO DIGITAL</span>
+              <span>XEQUE SOCIAL • O LANCE PERFEITO</span>
             </div>
 
             <h1 className="xeque-hero-left-headline">
@@ -114,11 +114,13 @@ export function XequeSocial() {
               <span>Afastamentos</span>
             </div>
 
+            <div className="xeque-special-condition">CONDIÇÃO ESPECIAL</div>
+
             <div className="xeque-hero-purchase-meta">
               <div className="xeque-hero-price">
                 <span className="xeque-hero-price-currency">R$</span>
-                <span className="xeque-hero-price-value">37</span>
-                <span className="xeque-hero-price-cents">,00</span>
+                <span className="xeque-hero-price-value">27</span>
+                <span className="xeque-hero-price-cents">,90</span>
               </div>
               <div className="xeque-hero-price-copy">
                 <strong>pagamento único</strong>
@@ -236,17 +238,19 @@ export function XequeSocial() {
                 />
               </picture>
               <span className="xeque-offer-eyebrow">LIVRO DIGITAL</span>
-              <h2 className="xeque-offer-card-title">XEQUE SOCIAL</h2>
+              <h2 className="xeque-offer-card-title">XEQUE SOCIAL - O LANCE PERFEITO</h2>
               <p className="xeque-offer-card-subtitle">
                 Para entender melhor a situação antes de deixar a ansiedade decidir por você.
               </p>
             </div>
 
+            <div className="xeque-special-condition xeque-special-condition-offer">CONDIÇÃO ESPECIAL</div>
+
             <div className="xeque-offer-price-wrap">
               <div className="xeque-offer-price">
                 <span className="xeque-price-currency">R$</span>
-                <span className="xeque-price-value">37</span>
-                <span className="xeque-price-cents">,00</span>
+                <span className="xeque-price-value">27</span>
+                <span className="xeque-price-cents">,90</span>
               </div>
               <span className="xeque-offer-payment-label">pagamento único</span>
             </div>
