@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/xeque-social",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/xeque-social/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
