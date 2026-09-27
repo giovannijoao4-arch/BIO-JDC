@@ -66,7 +66,7 @@ export function FreeContent({ sectionConfig, contents }) {
                       src={logoSrc}
                       alt=""
                       aria-hidden="true"
-                      className="free-card-vtsd-meta-logo"
+                      className={`free-card-vtsd-meta-logo free-card-vtsd-meta-logo--${item.id}`}
                     />
                   )}
                 </div>
