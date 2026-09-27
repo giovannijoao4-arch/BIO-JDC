@@ -5855,3 +5855,539 @@
     min-height: 180px;
   }
 }
+
+
+/* XEQUE SOCIAL — TESTIMONIALS REAL IMAGES V2 */
+.xeque-testimonial-card {
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 16px !important;
+  background: #050607 !important;
+  overflow: hidden !important;
+}
+
+.xeque-testimonial-img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 620px) {
+  .xeque-testimonials-grid {
+    gap: 1rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — PROVA SOCIAL 3x3
+   ========================================================================== */
+
+.xeque-testimonials-section {
+  background:
+    radial-gradient(circle at 50% 0, rgba(185,154,90,.055), transparent 30rem),
+    #08070d;
+}
+
+.xeque-testimonials-section .xeque-container {
+  max-width: 1180px;
+  align-items: flex-start;
+}
+
+.xeque-testimonials-grid {
+  width: 100%;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.xeque-testimonial-card.xeque-testimonial-native {
+  min-height: 260px;
+  margin: 0;
+  padding: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  background: #030405;
+  overflow: hidden;
+}
+
+.xeque-testimonial-avatar {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 50%;
+  filter: blur(1.7px);
+  opacity: .88;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(235,207,177,.95) 0 20%, transparent 21%),
+    radial-gradient(circle at 50% 70%, rgba(68,57,52,.95) 0 31%, transparent 32%),
+    linear-gradient(135deg, #574c47, #17191b);
+}
+
+.xeque-testimonial-avatar-2 {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(210,179,151,.95) 0 20%, transparent 21%),
+    radial-gradient(circle at 50% 70%, rgba(34,41,47,.95) 0 31%, transparent 32%),
+    linear-gradient(135deg, #3e474e, #17191b);
+}
+
+.xeque-testimonial-avatar-3 {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(166,125,99,.95) 0 20%, transparent 21%),
+    radial-gradient(circle at 50% 70%, rgba(33,29,28,.95) 0 31%, transparent 32%),
+    linear-gradient(135deg, #715445, #151617);
+}
+
+.xeque-testimonial-avatar-4 {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(192,162,137,.95) 0 20%, transparent 21%),
+    radial-gradient(circle at 50% 70%, rgba(53,57,59,.95) 0 31%, transparent 32%),
+    linear-gradient(135deg, #4f565b, #151617);
+}
+
+.xeque-testimonial-bubble {
+  max-width: 290px;
+  padding: 1rem 1.1rem;
+  border-radius: 22px;
+  background: #242424;
+  box-shadow: 0 10px 28px rgba(0,0,0,.22);
+}
+
+.xeque-testimonial-bubble p {
+  margin: 0;
+  color: #f1f1f1;
+  font-size: .92rem;
+  line-height: 1.48;
+  letter-spacing: -.01em;
+}
+
+@media (max-width: 980px) {
+  .xeque-testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .xeque-testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: .85rem;
+  }
+
+  .xeque-testimonial-card.xeque-testimonial-native {
+    min-height: 0;
+    padding: 1rem .8rem;
+    justify-content: flex-start;
+  }
+
+  .xeque-testimonial-bubble {
+    max-width: none;
+    flex: 1;
+  }
+}
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — RESTAURA HERO MOBILE DO DEPLOY ANTERIOR
+   Mantém a hero atual e força a arte mobile original no celular.
+   ========================================================================== */
+@media (max-width: 767px) {
+  .xeque-hero-responsive-bg {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(4, 5, 6, 0) 0%,
+        rgba(4, 5, 6, 0.08) 30%,
+        rgba(4, 5, 6, 0.72) 48%,
+        var(--xs-deep) 61%,
+        var(--xs-deep) 100%
+      ),
+      url("/images/xeque-hero-mobile.webp") !important;
+    background-size: 100% auto !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    filter: saturate(.9);
+  }
+}
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — DEPOIMENTOS REAIS / POSIÇÃO ALTA
+   ========================================================================== */
+.xeque-testimonials-section {
+  background:
+    radial-gradient(circle at 50% 0, rgba(185,154,90,.055), transparent 30rem),
+    #08070d !important;
+  border-top: 1px solid rgba(185,154,90,.10);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.xeque-testimonials-section .xeque-container {
+  max-width: 1180px;
+  align-items: flex-start;
+}
+
+.xeque-testimonials-section .xeque-headline-medium {
+  max-width: 760px;
+  text-align: left;
+}
+
+.xeque-testimonials-grid {
+  width: 100%;
+  margin-top: 2.35rem;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+.xeque-testimonial-card,
+.xeque-testimonial-card.xeque-testimonial-native {
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 14px !important;
+  background: #050607 !important;
+  overflow: hidden !important;
+}
+
+.xeque-testimonial-img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 900px) {
+  .xeque-testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .xeque-testimonials-section {
+    padding-top: 3.8rem !important;
+    padding-bottom: 3.8rem !important;
+  }
+
+  .xeque-testimonials-section .xeque-headline-medium {
+    text-align: left;
+  }
+
+  .xeque-testimonials-grid {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(82vw, 82vw);
+    grid-template-columns: none !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: .85rem !important;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: .35rem;
+  }
+
+  .xeque-testimonials-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .xeque-testimonial-card {
+    scroll-snap-align: start;
+  }
+}
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — LOW TICKET COMPACT
+   ========================================================================== */
+.xeque-low-ticket-page .xeque-section {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+
+.xeque-compact-problem-section {
+  background: #07090c;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.xeque-compact-problem-section .xeque-container-editorial {
+  max-width: 1020px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.xeque-compact-lead {
+  max-width: 780px;
+  margin-top: 1rem;
+  color: #b9b5ad;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.xeque-compact-example {
+  width: 100%;
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  border-top: 1px solid rgba(255,255,255,.09);
+  border-bottom: 1px solid rgba(255,255,255,.09);
+}
+
+.xeque-compact-example > div {
+  min-width: 0;
+  padding: 1.3rem 1.25rem;
+  border-right: 1px solid rgba(255,255,255,.09);
+}
+
+.xeque-compact-example > div:first-child {
+  padding-left: 0;
+}
+
+.xeque-compact-example > div:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.xeque-compact-example span {
+  display: block;
+  margin-bottom: .65rem;
+  color: #c8a85f;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.xeque-compact-example p {
+  margin: 0;
+  color: #ece8e0;
+  font-size: .94rem;
+  line-height: 1.6;
+}
+
+.xeque-compact-included-section {
+  background: #070809;
+  border-top: 1px solid rgba(255,255,255,.05);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.xeque-compact-included-section .xeque-container {
+  max-width: 1080px;
+  align-items: flex-start;
+}
+
+.xeque-compact-included-section .xeque-headline-medium {
+  max-width: 760px;
+  text-align: left;
+}
+
+.xeque-compact-included-grid {
+  width: 100%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.xeque-compact-included-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255,255,255,.09);
+}
+
+.xeque-compact-included-list > div {
+  display: grid;
+  grid-template-columns: 20px minmax(0,1fr);
+  gap: .7rem;
+  align-items: start;
+  padding: .9rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  color: #d8d3ca;
+  line-height: 1.5;
+}
+
+.xeque-compact-included-list svg {
+  color: #c8a85f;
+  margin-top: .14rem;
+}
+
+.xeque-compact-pages {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: .75rem;
+  align-items: start;
+}
+
+.xeque-compact-pages figure {
+  margin: 0;
+  overflow: hidden;
+  background: #efe9df;
+}
+
+.xeque-compact-pages img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.xeque-compact-after-offer {
+  background: #08090b;
+}
+
+.xeque-compact-after-offer .xeque-container-narrow {
+  max-width: 840px;
+  gap: 2.75rem;
+}
+
+.xeque-compact-faq-wrap {
+  width: 100%;
+}
+
+.xeque-compact-faq-wrap .xeque-headline-medium {
+  margin-bottom: 1.4rem;
+  text-align: left;
+  font-size: clamp(1.7rem,3vw,2.4rem);
+}
+
+@media (max-width: 767px) {
+  .xeque-low-ticket-page .xeque-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .xeque-compact-example {
+    grid-template-columns: 1fr;
+  }
+
+  .xeque-compact-example > div,
+  .xeque-compact-example > div:first-child,
+  .xeque-compact-example > div:last-child {
+    padding: 1rem 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .xeque-compact-example > div:last-child {
+    border-bottom: 0;
+  }
+
+  .xeque-compact-included-grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .xeque-compact-pages {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: .45rem;
+  }
+
+  .xeque-compact-after-offer .xeque-container-narrow {
+    gap: 2.25rem;
+  }
+}
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — PREÇO EM DESTAQUE
+   ========================================================================== */
+.xeque-offer-price {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: .08rem !important;
+  line-height: 1 !important;
+}
+
+.xeque-price-currency {
+  margin-top: .5rem !important;
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+}
+
+.xeque-price-value {
+  font-size: clamp(4.8rem, 7.5vw, 7rem) !important;
+  line-height: .82 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 800 !important;
+}
+
+.xeque-price-cents {
+  margin-top: .5rem !important;
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+}
+
+@media (max-width: 767px) {
+  .xeque-price-value {
+    font-size: clamp(4.2rem, 20vw, 5.6rem) !important;
+  }
+}
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — CONDIÇÃO ESPECIAL
+   ========================================================================== */
+.xeque-special-condition {
+  width: fit-content;
+  margin: 1.15rem 0 .7rem;
+  padding: .42rem .72rem;
+  border: 1px solid rgba(200,168,95,.42);
+  border-radius: 999px;
+  background: rgba(200,168,95,.07);
+  color: #c8a85f;
+  font-size: .64rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .12em;
+}
+
+.xeque-special-condition-offer {
+  margin: 0 0 .65rem;
+}
+
+.xeque-offer-card-title {
+  max-width: 360px;
+}
+
+@media (max-width: 767px) {
+  .xeque-special-condition {
+    margin-top: 1rem;
+  }
+
+  .xeque-offer-card-title {
+    max-width: 100%;
+  }
+}
+
+
+/* ==========================================================================
+   XEQUE SOCIAL — DEPOIMENTOS MOBILE EM COLUNA
+   ========================================================================== */
+@media (max-width: 620px) {
+  .xeque-testimonials-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-auto-flow: initial !important;
+    grid-auto-columns: auto !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    gap: .85rem !important;
+    padding-bottom: 0 !important;
+    scroll-snap-type: none !important;
+  }
+
+  .xeque-testimonial-card {
+    width: 100% !important;
+    scroll-snap-align: none !important;
+  }
+}

@@ -217,7 +217,7 @@ export const siteConfig = {
 
   // 7. RODAPÉ
   footer: {
-    copyright: "© 2026 Closy Company. Todos os direitos reservados.",
+    copyright: "© 2026 João Giovanni. Todos os direitos reservados.",
     privacyLink: "#politica-de-privacidade",
     termsLink: "#termos-de-uso",
   },

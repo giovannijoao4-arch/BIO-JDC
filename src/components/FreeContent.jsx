@@ -1,21 +1,14 @@
 import React from 'react';
-import { IconYoutube, IconSpotify, IconBlog, IconLock, IconCompass } from './Icons';
+import { IconLock } from './Icons';
+
+const APP_LOGOS = {
+  youtube: '/images/youtube-white.png',
+  spotify: '/images/spotify-white.png',
+  blog: '/images/blog-white.png',
+};
 
 export function FreeContent({ sectionConfig, contents }) {
   if (!contents || contents.length === 0) return null;
-
-  const renderIcon = (iconName) => {
-    switch (iconName?.toLowerCase()) {
-      case 'youtube':
-        return <IconYoutube size={21} />;
-      case 'spotify':
-        return <IconSpotify size={21} />;
-      case 'blog':
-        return <IconBlog size={21} />;
-      default:
-        return <IconCompass size={21} />;
-    }
-  };
 
   const getWebpUrl = (jpgUrl) => {
     if (!jpgUrl) return '';
@@ -35,6 +28,7 @@ export function FreeContent({ sectionConfig, contents }) {
         {contents.map((item) => {
           const isComingSoon = Boolean(item.comingSoon);
           const webpUrl = getWebpUrl(item.image);
+          const logoSrc = APP_LOGOS[item.id];
 
           return (
             <a
@@ -57,7 +51,6 @@ export function FreeContent({ sectionConfig, contents }) {
                   />
                 </picture>
 
-
                 {isComingSoon && (
                   <div className="free-card-vtsd-coming-soon-badge">
                     <IconLock size={11} />
@@ -68,7 +61,14 @@ export function FreeContent({ sectionConfig, contents }) {
 
               <div className="free-card-vtsd-meta">
                 <div className="free-card-vtsd-label-symbol">
-                  {renderIcon(item.icon)}
+                  {logoSrc && (
+                    <img
+                      src={logoSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className={`free-card-vtsd-meta-logo free-card-vtsd-meta-logo--${item.id}`}
+                    />
+                  )}
                 </div>
                 <div>
                   <span className="free-card-vtsd-platform">{item.platform}</span>

@@ -77,7 +77,7 @@ export function Footer({ footer }) {
                 </>
               ) : (
                 <>
-                  <p>Ao acessar esta página e adquirir nossos conteúdos ou formações, você concorda com os termos de uso e condições estabelecidas por Closy Company.</p>
+                  <p>Ao acessar esta página e adquirir nossos conteúdos ou formações, você concorda com os termos de uso e condições estabelecidas por João Giovanni.</p>
                   <br />
                   <p>Todo o material disponibilizado (vídeos, textos, metodologias) é protegido por direitos autorais e de propriedade intelectual. O compartilhamento não autorizado de acessos ou conteúdos sujeita o infrator às medidas legais cabíveis.</p>
                 </>
