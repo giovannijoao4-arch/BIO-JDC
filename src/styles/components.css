@@ -932,6 +932,66 @@
 }
 
 
+
+/* Logos oficiais em branco nos cards de conteúdo gratuito */
+.free-card-vtsd-image-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #07090b !important;
+}
+
+.free-card-vtsd-app-logo {
+  width: clamp(88px, 9vw, 132px);
+  height: clamp(88px, 9vw, 132px);
+  object-fit: contain;
+  opacity: 0.98;
+  transition: transform 260ms var(--ease-out), opacity 260ms var(--ease-out);
+}
+
+.free-card-vtsd-app-logo--youtube {
+  width: clamp(104px, 11vw, 154px);
+  height: clamp(104px, 11vw, 154px);
+}
+
+.free-card-vtsd-app-logo--blog {
+  width: clamp(82px, 8vw, 116px);
+  height: clamp(82px, 8vw, 116px);
+}
+
+.free-card-vtsd-item:hover .free-card-vtsd-app-logo {
+  transform: scale(1.035);
+  opacity: 1;
+}
+
+.free-card-vtsd-meta-logo {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+  opacity: 0.92;
+}
+
+.free-card-vtsd-label-symbol {
+  color: #fff !important;
+}
+
+@media (max-width: 700px) {
+  .free-card-vtsd-app-logo {
+    width: 92px;
+    height: 92px;
+  }
+
+  .free-card-vtsd-app-logo--youtube {
+    width: 112px;
+    height: 112px;
+  }
+
+  .free-card-vtsd-app-logo--blog {
+    width: 82px;
+    height: 82px;
+  }
+}
+
 /* ==========================================================================
    BIO — LIMPEZA DE NUMERAÇÕES E FOCUS DE CLIQUE
    ========================================================================== */
